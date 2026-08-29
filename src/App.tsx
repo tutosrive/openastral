@@ -1,13 +1,15 @@
-import { useState } from 'react';
-import heroImg from './assets/hero.png';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
+import { themeChange } from 'theme-change';
 import './App.css';
+import HomePage from './pages/home.page';
+import { useEffect } from 'react';
 
 function App() {
+    useEffect(() => {
+        themeChange(false);
+    }, []);
     return (
         <div className="w-full h-full flex items-center justify-center">
-            <h1 className="text-amber-100 text-2xl">Astral Supa</h1>
+            <HomePage />
         </div>
     );
 }

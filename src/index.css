@@ -1,5 +1,9 @@
 @import 'tailwindcss';
-
-:root {
-    background-color: #252525;
+@plugin "daisyui" {
+    themes:
+        dark --default --prefersdark,
+        abyss,
+        synthwave,
+        luxury,
+        halloween;
 }
