@@ -1,4 +1,4 @@
-# Astra Supabase
+# Astral Supabase
 
 > [!NOTE]
 > This project use "[SAWP](https://github.com/tutosrive/sawp)" to save all data used on supabase
