@@ -42,7 +42,7 @@ jobs:
             - name: Build
               run: pnpm build
               env:
-                  VITE_APIURL_BASE: ${{secrets.VITE_API_URL}}
+                  VITE_API_URL: ${{secrets.VITE_API_URL}}
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v5
