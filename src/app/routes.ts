@@ -1,0 +1,11 @@
+import { lazy } from 'react';
+
+const HomePage = lazy(() => import('../pages/home.page'));
+const CategoriesPage = lazy(() => import('../pages/categories.page'));
+
+const routes = [
+    { endpoint: '/', title: 'Tutos Rive Stargazers | Stargazers | Awesome Github Repositories | Github Stargazers', component: HomePage },
+    { endpoint: '/categories', title: 'Stargazers Categories | Repositories Topics', component: CategoriesPage },
+];
+
+export default routes;

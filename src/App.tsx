@@ -1,16 +1,22 @@
 import { themeChange } from 'theme-change';
 import './App.css';
-import HomePage from './pages/home.page';
 import { useEffect } from 'react';
+import DefaultLayout from './app/layout/default.layout';
+import { Route, Routes } from 'react-router';
+import routes from './app/routes';
 
 function App() {
     useEffect(() => {
         themeChange(false);
     }, []);
     return (
-        <div className="w-full h-full flex items-center justify-center">
-            <HomePage />
-        </div>
+        <Routes>
+            <Route element={<DefaultLayout />}>
+                {routes.map((route) => {
+                    return <Route element={<route.component />} path={route.endpoint} />;
+                })}
+            </Route>
+        </Routes>
     );
 }
 
