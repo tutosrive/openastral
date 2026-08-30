@@ -6,7 +6,7 @@ export default function DefaultLayout() {
     return (
         <div id="default-layout" className="w-full h-full grid grid-rows-12">
             <Header />
-            <main className="row-span-10 overflow-x-hidden overflow-y-scroll scrollbar-thin p-5">
+            <main className="row-span-10 overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-thumb-neutral p-5">
                 <Outlet />
             </main>
             <Footer />

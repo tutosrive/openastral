@@ -11,18 +11,15 @@ export default function CategoriesPage() {
     const fetchCategories = async () => {
         const req = await fetch(`${base}/topics`);
         const res: Topic[] = await req.json();
-
-        const tmt = setTimeout(() => {
-            if (req.ok === true && req.status === 200 && res instanceof Array) {
-                setCategories(res);
-            }
-            clearTimeout(tmt);
-        }, 1000);
+        if (req.ok === true && req.status === 200 && res instanceof Array) {
+            setCategories(res);
+        }
     };
 
     useEffect(() => {
         fetchCategories();
     }, []);
+
     return (
         <div className="w-full h-full flex flex-wrap items-center justify-center">
             <div className="w-full flex flex-wrap items-center justify-center">
