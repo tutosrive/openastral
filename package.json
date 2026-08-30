@@ -13,13 +13,16 @@
     "@tailwindcss/vite": "^4.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "tailwindcss": "^4.3.3"
+    "react-router": "^8.3.1",
+    "tailwindcss": "^4.3.3",
+    "theme-change": "^3.0.4"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.1.0",
+    "daisyui": "^5.7.22",
     "oxlint": "^1.79.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.2"

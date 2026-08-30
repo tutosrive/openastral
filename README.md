@@ -1,32 +1,10 @@
-# React + TypeScript + Vite
+# Astra Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> [!NOTE]
+> This project use "[SAWP](https://github.com/tutosrive/sawp)" to save all data used on supabase
 
-Currently, two official plugins are available:
+This project is to show all my github starred repositories (Stargazers) in a nice website, it uses Supabase to get all data in real-time and to make nice queries that relational databases allow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+You can use this public template, just set your own credentials and enjoy.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Astra Supabase is inspired by "[Astral](https://github.com/astralapp/astral)" because it looks nice to me, and I want build 'my own astral' but accesible for any user from internet ... Don't just for me (as Astral makes it)

@@ -17,9 +17,15 @@ importers:
       react-dom:
         specifier: ^19.2.8
         version: 19.2.8(react@19.2.8)
+      react-router:
+        specifier: ^8.3.1
+        version: 8.3.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
+      theme-change:
+        specifier: ^3.0.4
+        version: 3.0.4
     devDependencies:
       '@types/node':
         specifier: ^24.13.3
@@ -33,6 +39,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.1.0
         version: 6.1.0(vite@8.2.2(@types/node@24.13.3))
+      daisyui:
+        specifier: ^5.7.22
+        version: 5.7.22
       oxlint:
         specifier: ^1.79.0
         version: 1.80.0
@@ -350,13 +359,6 @@ packages:
     resolution: {integrity: sha512-jx1+rPhY/5Ympkktd656HBWEBLxP7dH06losBLjjf5vgCODXvi9KhtftWcMIwTFIDqBr7cRnQkdLnAG+IOlGvQ==}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
-    bundledDependencies:
-      - '@napi-rs/wasm-runtime'
-      - '@emnapi/core'
-      - '@emnapi/runtime'
-      - '@tybys/wasm-util'
-      - '@emnapi/wasi-threads'
-      - tslib
 
   '@tailwindcss/oxide-win32-arm64-msvc@4.3.3':
     resolution: {integrity: sha512-3rc292Ca2ceK6Ulcc/bAVnTs/3nDtoPhyEKlgPv+yQJQi/JS/AMJlqzxvlDacL1nekbrcf6bTqp/jV4qgnPxNQ==}
@@ -406,8 +408,14 @@ packages:
       oxc-transform-react:
         optional: true
 
+  cookie-es@3.1.1:
+    resolution: {integrity: sha512-UaXxwISYJPTr9hwQxMFYZ7kNhSXboMXP+Z3TRX6f1/NyaGPfuNUZOWP1pUEb75B2HjfklIYLVRfWiFZJyC6Npg==}
+
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
+
+  daisyui@5.7.22:
+    resolution: {integrity: sha512-pYii+2NCN0+OIL6Lpuc054LK0QJeNv+GRK9UzN1GRmjdYhYO6WFl0QLoj5oPcitPD7o+okiiI0SKFkn641TxmA==}
 
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
@@ -623,6 +631,16 @@ packages:
     peerDependencies:
       react: ^19.2.8
 
+  react-router@8.3.1:
+    resolution: {integrity: sha512-TEOpiO2g0TJHEOJeRVv4amUFun9v1npCKszvcquNvzETUtJ8udV86ah5eFoHT7g26bsBvT6EiIhqulR8eDF++A==}
+    engines: {node: '>=22.22.0'}
+    peerDependencies:
+      react: '>=19.2.7'
+      react-dom: '>=19.2.7'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react@19.2.8:
     resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
@@ -645,6 +663,9 @@ packages:
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
+
+  theme-change@3.0.4:
+    resolution: {integrity: sha512-tPknw142u0yX7M63rXOU1gc2N3cw61iLUtuvh5OKxXTA4/B5SOXxOeS+JT8Ig14SCjs5T2rY41aLFDeTRclV5w==}
 
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
@@ -914,7 +935,11 @@ snapshots:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.2.2(@types/node@24.13.3)
 
+  cookie-es@3.1.1: {}
+
   csstype@3.2.3: {}
+
+  daisyui@5.7.22: {}
 
   detect-libc@2.1.2: {}
 
@@ -1075,6 +1100,13 @@ snapshots:
       react: 19.2.8
       scheduler: 0.27.0
 
+  react-router@8.3.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+    dependencies:
+      cookie-es: 3.1.1
+      react: 19.2.8
+    optionalDependencies:
+      react-dom: 19.2.8(react@19.2.8)
+
   react@19.2.8: {}
 
   rolldown@1.2.6:
@@ -1105,6 +1137,8 @@ snapshots:
   tailwindcss@4.3.3: {}
 
   tapable@2.3.3: {}
+
+  theme-change@3.0.4: {}
 
   tinyglobby@0.2.17:
     dependencies:
