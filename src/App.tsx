@@ -13,7 +13,7 @@ function App() {
         <Routes>
             <Route element={<DefaultLayout />}>
                 {routes.map((route) => {
-                    return <Route element={<route.component />} path={route.endpoint} />;
+                    return <Route key={route.endpoint} element={<route.component />} path={route.endpoint} />;
                 })}
             </Route>
         </Routes>

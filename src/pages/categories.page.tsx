@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { Topic } from '../app/models';
 import Loading from '../components/loading.component';
-import Helpers from '../app/utils/helpers.utils';
-import { Link } from 'react-router';
+import CategoryC from '../components/repository/category.component';
 
 const base = import.meta.env.VITE_API_URL;
 
@@ -25,12 +24,7 @@ export default function CategoriesPage() {
             <div className="w-full flex flex-wrap items-center justify-center">
                 {categories.length > 0 ? (
                     categories.map((cat) => {
-                        const badgeStyle: string = Helpers.getRandomBadgeStyle();
-                        return (
-                            <Link to={`/categories/${cat.name}`} key={cat.id} className={`m-1 badge-lg badge badge-soft ${badgeStyle}`}>
-                                {cat.name}
-                            </Link>
-                        );
+                        return <CategoryC name={cat.name} to={`/categories/${cat.name}`} key={cat.id} />;
                     })
                 ) : (
                     <Loading />

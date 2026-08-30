@@ -5,7 +5,7 @@ export default function Header() {
     const values = { home: 'Home', about: { first: 'About', second: 'Page', third: 'Creator', fourthy: 'Search' }, category: 'Categories' };
 
     return (
-        <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm w-full row-span-1 rounded-none">
+        <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm w-full row-span-1 rounded-none z-50">
             <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
             <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
             <div className="collapse-title navbar mb-0">

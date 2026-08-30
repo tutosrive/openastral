@@ -11,6 +11,21 @@ export interface Language {
     name: string;
 }
 
+export interface Admin {
+    id: string;
+    bio: string | null;
+    avatarUrl: string;
+    company: string | null;
+    createdAt: string;
+    email: string | null;
+    location: string | null;
+    login: string;
+    name: string | null;
+    url: string;
+    websiteUrl: string | null;
+    stargazerCount: number;
+}
+
 export interface Repository {
     id: string;
     createdAt: string | null;
@@ -24,11 +39,12 @@ export interface Repository {
     sshUrl: string;
     stargazerCount: number;
     url: string;
-    licenseId: string | null;
+    license: License | null;
     readmeUrl: string | null;
-    primaryLanguageId: string | null;
-    ownerId: string;
-    ownerStarredId: string;
+    primaryLanguage: Language | null;
+    owner: Owner;
+    ownerStarred: Admin;
+    topics: Topic[] | null;
 }
 
 export interface Topic {
