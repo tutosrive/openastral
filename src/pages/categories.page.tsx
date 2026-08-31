@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { Topic } from '../app/models';
+import type { Topic } from '../app/models/models';
 import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 

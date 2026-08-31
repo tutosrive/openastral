@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactElement } from 'react';
 import RepositoryC from '../components/repository/repository.component';
-import type { Repository, Topic } from '../app/models';
+import type { Repository, Topic } from '../app/models/models';
 import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 

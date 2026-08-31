@@ -1,0 +1,88 @@
+import { useEffect, useState } from 'react';
+import type { Tables } from '../../app/models/supabase';
+import adminService from '../../app/services/admin.service';
+import Loading from '../../components/loading.component';
+import StorageUtils from '../../app/utils/storage.utils';
+
+export default function CreatorPage() {
+    const [creator, setCreator] = useState<Tables<'admin'>>();
+    const [hasError, setHasError] = useState<boolean>(false);
+
+    const getCreator = async () => {
+        const adminFromLocal = StorageUtils.getJSONFromStorage('admin');
+        if (adminFromLocal !== null && Object.keys(adminFromLocal).length > 0) {
+            setCreator(adminFromLocal);
+            return;
+        }
+
+        const data = await adminService.get();
+        console.log(data);
+        if (!data || data === null) {
+            setHasError(true);
+            return;
+        }
+        StorageUtils.saveJSONOnLocalStorage('admin', data);
+        setCreator(data);
+    };
+
+    useEffect(() => {
+        getCreator();
+    }, []);
+
+    /**
+     {
+        "id": "U_kgDOBn8U4A"
+        "created_at": "2022-07-09T15:55:36Z",
+        "email": "",
+        "website_url": "https://tutosrive.github.io/",
+    }
+     */
+
+    return (
+        <div className="w-full h-full flex items-center justify-center">
+            {hasError ? (
+                <div>Has been an error getting Admin data, try again.</div>
+            ) : creator ? (
+                <div className="w-full h-full flex flex-wrap justify-center">
+                    <div className="w-full flex flex-col items-center">
+                        <h1 className="text-3xl text-primary mb-6">
+                            Admin <span className="font-bold">{creator.name ?? creator.login}</span>
+                        </h1>
+                        <div className="rounded-4xl w-1/2 lg:w-1/4 h-auto aura aura-dual text-primary mb-2">
+                            <img className="rounded-4xl w-full h-full" src={`${creator.avatar_url}`} alt={`GitHub Profile Image from user '${creator.login}'`} />
+                        </div>
+                        <div className="w-full flex flex-wrap justify-center items-center">
+                            <span className="m-1 badge badge-soft badge-dash">
+                                <i className="fa-solid fa-building"></i>
+                                {creator.company ?? <span className="italic">No Company</span>}
+                            </span>
+                            <span className="m-1 badge badge-soft badge-info">
+                                <i className="fa-solid fa-street-view"></i>
+                                {creator.location ?? <span className="italic">No Location</span>}
+                            </span>
+                            <span className="m-1 badge badge-soft badge-info">
+                                <i className="fa-solid fa-id-badge"></i>
+                                {creator.login}
+                            </span>
+                            <span className="m-1 badge badge-soft badge-info">
+                                <i className="fa-solid fa-clock"></i>
+                                {creator.created_at}
+                            </span>
+                            <a href={creator.url} className="m-1 badge badge-soft badge-success">
+                                <i className="fa-brands fa-github"></i>
+                                {creator.login}
+                            </a>
+                            <span className="m-1 badge badge-soft badge-warning">
+                                <i className="fa-solid fa-star"></i>
+                                {creator.stargazercount}
+                            </span>
+                        </div>
+                        <p>{creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>}</p>
+                    </div>
+                </div>
+            ) : (
+                <Loading />
+            )}
+        </div>
+    );
+}
