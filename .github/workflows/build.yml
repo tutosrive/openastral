@@ -43,6 +43,8 @@ jobs:
               run: pnpm build
               env:
                   VITE_API_URL: ${{secrets.VITE_API_URL}}
+                  VITE_SUPABASE_APIKEY: ${{secrets.VITE_SUPABASE_APIKEY}}
+                  VITE_SUPABASE_URL: ${{secrets.VITE_SUPABASE_URL}}
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v5
