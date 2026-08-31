@@ -46,7 +46,7 @@ export default function Header() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to={'/about/creator'}>
+                                        <Link to={'/about/admin'}>
                                             <i className="fa-solid fa-circle-user"></i>
                                             {values.about.third}
                                         </Link>
@@ -90,7 +90,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to={'/about/creator'}>
+                                <Link to={'/about/admin'}>
                                     <i className="fa-solid fa-circle-user"></i>
                                     {values.about.third}
                                 </Link>

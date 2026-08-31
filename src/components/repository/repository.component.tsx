@@ -1,5 +1,5 @@
 import type { FC, ReactElement } from 'react';
-import type { Repository } from '../../app/models';
+import type { Repository } from '../../app/models/models';
 
 interface RepositoryProps {
     repository: Repository;
