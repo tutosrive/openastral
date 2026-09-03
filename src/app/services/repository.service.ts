@@ -19,7 +19,6 @@ class RepositoryService extends Service {
         if (itRequireNewData === true || isRefetch === true) {
             this.start = this.rounds * this.PAGE_COUNT;
             // this.end = this.start + this.PAGE_COUNT - 1;
-            this.rounds++;
             const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
             if (error !== null) {
                 console.error(error);
@@ -30,6 +29,7 @@ class RepositoryService extends Service {
             savedData = savedData !== null ? [...savedData, ...data] : data;
             const sorted = savedData.sort((a, b) => a.name.localeCompare(b.name));
             StorageUtils.saveJSONOnLocalStorage('repositories', sorted);
+            this.rounds++;
         }
         return savedData;
     }

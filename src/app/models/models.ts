@@ -28,22 +28,22 @@ export interface Admin {
 
 export interface Repository {
     id: string;
-    createdAt: string | null;
+    createda_at: string | null;
     description: string | null;
-    diskUsage: number;
-    forkCount: number;
-    homepageUrl: string | null;
-    isArchived: boolean;
+    disk_usage: number;
+    fork_count: number;
+    homepage_url: string | null;
+    is_archived: boolean;
     name: string;
-    pushedAt: string | null;
-    sshUrl: string;
-    stargazerCount: number;
+    pushed_at: string | null;
+    ssh_url: string;
+    stargazer_count: number;
     url: string;
     license: License | null;
-    readmeUrl: string | null;
-    primaryLanguage: Language | null;
+    readme_url: string | null;
+    primary_language: Language | null;
     owner: Owner;
-    ownerStarred: Admin;
+    owner_starred: Admin;
     topics: Topic[] | null;
 }
 

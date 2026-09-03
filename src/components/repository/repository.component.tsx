@@ -9,6 +9,7 @@ interface RepositoryProps {
 }
 
 export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, topics }) => {
+    const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
     return (
         <div id={`repo-${repository.id}`} className={`${classess ?? ''} flex flex-wrap pb-28`}>
             {/* Repo Title */}
@@ -21,11 +22,11 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
                     <div className="m-2 badge badge-soft badge-neutral rounded-xl w-auto h-10">
                         <i className="fa-solid fa-star"></i>
                         <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
-                            {repository.stargazerCount.toString()}
+                            {stargazerCount}
                         </a>
                     </div>
                     {/* Owner Link/Image */}
-                    <a href={repository.url} target="_blank" className="badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
+                    <a href={repository.owner.url} target="_blank" className="badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
                         <div className="avatar">
                             <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
                                 <img alt={`Owner of repository '${repository.name}'`} src={`${repository.owner.avatar_url}`} />
@@ -51,22 +52,37 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
 };
 
 export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classess, topics }) => {
-    const stargazerCount = Helpers.formatNumberToCompact(repository.stargazerCount);
+    const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
+    const forkCount = Helpers.formatNumberToCompact(repository.fork_count);
     return (
-        <div className={`${classess ?? ''} card bg-base-300 cbg-shiny w-5/12 h-40 shadow-sm overflow-hidden`} id={`repo-${repository.id}`}>
+        <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-40 shadow-sm overflow-hidden`}>
             <div className="card-body">
-                <div className="flex justify-between">
-                    <h2 className="card-title">{repository.name}</h2>
-                    <div className="flex items-center justify-between">
-                        {/* Stars Count */}
-                        <div className="m-2 badge badge-soft badge-neutral rounded-xl w-auto h-10">
-                            <i className="fa-solid fa-star"></i>
+                <div className="grid grid-cols-12">
+                    <h2 className="card-title truncate col-span-6">{repository.name}</h2>
+                    <div className="col-span-6 carousel text-nowrap flex items-center justify-end py-1">
+                        {/* License */}
+                        {/* <div className="m-2 badge badge-soft bg-neutral rounded-xl w-auto h-10">
                             <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
+                                <i className="fa-solid fa-code-fork"></i>
+                                <span className="truncate">{repository.license_id}</span>
+                            </a>
+                        </div> */}
+                        {/* Forks Count */}
+                        <div className="mx-0.5 badge badge-soft bg-neutral rounded-xl w-auto h-10">
+                            <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
+                                <i className="fa-solid fa-code-fork"></i>
+                                <span className="truncate">{forkCount}</span>
+                            </a>
+                        </div>
+                        {/* Stars Count */}
+                        <div className="mx-0.5 badge badge-soft bg-neutral rounded-xl w-auto h-10">
+                            <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
+                                <i className="fa-solid fa-star"></i>
                                 <span className="truncate">{stargazerCount}</span>
                             </a>
                         </div>
                         {/* Owner Link/Image */}
-                        <a href={repository.url} target="_blank" className="badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
+                        <a href={repository.owner.url} target="_blank" className="mx-1 badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
                             <div className="avatar">
                                 <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
                                     <img alt={`Owner of repository '${repository.name}'`} src={`${repository.owner.avatar_url}`} />
@@ -74,7 +90,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
                             </div>
                         </a>
                         {/* Backlink */}
-                        <a href={repository.url} target="_blank" className="float-end mx-1 badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
+                        <a href={repository.url} target="_blank" className="mx-0.5 float-end badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
                             <i className="fa-solid fa-arrow-up-right-from-square text-primary"></i>
                         </a>
                     </div>
