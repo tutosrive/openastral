@@ -11,6 +11,8 @@ const routes = [
     { endpoint: '/repositories/:id', title: 'Favorite Repository | Github Repository', component: RepositoryPage },
     { endpoint: '/about', title: 'About Astral Supa | Astral Supa Information', component: CategoriesPage },
     { endpoint: '/about/admin', title: 'Admin Astral Supa | Github Admin | About Admin Astral Supa', component: CreatorPage },
+    { endpoint: '/repositories/query/search', title: 'Search Repositories | Search Favorite Repository', component: HomePage },
+    { endpoint: '/about/admin', title: 'Admin Astral Supa | Github Admin | About Admin Astral Supa', component: CreatorPage },
 ];
 
 export default routes;

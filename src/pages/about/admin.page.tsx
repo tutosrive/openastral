@@ -2,41 +2,24 @@ import { useEffect, useState } from 'react';
 import type { Tables } from '../../app/models/supabase';
 import adminService from '../../app/services/admin.service';
 import Loading from '../../components/loading.component';
-import StorageUtils from '../../app/utils/storage.utils';
 
 export default function CreatorPage() {
     const [creator, setCreator] = useState<Tables<'admin'>>();
     const [hasError, setHasError] = useState<boolean>(false);
 
     const getCreator = async () => {
-        const adminFromLocal = StorageUtils.getJSONFromStorage('admin');
-        if (adminFromLocal !== null && Object.keys(adminFromLocal).length > 0) {
-            setCreator(adminFromLocal);
-            return;
-        }
-
         const data = await adminService.get();
         console.log(data);
         if (!data || data === null) {
             setHasError(true);
             return;
         }
-        StorageUtils.saveJSONOnLocalStorage('admin', data);
         setCreator(data);
     };
 
     useEffect(() => {
         getCreator();
     }, []);
-
-    /**
-     {
-        "id": "U_kgDOBn8U4A"
-        "created_at": "2022-07-09T15:55:36Z",
-        "email": "",
-        "website_url": "https://tutosrive.github.io/",
-    }
-     */
 
     return (
         <div className="w-full h-full flex items-center justify-center">
@@ -59,6 +42,10 @@ export default function CreatorPage() {
                             <span className="m-1 badge badge-soft badge-info">
                                 <i className="fa-solid fa-street-view"></i>
                                 {creator.location ?? <span className="italic">No Location</span>}
+                            </span>
+                            <span className="m-1 badge badge-soft badge-info">
+                                <i className="fa-solid fa-globe"></i>
+                                {creator.website_url ?? <span className="italic">No website</span>}
                             </span>
                             <span className="m-1 badge badge-soft badge-info">
                                 <i className="fa-solid fa-id-badge"></i>
