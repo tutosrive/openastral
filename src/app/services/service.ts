@@ -13,12 +13,12 @@ export default abstract class Service {
     }
 
     abstract get(): Promise<any>;
-    abstract getAll(): Promise<any[]>;
+    abstract getAll(isRefetch: boolean): Promise<any[]>;
     abstract getById(): Promise<any>;
 
-    async requireNewData(table: 'admin' | 'db_version' | 'language' | 'license' | 'owner' | 'repository' | 'topic' | 'topicxrepository') {
+    protected async requireNewData(key: string, table: 'admin' | 'db_version' | 'language' | 'license' | 'owner' | 'repository' | 'topic' | 'topicxrepository') {
         let itRequireNewData: boolean = false;
-        let data: Tables<typeof table> | null = StorageUtils.getJSONFromStorage(table);
+        let data: Tables<typeof table> | null | Tables<typeof table>[] = StorageUtils.getJSONFromStorage(key);
         const dbIsOld: boolean = await this.supabase.checkDatabaseVersion();
         if (dbIsOld === true || data === null || Object.keys(data).length === 0) {
             itRequireNewData = true;

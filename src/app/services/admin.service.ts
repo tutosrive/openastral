@@ -6,7 +6,7 @@ class AdminService extends Service {
     private table: string = 'admin';
 
     async get(): Promise<Tables<'admin'> | null> {
-        const { itRequireNewData, data } = await this.requireNewData('admin');
+        const { itRequireNewData, data } = await this.requireNewData('admin', 'admin');
         let savedData: Tables<'admin'> = data as Tables<'admin'>;
         if (itRequireNewData === true) {
             const { data: admin, error } = await this.client.from(this.table).select<'admin', Tables<'admin'>>();
