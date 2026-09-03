@@ -1,17 +1,24 @@
 import type { Tables } from '../models/supabase';
+import StorageUtils from '../utils/storage.utils';
 import Service from './service';
 
 class AdminService extends Service {
     private table: string = 'admin';
 
     async get(): Promise<Tables<'admin'> | null> {
-        console.log('Getting Admin');
-        const { data: admin, error } = await this.supabase.from(this.table).select<'admin', Tables<'admin'>>();
-        if (error !== null) {
-            console.error(error);
-            return null;
+        let data: Tables<'admin'> | null = StorageUtils.getJSONFromStorage('admin');
+        const dbIsOld: boolean = await this.supabase.checkDatabaseVersion();
+        if (dbIsOld === true || data === null || Object.keys(data).length === 0) {
+            console.log('db is OLD');
+
+            const { data: admin, error } = await this.client.from(this.table).select<'admin', Tables<'admin'>>();
+            if (error !== null) {
+                console.error(error);
+                return null;
+            }
+            data = admin[0];
+            StorageUtils.saveJSONOnLocalStorage('admin', data);
         }
-        const data: Tables<'admin'> | null = admin !== null ? admin[0] : null;
         return data;
     }
     async getAll(): Promise<Array<Tables<'admin'>>> {
