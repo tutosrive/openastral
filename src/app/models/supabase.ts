@@ -13,6 +13,7 @@ export type Database = {
                 Update: { avatar_url?: string | null; bio?: string | null; company?: string | null; created_at?: string; email?: string | null; id?: string; location?: string | null; login?: string; name?: string | null; stargazercount?: number; url?: string; website_url?: string | null };
                 Relationships: [];
             };
+            db_version: { Row: { id: number; version: string }; Insert: { id?: number; version?: string }; Update: { id?: number; version?: string }; Relationships: [] };
             language: { Row: { color: string; id: string; name: string }; Insert: { color?: string; id: string; name: string }; Update: { color?: string; id?: string; name?: string }; Relationships: [] };
             license: { Row: { id: string; name: string; url: string }; Insert: { id: string; name: string; url: string }; Update: { id?: string; name?: string; url?: string }; Relationships: [] };
             owner: { Row: { avatar_url: string | null; id: string; login: string; url: string }; Insert: { avatar_url?: string | null; id: string; login: string; url: string }; Update: { avatar_url?: string | null; id?: string; login?: string; url?: string }; Relationships: [] };
