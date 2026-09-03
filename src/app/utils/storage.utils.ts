@@ -1,7 +1,7 @@
 export default class StorageUtils {
     static saveJSONOnLocalStorage(key: string, data: any): boolean {
         let ok: boolean = false;
-        const value: string = data == null ? 'NULL' : JSON.stringify(data);
+        const value: string = data == null ? '{}' : JSON.stringify(data);
         localStorage.setItem(key, value);
         const recovered: any = this.getJSONFromStorage(key);
         if (recovered == data) ok = true;

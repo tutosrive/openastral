@@ -6,20 +6,18 @@ class AdminService extends Service {
     private table: string = 'admin';
 
     async get(): Promise<Tables<'admin'> | null> {
-        let data: Tables<'admin'> | null = StorageUtils.getJSONFromStorage('admin');
-        const dbIsOld: boolean = await this.supabase.checkDatabaseVersion();
-        if (dbIsOld === true || data === null || Object.keys(data).length === 0) {
-            console.log('db is OLD');
-
+        const { itRequireNewData, data } = await this.requireNewData('admin');
+        let savedData: Tables<'admin'> = data as Tables<'admin'>;
+        if (itRequireNewData === true) {
             const { data: admin, error } = await this.client.from(this.table).select<'admin', Tables<'admin'>>();
             if (error !== null) {
                 console.error(error);
                 return null;
             }
-            data = admin[0];
-            StorageUtils.saveJSONOnLocalStorage('admin', data);
+            savedData = admin[0];
+            StorageUtils.saveJSONOnLocalStorage('admin', savedData);
         }
-        return data;
+        return savedData;
     }
     async getAll(): Promise<Array<Tables<'admin'>>> {
         throw new Error('Method not implemented.');

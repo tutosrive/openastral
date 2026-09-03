@@ -2,26 +2,18 @@ import { useEffect, useState } from 'react';
 import type { Tables } from '../../app/models/supabase';
 import adminService from '../../app/services/admin.service';
 import Loading from '../../components/loading.component';
-import StorageUtils from '../../app/utils/storage.utils';
 
 export default function CreatorPage() {
     const [creator, setCreator] = useState<Tables<'admin'>>();
     const [hasError, setHasError] = useState<boolean>(false);
 
     const getCreator = async () => {
-        // const adminFromLocal = StorageUtils.getJSONFromStorage('admin');
-        // if (adminFromLocal !== null && Object.keys(adminFromLocal).length > 0) {
-        //     setCreator(adminFromLocal);
-        //     return;
-        // }
-
         const data = await adminService.get();
         console.log(data);
         if (!data || data === null) {
             setHasError(true);
             return;
         }
-        // StorageUtils.saveJSONOnLocalStorage('admin', data);
         setCreator(data);
     };
 
