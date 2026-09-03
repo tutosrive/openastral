@@ -2,7 +2,7 @@ export interface Owner {
     id: string;
     url: string;
     login: string;
-    avatarUrl: string | null;
+    avatar_url: string | null;
 }
 
 export interface Language {

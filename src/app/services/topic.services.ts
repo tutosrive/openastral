@@ -4,7 +4,7 @@ import Service from './service';
 
 class TopicService extends Service {
     private table: string = 'topic';
-    private rounds: number = 1;
+    private rounds: number = 0;
     private PAGE_COUNT: number = 100;
     private startCountFetch: number = 0;
     private endCountFetch: number = 0;

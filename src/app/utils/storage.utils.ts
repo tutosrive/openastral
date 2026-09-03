@@ -11,11 +11,10 @@ export default class StorageUtils {
     static getJSONFromStorage(key: string): any | null {
         let data: any | null = null;
         try {
-            const value = localStorage.getItem(key);
-            if (value === null || value.length == 0) {
-                throw new Error('Value recovered is not a valid JSON object');
+            let value = localStorage.getItem(key);
+            if (value !== null && value.length > 2) {
+                data = JSON.parse(value);
             }
-            data = JSON.parse(value);
         } catch (e) {
             console.error(e);
         }

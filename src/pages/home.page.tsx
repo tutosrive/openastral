@@ -1,8 +1,9 @@
 import { useEffect, useState, type ReactElement } from 'react';
-import RepositoryC from '../components/repository/repository.component';
+import { RepositoryFullView, RepositoryParcialView } from '../components/repository/repository.component';
 import type { Repository, Topic } from '../app/models/models';
 import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
+import repositoryService from '../app/services/repository.service';
 
 const base = import.meta.env.VITE_API_URL;
 
@@ -18,8 +19,8 @@ export default function HomePage() {
         }
     };
 
-    const setReposs = () => {
-        const r: Array<Repository> = [
+    const setReposs = async (refetch: boolean = false) => {
+        /* const r: Array<Repository> = [
             {
                 id: '1',
                 createdAt: '12/12/2024',
@@ -32,7 +33,7 @@ export default function HomePage() {
                 name: 'supabase-csharp',
                 pushedAt: null,
                 sshUrl: '',
-                stargazerCount: 1982378230,
+                stargazerCount: 1000,
                 url: 'https://github.com/supabase-community/supabase-csharp',
                 license: { id: 'jjas9as', name: 'MIT', url: 'https://opensource.org/license/mit' },
                 readmeUrl: null,
@@ -41,8 +42,9 @@ export default function HomePage() {
                 ownerStarred: { id: 'ed2323', bio: null, avatarUrl: 'https://avatars.githubusercontent.com/u/87650496?s=200&v=4', company: null, createdAt: '', email: null, location: null, login: '', name: null, url: '', websiteUrl: null, stargazerCount: 0 },
                 topics: categories,
             },
-        ];
-        setRepos(r);
+        ]; */
+        const res = await repositoryService.getAll(refetch);
+        setRepos(res);
     };
 
     useEffect(() => {
@@ -51,11 +53,11 @@ export default function HomePage() {
 
     useEffect(() => {
         setReposs();
-        const elementTags = categories.map((cat) => {
-            return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
-        });
-        setTags(elementTags);
-    }, [categories]);
+        // const elementTags = categories.map((cat) => {
+        //     return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
+        // });
+        // setTags(elementTags);
+    }, []);
 
     useEffect(() => {
         console.log(repos);
@@ -66,7 +68,17 @@ export default function HomePage() {
             {repos ? (
                 <div className="h-full">
                     <div className="h-screen">
-                        <RepositoryC isFullView={true} repository={repos[0]} topics={tags} />
+                        {repos.length > 0 ? (
+                            repos.map((repo) => {
+                                const elementTags = categories.map((cat) => {
+                                    return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
+                                });
+                                return <RepositoryParcialView key={repo.id} repository={repo} topics={elementTags} />;
+                            })
+                        ) : (
+                            <Loading />
+                        )}
+                        {/* <RepositoryFullView repository={repos[0]} topics={tags} /> */}
                     </div>
                 </div>
             ) : (

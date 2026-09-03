@@ -1,4 +1,6 @@
+@import url('./assets/css/backgrounds.css');
 @import 'tailwindcss';
+
 @plugin "daisyui" {
     themes:
         dark --default --prefersdark,
