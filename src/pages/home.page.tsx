@@ -70,9 +70,12 @@ export default function HomePage() {
                     <div className="h-screen">
                         {repos.length > 0 ? (
                             repos.map((repo) => {
-                                const elementTags = categories.map((cat) => {
-                                    return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
-                                });
+                                let elementTags = [<span className="italic text-neutral">Not categories</span>];
+                                if (repo.topics && repo.topics.length > 0) {
+                                    elementTags = repo.topics.map((cat) => {
+                                        return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
+                                    });
+                                }
                                 return <RepositoryParcialView key={repo.id} repository={repo} topics={elementTags} />;
                             })
                         ) : (

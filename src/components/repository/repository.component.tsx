@@ -69,7 +69,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
                         <a href={repository.url} target="_blank" className="badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
                             <div className="avatar">
                                 <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                                    <img alt={`Owner of repository '${repository.name}'`} src={`${repository.owner.avatarUrl}`} />
+                                    <img alt={`Owner of repository '${repository.name}'`} src={`${repository.owner.avatar_url}`} />
                                 </div>
                             </div>
                         </a>
