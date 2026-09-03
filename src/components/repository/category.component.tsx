@@ -10,7 +10,7 @@ interface CategoryProps {
 const CategoryC: FC<CategoryProps> = ({ name, to }) => {
     const badgeStyle: string = Helpers.getRandomBadgeStyle();
     return (
-        <Link to={to} className={`m-1 badge-lg badge badge-soft ${badgeStyle}`}>
+        <Link to={to} className={`m-1 badge-lg badge badge-soft ${badgeStyle} w-auto text-nowrap`}>
             {name}
         </Link>
     );
