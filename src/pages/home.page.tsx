@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { RepositoryParcialView } from '../components/repository/repository.component';
-import type { Repository, Topic } from '../app/models/models';
+import type { Repository } from '../app/models/models';
 import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 import repositoryService from '../app/services/repository.service';
-
-const base = import.meta.env.VITE_API_URL;
 
 export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);

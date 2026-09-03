@@ -6,8 +6,6 @@ class RepositoryService extends Service {
     private PAGE_COUNT: number = 50;
     private rounds: number = 0;
     private start: number = 0;
-    private end: number = 0;
-    private table: string = 'repository';
 
     get(): Promise<any> {
         throw new Error('Method not implemented.');
@@ -18,13 +16,11 @@ class RepositoryService extends Service {
         let savedData = data as Tables<'repository'>[];
         if (itRequireNewData === true || isRefetch === true) {
             this.start = this.rounds * this.PAGE_COUNT;
-            // this.end = this.start + this.PAGE_COUNT - 1;
             const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
             if (error !== null) {
                 console.error(error);
                 return [];
             }
-            console.log(data);
 
             savedData = savedData !== null ? [...savedData, ...data] : data;
             const sorted = savedData.sort((a, b) => a.name.localeCompare(b.name));
