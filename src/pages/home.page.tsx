@@ -27,12 +27,10 @@ export default function HomePage() {
     const paginationPrevious = () => {
         console.log('Previous');
         setCurrentPage((prev) => prev - 1);
-        // getPagination();
     };
     const paginationNext = () => {
         console.log('Next');
         setCurrentPage((prev) => prev + 1);
-        // getPagination();
     };
 
     useEffect(() => {
@@ -72,7 +70,7 @@ export default function HomePage() {
                     {/* <button className="col-span-12 btn btn-primary text-nowrap" onClick={() => setReposs(true)}>
                         Load More <i className="fa-solid fa-plus"></i>
                     </button> */}
-                    <div className="fixed w-full flex justify-center bottom-14 ">
+                    <div className=" col-span-12 w-full flex items-center justify-center bottom-14 ">
                         <PaginationController next={() => paginationNext()} previous={() => paginationPrevious()} page={currentPage} />
                     </div>
                 </div>
