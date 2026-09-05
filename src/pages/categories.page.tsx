@@ -69,9 +69,6 @@ export default function CategoriesPage() {
                                     const rd = Math.random() * 19882 * 3 - 2;
                                     return <CategoryC name={cat.name} to={`/categories/${cat.name}`} key={`${cat.id}-${cat.name}-${rd}`} />;
                                 })}
-                                {/* <button onClick={() => fetchCategories(true)} className="btn btn-primary">
-                                Load More <i className="fa-solid fa-plus"></i>
-                                </button> */}
                             </div>
                             <div className="w-full flex justify-center">
                                 <PaginationController next={() => paginationNext()} previous={() => paginationPrevious()} page={currentPage} />
