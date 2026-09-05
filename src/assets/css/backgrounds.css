@@ -1,5 +1,6 @@
 .cbg-shiny {
     background-image: url('../img/svg/bg-pattern.svg');
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-blend-mode: screen;
+    background-size: contain;
 }

@@ -6,13 +6,17 @@ import CategoryC from '../components/repository/category.component';
 import repositoryService from '../app/services/repository.service';
 import PaginationController from '../components/pagination.component';
 import Helpers from '../app/utils/helpers.utils';
+import { useWindowTitle } from '../app/stores/app.store';
+import { PAGES_TITLES } from '../app/utils/constants';
 
 export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);
     const [currentRepos, setCurrentRepos] = useState<Repository[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const winTitle = useWindowTitle();
 
     const setReposs = async (refetch: boolean = false) => {
+        winTitle.updateTitle(PAGES_TITLES.home);
         const res = await repositoryService.getAll(refetch);
         setRepos((prev) => [...prev, ...res]);
     };
@@ -67,9 +71,6 @@ export default function HomePage() {
                         }
                         return <RepositoryParcialView key={`repo-${repo.id}-${uuid}`} repository={repo} topics={elementTags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;
                     })}
-                    {/* <button className="col-span-12 btn btn-primary text-nowrap" onClick={() => setReposs(true)}>
-                        Load More <i className="fa-solid fa-plus"></i>
-                    </button> */}
                     <div className=" col-span-12 w-full flex items-center justify-center bottom-14 ">
                         <PaginationController next={() => paginationNext()} previous={() => paginationPrevious()} page={currentPage} />
                     </div>

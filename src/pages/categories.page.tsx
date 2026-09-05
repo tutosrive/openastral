@@ -5,13 +5,18 @@ import CategoryC from '../components/repository/category.component';
 import topicService from '../app/services/topic.services';
 import PaginationController from '../components/pagination.component';
 import Helpers from '../app/utils/helpers.utils';
+import { useWindowTitle } from '../app/stores/app.store';
+import { PAGES_TITLES } from '../app/utils/constants';
 
 export default function CategoriesPage() {
     const [hasError, setHasError] = useState<boolean>(false);
     const [categories, setCategories] = useState<Topic[]>([]);
     const [currentCategories, setCurrentCategories] = useState<Topic[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const winTitle = useWindowTitle();
+
     const fetchCategories = async (refetch: boolean = false) => {
+        winTitle.updateTitle(PAGES_TITLES.categories);
         const res = await topicService.getAll(refetch);
         if (res.length > 0) {
             setCategories((prev) => [...prev, ...res]);

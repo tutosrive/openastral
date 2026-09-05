@@ -55,11 +55,11 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
     const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
     const forkCount = Helpers.formatNumberToCompact(repository.fork_count);
     return (
-        <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-40 shadow-sm overflow-hidden`}>
+        <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-auto shadow-sm overflow-hidden`}>
             <div className="card-body">
                 <div className="grid grid-cols-12">
-                    <h2 className="card-title truncate col-span-6">{repository.name}</h2>
-                    <div className="col-span-6 carousel text-nowrap flex items-center py-1">
+                    <h2 className="card-title truncate lg:col-span-6 col-span-12">{repository.name}</h2>
+                    <div className="lg:col-span-6 col-span-12 carousel text-nowrap flex items-center lg:justify-end justify-center py-1">
                         {/* License */}
                         {/* <div className="m-2 badge badge-soft bg-neutral rounded-xl w-auto h-10">
                             <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
@@ -69,7 +69,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
                         </div> */}
                         {/* Forks Count */}
                         <div className="mx-0.5 badge badge-soft bg-neutral rounded-xl w-auto h-10">
-                            <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
+                            <a target="_blank" href={`${repository.url}/forks`}>
                                 <i className="fa-solid fa-code-fork"></i>
                                 <span className="truncate">{forkCount}</span>
                             </a>
