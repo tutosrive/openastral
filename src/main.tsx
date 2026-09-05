@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <BrowserRouter basename="/astralsupa">
+        <BrowserRouter basename="/">
             <App />
         </BrowserRouter>
     </StrictMode>,

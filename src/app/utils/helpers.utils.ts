@@ -14,4 +14,19 @@ export default class Helpers {
     static formatNumberToCompact(n: number): string {
         return Intl.NumberFormat('en-US', { notation: 'compact', compactDisplay: 'short' }).format(n);
     }
+
+    static getArrayPagination(arr: Array<any>, currentPage: number, pageSize: number): { data: Array<any>; page: number } {
+        let page = currentPage;
+        const start = (currentPage - 1) * pageSize;
+        const end = start + pageSize;
+        if (start > arr.length - 1 || start < 0) {
+            return this.getArrayPagination(arr, 1, pageSize);
+        }
+        // if (start < 0) {
+        //     const floor = Math.floor(arr.length / pageSize);
+        //     return this.getArrayPagination(arr, floor, pageSize);
+        // }
+        let data = arr.slice(start, end);
+        return { data, page };
+    }
 }

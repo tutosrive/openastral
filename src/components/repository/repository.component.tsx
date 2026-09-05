@@ -59,7 +59,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
             <div className="card-body">
                 <div className="grid grid-cols-12">
                     <h2 className="card-title truncate col-span-6">{repository.name}</h2>
-                    <div className="col-span-6 carousel text-nowrap flex items-center justify-end py-1">
+                    <div className="col-span-6 carousel text-nowrap flex items-center py-1">
                         {/* License */}
                         {/* <div className="m-2 badge badge-soft bg-neutral rounded-xl w-auto h-10">
                             <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>

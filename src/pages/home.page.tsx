@@ -4,13 +4,46 @@ import type { Repository } from '../app/models/models';
 import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 import repositoryService from '../app/services/repository.service';
+import PaginationController from '../components/pagination.component';
+import Helpers from '../app/utils/helpers.utils';
 
 export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);
+    const [currentRepos, setCurrentRepos] = useState<Repository[]>([]);
+    const [currentPage, setCurrentPage] = useState<number>(1);
+
     const setReposs = async (refetch: boolean = false) => {
         const res = await repositoryService.getAll(refetch);
         setRepos((prev) => [...prev, ...res]);
     };
+    const getPagination = () => {
+        const { data, page } = Helpers.getArrayPagination(repos, currentPage, 20);
+        setCurrentPage((prev) => {
+            const newPage = page !== prev ? page : prev;
+            return newPage;
+        });
+        setCurrentRepos(data);
+    };
+    const paginationPrevious = () => {
+        console.log('Previous');
+        setCurrentPage((prev) => prev - 1);
+    };
+    const paginationNext = () => {
+        console.log('Next');
+        setCurrentPage((prev) => prev + 1);
+    };
+
+    useEffect(() => {
+        if (repos && repos.length > 0) {
+            getPagination();
+        }
+    }, [repos]);
+
+    useEffect(() => {
+        if (repos && repos.length > 0) {
+            getPagination();
+        }
+    }, [currentPage]);
 
     useEffect(() => {
         setReposs();
@@ -18,9 +51,9 @@ export default function HomePage() {
 
     return (
         <div id="home-page" className="w-full">
-            {repos.length > 0 ? (
+            {currentRepos.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
-                    {repos.map((repo) => {
+                    {currentRepos.map((repo) => {
                         const uuid = crypto.randomUUID();
                         let elementTags = [
                             <span key={uuid} className="italic text-neutral">
@@ -34,10 +67,12 @@ export default function HomePage() {
                         }
                         return <RepositoryParcialView key={`repo-${repo.id}-${uuid}`} repository={repo} topics={elementTags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;
                     })}
-                    <button className="btn btn-primary" onClick={() => setReposs(true)}>
-                        {' '}
+                    {/* <button className="col-span-12 btn btn-primary text-nowrap" onClick={() => setReposs(true)}>
                         Load More <i className="fa-solid fa-plus"></i>
-                    </button>
+                    </button> */}
+                    <div className=" col-span-12 w-full flex items-center justify-center bottom-14 ">
+                        <PaginationController next={() => paginationNext()} previous={() => paginationPrevious()} page={currentPage} />
+                    </div>
                 </div>
             ) : (
                 <Loading />
