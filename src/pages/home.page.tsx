@@ -6,13 +6,17 @@ import CategoryC from '../components/repository/category.component';
 import repositoryService from '../app/services/repository.service';
 import PaginationController from '../components/pagination.component';
 import Helpers from '../app/utils/helpers.utils';
+import { useWindowTitle } from '../app/stores/app.store';
+import { PAGES_TITLES } from '../app/utils/constants';
 
 export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);
     const [currentRepos, setCurrentRepos] = useState<Repository[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const winTitle = useWindowTitle();
 
     const setReposs = async (refetch: boolean = false) => {
+        winTitle.updateTitle(PAGES_TITLES.home);
         const res = await repositoryService.getAll(refetch);
         setRepos((prev) => [...prev, ...res]);
     };

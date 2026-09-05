@@ -1,9 +1,10 @@
 import { Link } from 'react-router';
 import ThemeChanger from './theme-changer.component';
+import { useTheme } from '../app/stores/app.store';
 
 export default function Header() {
     const values = { home: 'Home', about: { first: 'About', second: 'Page', third: 'Creator', fourthy: 'Search' }, category: 'Categories' };
-
+    const theme = useTheme((state) => state.name);
     return (
         <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm w-full row-span-1 rounded-none z-50">
             <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
@@ -66,7 +67,7 @@ export default function Header() {
                         </svg>
                         <input type="search" required placeholder="Search" className="input w-64 lg:w-auto" />
                     </label>
-                    <ThemeChanger themeName="Default" />
+                    <ThemeChanger themeName={theme} />
                 </div>
             </div>
 

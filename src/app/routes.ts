@@ -6,13 +6,12 @@ const RepositoryPage = lazy(() => import('../pages/repository/repository.page'))
 const CreatorPage = lazy(() => import('../pages/about/admin.page'));
 
 const routes = [
-    { endpoint: '/', title: 'Tutos Rive Stargazers | Stargazers | Awesome Github Repositories | Github Stargazers', component: HomePage },
-    { endpoint: '/categories', title: 'Stargazers Categories | Repositories Topics', component: CategoriesPage },
-    { endpoint: '/repositories/:id', title: 'Favorite Repository | Github Repository', component: RepositoryPage },
-    { endpoint: '/about', title: 'About Astral Supa | Astral Supa Information', component: CategoriesPage },
-    { endpoint: '/about/admin', title: 'Admin Astral Supa | Github Admin | About Admin Astral Supa', component: CreatorPage },
-    { endpoint: '/repositories/query/search', title: 'Search Repositories | Search Favorite Repository', component: HomePage },
-    { endpoint: '/about/admin', title: 'Admin Astral Supa | Github Admin | About Admin Astral Supa', component: CreatorPage },
+    { id: 'route-home', endpoint: '/', component: HomePage },
+    { id: 'route-categories', endpoint: '/categories', component: CategoriesPage },
+    { id: 'route-repository-id', endpoint: '/repositories/:id', component: RepositoryPage },
+    { id: 'route-about', endpoint: '/about', component: CategoriesPage },
+    { id: 'route-admin', endpoint: '/about/admin', component: CreatorPage },
+    { id: 'route-repository-search', endpoint: '/repositories/query/search', component: HomePage },
 ];
 
 export default routes;

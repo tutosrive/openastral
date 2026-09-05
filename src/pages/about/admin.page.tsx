@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import type { Tables } from '../../app/models/supabase';
 import adminService from '../../app/services/admin.service';
 import Loading from '../../components/loading.component';
+import { useWindowTitle } from '../../app/stores/app.store';
+import { PAGES_TITLES } from '../../app/utils/constants';
 
 export default function CreatorPage() {
     const [creator, setCreator] = useState<Tables<'admin'>>();
     const [hasError, setHasError] = useState<boolean>(false);
-
+    const winTitle = useWindowTitle();
     const getCreator = async () => {
+        winTitle.updateTitle(PAGES_TITLES.admin);
         const data = await adminService.get();
         console.log(data);
         if (!data || data === null) {

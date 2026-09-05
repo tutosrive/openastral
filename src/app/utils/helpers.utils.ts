@@ -29,4 +29,13 @@ export default class Helpers {
         let data = arr.slice(start, end);
         return { data, page };
     }
+
+    static capitalizeString(str: string): string {
+        let capitalized = '';
+        str.split(' ').forEach((split) => {
+            capitalized += split.charAt(0).toUpperCase() + split.substring(1, split.length);
+        });
+
+        return capitalized;
+    }
 }

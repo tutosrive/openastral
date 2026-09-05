@@ -1,4 +1,4 @@
-export const CUSTOM_BADGES_STYLES = [
+export const CUSTOM_BADGES_STYLES: Array<string> = [
     'badge-primary',
     'badge-secondary',
     'badge-info',
@@ -94,3 +94,12 @@ export const CUSTOM_BADGES_STYLES = [
     'bg-rose-950 text-rose-400',
     'bg-rose-900 text-rose-300',
 ];
+
+export const PAGES_TITLES = {
+    home: 'Awesome Github Repositories | Stargazers | Tutos Rive Stargazers | Github Stargazers',
+    categories: 'Stargazers Categories | Repositories Topics',
+    repository: 'Favorite Repository | Github Repository',
+    about: 'About Astral Supa | Astral Supa Information',
+    admin: 'Admin Astral Supa | Github Admin | About Admin Astral Supa',
+    search: 'Search Repositories | Search Favorite Repository',
+};
