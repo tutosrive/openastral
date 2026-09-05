@@ -16,7 +16,7 @@ export default function Header() {
                         </svg>
                     </label>
                     <Link to={'/'} className="btn btn-ghost text-xl">
-                        Astral Supa
+                        Open Astral
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex pb-1">
@@ -66,7 +66,7 @@ export default function Header() {
                         </svg>
                         <input type="search" required placeholder="Search" className="input w-64 lg:w-auto" />
                     </label>
-                    <ThemeChanger />
+                    <ThemeChanger themeName="Default" />
                 </div>
             </div>
 

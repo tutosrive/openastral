@@ -67,9 +67,6 @@ export default function HomePage() {
                         }
                         return <RepositoryParcialView key={`repo-${repo.id}-${uuid}`} repository={repo} topics={elementTags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;
                     })}
-                    {/* <button className="col-span-12 btn btn-primary text-nowrap" onClick={() => setReposs(true)}>
-                        Load More <i className="fa-solid fa-plus"></i>
-                    </button> */}
                     <div className=" col-span-12 w-full flex items-center justify-center bottom-14 ">
                         <PaginationController next={() => paginationNext()} previous={() => paginationPrevious()} page={currentPage} />
                     </div>
