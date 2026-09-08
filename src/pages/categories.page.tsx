@@ -7,6 +7,7 @@ import PaginationController from '../components/pagination.component';
 import Helpers from '../app/utils/helpers.utils';
 import { useWindowTitle } from '../app/stores/app.store';
 import { PAGES_TITLES } from '../app/utils/constants';
+import SkeletonCategories from '../components/skeleton/categories.skeleton';
 
 export default function CategoriesPage() {
     const [hasError, setHasError] = useState<boolean>(false);
@@ -75,7 +76,7 @@ export default function CategoriesPage() {
                             </div>
                         </div>
                     ) : (
-                        <Loading />
+                        <SkeletonCategories />
                     )
                 ) : (
                     <p>Has happend something loading categories data, trye again</p>
