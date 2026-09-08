@@ -13,10 +13,10 @@ export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);
     const [currentRepos, setCurrentRepos] = useState<Repository[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const winTitle = useWindowTitle();
+    const updateTitle = useWindowTitle((state) => state.updateTitle);
 
     const setReposs = async (refetch: boolean = false) => {
-        winTitle.updateTitle(PAGES_TITLES.home);
+        updateTitle(PAGES_TITLES.home);
         const res = await repositoryService.getAll(refetch);
         setRepos((prev) => [...prev, ...res]);
     };

@@ -8,9 +8,9 @@ import { PAGES_TITLES } from '../../app/utils/constants';
 export default function CreatorPage() {
     const [creator, setCreator] = useState<Tables<'admin'>>();
     const [hasError, setHasError] = useState<boolean>(false);
-    const winTitle = useWindowTitle();
+    const updateTitle = useWindowTitle((state) => state.updateTitle);
     const getCreator = async () => {
-        winTitle.updateTitle(PAGES_TITLES.admin);
+        updateTitle(PAGES_TITLES.admin);
         const data = await adminService.get();
         console.log(data);
         if (!data || data === null) {

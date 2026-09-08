@@ -13,10 +13,10 @@ export default function CategoriesPage() {
     const [categories, setCategories] = useState<Topic[]>([]);
     const [currentCategories, setCurrentCategories] = useState<Topic[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const winTitle = useWindowTitle();
+    const updateTitle = useWindowTitle((state) => state.updateTitle);
 
     const fetchCategories = async (refetch: boolean = false) => {
-        winTitle.updateTitle(PAGES_TITLES.categories);
+        updateTitle(PAGES_TITLES.categories);
         const res = await topicService.getAll(refetch);
         if (res.length > 0) {
             setCategories((prev) => [...prev, ...res]);

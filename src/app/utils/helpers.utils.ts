@@ -19,13 +19,13 @@ export default class Helpers {
         let page = currentPage;
         const start = (currentPage - 1) * pageSize;
         const end = start + pageSize;
-        if (start > arr.length - 1 || start < 0) {
+        if (start > arr.length - 1) {
             return this.getArrayPagination(arr, 1, pageSize);
         }
-        // if (start < 0) {
-        //     const floor = Math.floor(arr.length / pageSize);
-        //     return this.getArrayPagination(arr, floor, pageSize);
-        // }
+        if (start < 0) {
+            const floor = Math.floor(arr.length / pageSize);
+            return this.getArrayPagination(arr, floor, pageSize);
+        }
         let data = arr.slice(start, end);
         return { data, page };
     }
@@ -37,5 +37,10 @@ export default class Helpers {
         });
 
         return capitalized;
+    }
+
+    static getInitialThemeFromLocal() {
+        const theme = localStorage.getItem('theme');
+        return theme !== 'true' && theme && theme.length > 4 ? theme : 'default';
     }
 }
