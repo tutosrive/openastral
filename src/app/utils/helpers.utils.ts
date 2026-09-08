@@ -31,7 +31,7 @@ export default class Helpers {
     }
 
     static calculateNextPage(currentPage: number): number {
-        return 0;
+        return currentPage;
     }
 
     static capitalizeString(str: string): string {
