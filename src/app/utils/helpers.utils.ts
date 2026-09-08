@@ -30,6 +30,10 @@ export default class Helpers {
         return { data, page };
     }
 
+    static calculateNextPage(currentPage: number): number {
+        return 0;
+    }
+
     static capitalizeString(str: string): string {
         let capitalized = '';
         str.split(' ').forEach((split) => {

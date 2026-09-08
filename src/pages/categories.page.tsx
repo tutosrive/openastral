@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import type { Topic } from '../app/models/models';
-import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 import topicService from '../app/services/topic.services';
 import PaginationController from '../components/pagination.component';
 import Helpers from '../app/utils/helpers.utils';
 import { useWindowTitle } from '../app/stores/app.store';
 import { PAGES_TITLES } from '../app/utils/constants';
-import SkeletonCategories from '../components/skeleton/categories.skeleton';
+import SkeletonCategory from '../components/skeleton/categories.skeleton';
 
 export default function CategoriesPage() {
     const [hasError, setHasError] = useState<boolean>(false);
@@ -28,10 +27,7 @@ export default function CategoriesPage() {
 
     const getPagination = () => {
         const { data, page } = Helpers.getArrayPagination(categories, currentPage, 20);
-        setCurrentPage((prev) => {
-            const newPage = page !== prev ? page : prev;
-            return newPage;
-        });
+        setCurrentPage(page);
         setCurrentCategories(data);
     };
     const paginationPrevious = () => {
@@ -66,7 +62,7 @@ export default function CategoriesPage() {
                     currentCategories.length > 0 ? (
                         <div className="w-full h-full">
                             <div className="mb-3">
-                                {categories.map((cat) => {
+                                {currentCategories.map((cat) => {
                                     const rd = Math.random() * 19882 * 3 - 2;
                                     return <CategoryC name={cat.name} to={`/categories/${cat.name}`} key={`${cat.id}-${cat.name}-${rd}`} />;
                                 })}
@@ -76,7 +72,7 @@ export default function CategoriesPage() {
                             </div>
                         </div>
                     ) : (
-                        <SkeletonCategories />
+                        <SkeletonCategory />
                     )
                 ) : (
                     <p>Has happend something loading categories data, trye again</p>

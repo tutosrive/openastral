@@ -1,4 +1,4 @@
-export default function SkeletonCategories() {
+export default function SkeletonCategory() {
     return (
         <div className="flex w-full h-full flex-wrap gap-2 animate-pulse">
             <div className="skeleton badge badge-lg w-full"></div>

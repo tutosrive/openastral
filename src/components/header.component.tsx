@@ -9,14 +9,14 @@ export default function Header() {
         <div className="flex items-center justify-center max-lg:collapse bg-base-200 lg:mb-4 shadow-sm w-full row-span-1 rounded-none z-50 py-9">
             <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
             <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
-            <div className="collapse-title navbar m-0 flex lg:w-full md:w-full w-screen">
+            <div className="collapse-title navbar m-0 flex lg:w-full md:w-full w-screen ">
                 <div className="navbar-start">
                     <label htmlFor="navbar-1-toggle" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </label>
-                    <Link to={'/'} className="px-12 text-4xl britney-ft">
+                    <Link to={'/'} className="lg:px-12 text-nowrap text-4xl britney-ft">
                         Open Astral
                     </Link>
                 </div>
