@@ -1,19 +1,24 @@
+import { useState } from 'react';
+
 export default function SkeletonRepository() {
+    const [els] = useState<Array<number>>(new Array<number>(10).fill(0, 0, 10));
+
     return (
-        <div className="mx-auto w-full max-w-sm rounded-md border border-blue-300 p-4">
-            <div className="flex animate-pulse space-x-4">
-                <div className="size-10 rounded-full bg-gray-200"></div>
-                <div className="flex-1 space-y-6 py-1">
-                    <div className="h-2 rounded bg-gray-200"></div>
-                    <div className="space-y-3">
-                        <div className="grid grid-cols-3 gap-4">
-                            <div className="col-span-2 h-2 rounded bg-gray-200"></div>
-                            <div className="col-span-1 h-2 rounded bg-gray-200"></div>
+        <div className="w-full h-full grid grid-cols-12 justify-between rounded-md gap-2 animate-pulse">
+            {els.map((val, i) => {
+                return (
+                    <div key={`${val}-${i}`} className="w-full lg:col-span-6 md:col-span-6 col-span-10 p-5">
+                        <div className="flex items-center gap-4 ">
+                            <div className="skeleton h-16 w-16 shrink-0 rounded-full bg-neutral"></div>
+                            <div className="flex flex-col gap-4">
+                                <div className="skeleton h-4 w-20 bg-neutral"></div>
+                                <div className="skeleton h-4 w-28 bg-neutral"></div>
+                            </div>
                         </div>
-                        <div className="h-2 rounded bg-gray-200"></div>
+                        <div className="skeleton mt-1 h-32 w-full bg-neutral"></div>
                     </div>
-                </div>
-            </div>
+                );
+            })}
         </div>
     );
 }

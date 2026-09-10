@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { RepositoryParcialView } from '../components/repository/repository.component';
 import type { Repository } from '../app/models/models';
-import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 import repositoryService from '../app/services/repository.service';
 import PaginationController from '../components/pagination.component';
 import Helpers from '../app/utils/helpers.utils';
 import { useWindowTitle } from '../app/stores/app.store';
 import { PAGES_TITLES } from '../app/utils/constants';
+import SkeletonRepository from '../components/skeleton/repository.skeleton';
 
 export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);
@@ -54,7 +54,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div id="home-page" className="w-full">
+        <div id="home-page" className="w-full px-5 py-8">
             {currentRepos.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
                     {currentRepos.map((repo) => {
@@ -76,7 +76,7 @@ export default function HomePage() {
                     </div>
                 </div>
             ) : (
-                <Loading />
+                <SkeletonRepository />
             )}
         </div>
     );
