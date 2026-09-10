@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { RepositoryParcialView } from '../components/repository/repository.component';
 import type { Repository } from '../app/models/models';
-import Loading from '../components/loading.component';
 import CategoryC from '../components/repository/category.component';
 import repositoryService from '../app/services/repository.service';
 import PaginationController from '../components/pagination.component';
@@ -78,7 +77,6 @@ export default function HomePage() {
                 </div>
             ) : (
                 <SkeletonRepository />
-                // <Loading />
             )}
         </div>
     );
