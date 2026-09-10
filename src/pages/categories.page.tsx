@@ -26,7 +26,7 @@ export default function CategoriesPage() {
     };
 
     const getPagination = () => {
-        const { data, page } = Helpers.getArrayPagination(categories, currentPage, 20);
+        const { data, page } = Helpers.getArrayPagination(categories, currentPage, 80);
         setCurrentPage(page);
         setCurrentCategories(data);
     };
