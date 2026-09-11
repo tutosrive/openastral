@@ -18,9 +18,9 @@ export default abstract class Service {
 
     protected async requireNewData(key: string, table: 'admin' | 'db_version' | 'language' | 'license' | 'owner' | 'repository' | 'topic' | 'topicxrepository') {
         let itRequireNewData: boolean = false;
-        let data: Tables<typeof table> | null | Tables<typeof table>[] = StorageUtils.getJSONFromStorage(key);
-        const dbIsOld: boolean = await this.supabase.checkDatabaseVersion();
-        if (dbIsOld === true || data === null || Object.keys(data).length === 0) {
+        const { isOld, dbVersion } = await this.supabase.checkDatabaseVersion();
+        let data: Tables<typeof table> | null | Tables<typeof table>[] = await StorageUtils.instance.indexedDBInstance(key, dbVersion).get(key); //await StorageUtils.getJSONFromStorage(key);
+        if (isOld === true || data === null || Object.keys(data).length === 0) {
             itRequireNewData = true;
         }
         return { itRequireNewData, data };

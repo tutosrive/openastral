@@ -4,6 +4,13 @@ import Service from './service';
 
 class AdminService extends Service {
     private table: string = 'admin';
+    private storage: StorageUtils = StorageUtils.instance;
+
+    async init(): Promise<AdminService> {
+        const dbVersion = await this.supabase.getDBVersion();
+        this.storage = StorageUtils.instance.indexedDBInstance(this.table, dbVersion);
+        return this;
+    }
 
     async get(): Promise<Tables<'admin'> | null> {
         const { itRequireNewData, data } = await this.requireNewData('admin', 'admin');
@@ -15,7 +22,7 @@ class AdminService extends Service {
                 return null;
             }
             savedData = admin[0];
-            StorageUtils.saveJSONOnLocalStorage('admin', savedData);
+            this.storage.save('admin', savedData);
         }
         return savedData;
     }
@@ -27,5 +34,5 @@ class AdminService extends Service {
     }
 }
 
-const adminService = new AdminService();
+const adminService = await new AdminService().init();
 export default adminService;
