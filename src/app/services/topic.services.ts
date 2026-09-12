@@ -8,13 +8,19 @@ class TopicService extends Service {
     private PAGE_COUNT: number = 100;
     private startCountFetch: number = 0;
     private endCountFetch: number = 0;
+    private storage: StorageUtils = StorageUtils.instance;
+
+    async init(): Promise<TopicService> {
+        this.storage = this.storage.indexedDBInstance('categories');
+        return this;
+    }
 
     async get(): Promise<any> {
         throw new Error('Method not implemented.');
     }
     async getAll(isRefetch: boolean = false): Promise<any[]> {
-        const { itRequireNewData, data } = await this.requireNewData('categories', 'topic');
-        let savedData = data as Tables<'topic'>[];
+        const itRequireNewData = await this.requireNewData('categories');
+        let savedData: Tables<'topic'>[] = [];
         if (itRequireNewData === true || isRefetch === true) {
             this.startCountFetch = this.rounds * this.PAGE_COUNT;
             this.endCountFetch = this.startCountFetch + this.PAGE_COUNT - 1;
@@ -24,16 +30,17 @@ class TopicService extends Service {
                 console.error(error);
                 return [];
             }
-            savedData = savedData !== null ? [...savedData, ...topic] : topic;
-            const sorted = savedData.sort((a, b) => a.name.localeCompare(b.name));
-            StorageUtils.saveJSONOnLocalStorage('categories', sorted);
+            topic.forEach((cat: Tables<'topic'>) => {
+                this.storage.save(cat.id, cat);
+            });
         }
-        return savedData;
+        savedData = await this.storage.getCollection<Tables<'topic'>>();
+        return savedData.sort((a, b) => a.name.localeCompare(b.name));
     }
     getById(): Promise<any> {
         throw new Error('Method not implemented.');
     }
 }
 
-const topicService = new TopicService();
+const topicService = await new TopicService().init();
 export default topicService;

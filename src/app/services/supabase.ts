@@ -1,6 +1,5 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Database, Tables } from '../models/supabase';
-import StorageUtils from '../utils/storage.utils';
 
 export default class Supabase {
     static #instance: Supabase;
@@ -20,33 +19,33 @@ export default class Supabase {
         return Supabase.#instance;
     }
 
-    public async getDBVersion(): Promise<number> {
-        let version: number = -1;
+    public async getDBVersion(): Promise<string> {
+        let version: string = '';
         const { data: db_version, error } = await Supabase.#instance.client.from('db_version').select<'db_version', Tables<'db_version'>>();
 
         if (error !== null) {
             console.error(error);
         } else {
-            version = db_version[0]?.version;
+            version = db_version[0]?.version ?? '';
         }
         return version;
     }
 
-    public async checkDatabaseVersion(): Promise<{ isOld: boolean; dbVersion: number }> {
+    public async checkDatabaseVersion(): Promise<boolean> {
         let isOld = false;
-        const TEMP_STORAGE = StorageUtils.instance.localStorageInstance();
+        // const TEMP_STORAGE = StorageUtils.instance.localStorageInstance();
         const dbVersion = await this.getDBVersion();
-        const dbVersionSaved: number | null = await TEMP_STORAGE.getAnyByKey<number>('db_version');
+        const dbVersionSaved: string | null = localStorage.getItem('db_version') ?? '';
         console.log(`Saved: ${dbVersionSaved} | New: ${dbVersion}`);
 
-        if (dbVersionSaved === -1) {
+        if (dbVersionSaved.length === 0) {
             isOld = true;
         } else {
             isOld = dbVersionSaved != dbVersion;
         }
-        TEMP_STORAGE.saveAnyByKey<number>('db_version', dbVersion);
-        // localStorage.setItem('db_version', `${version}`);
+        // TEMP_STORAGE.saveAnyByKey<string>('db_version', dbVersion);
+        localStorage.setItem('db_version', `${dbVersion}`);
 
-        return { isOld, dbVersion };
+        return isOld;
     }
 }

@@ -7,22 +7,21 @@ class AdminService extends Service {
     private storage: StorageUtils = StorageUtils.instance;
 
     async init(): Promise<AdminService> {
-        const dbVersion = await this.supabase.getDBVersion();
-        this.storage = StorageUtils.instance.indexedDBInstance(this.table, dbVersion);
+        this.storage = StorageUtils.instance.indexedDBInstance(this.table);
         return this;
     }
 
     async get(): Promise<Tables<'admin'> | null> {
-        const { itRequireNewData, data } = await this.requireNewData('admin', 'admin');
-        let savedData: Tables<'admin'> = data as Tables<'admin'>;
-        if (itRequireNewData === true) {
+        const itRequireNewData = await this.requireNewData(this.table);
+        let savedData: Tables<'admin'> = (await this.storage.getCollection<Tables<'admin'>>())[0];
+        if (itRequireNewData === true || !savedData || Object.keys(savedData).length === 0) {
             const { data: admin, error } = await this.client.from(this.table).select<'admin', Tables<'admin'>>();
             if (error !== null) {
                 console.error(error);
                 return null;
             }
             savedData = admin[0];
-            this.storage.save('admin', savedData);
+            this.storage.save(savedData.id, savedData);
         }
         return savedData;
     }

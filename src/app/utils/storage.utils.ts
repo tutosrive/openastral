@@ -1,16 +1,8 @@
 import localforage from 'localforage';
 
 export default class StorageUtils {
-    // static saveJSONOnLocalStorage(key: string, data: any): boolean {
-    //     let ok: boolean = false;
-    //     const value: string = data == null ? '{}' : JSON.stringify(data);
-    //     localStorage.setItem(key, value);
-    //     const recovered: any = this.getJSONFromStorage(key);
-    //     if (recovered == data) ok = true;
-    //     return ok;
-    // }
     static #instance: StorageUtils;
-    localforage: LocalForage | undefined;
+    storage: LocalForage | undefined;
 
     private constructor() {}
 
@@ -21,26 +13,15 @@ export default class StorageUtils {
         return this.#instance;
     }
 
-    indexedDBInstance(storeName: string, version: number): StorageUtils {
-        const STORAGE_CONFIG: LocalForageOptions = { name: `openastral-${storeName}`, storeName, version, driver: localforage.INDEXEDDB };
-        this.localforage = localforage.createInstance(STORAGE_CONFIG);
-        console.log(this.localforage);
-        return this;
-    }
-
-    localStorageInstance(): StorageUtils {
-        const STORAGE_CONFIG: LocalForageOptions = { name: `openastral-localstorage`, driver: localforage.LOCALSTORAGE };
-        this.localforage = localforage.createInstance(STORAGE_CONFIG);
-        console.log(this.localforage);
+    indexedDBInstance(storeName: string): StorageUtils {
+        const STORAGE_CONFIG: LocalForageOptions = { name: `openastral`, storeName, driver: localforage.INDEXEDDB };
+        this.storage = localforage.createInstance(STORAGE_CONFIG);
         return this;
     }
 
     async save(key: string, data: any): Promise<boolean> {
         let ok: boolean = false;
-        await this.localforage?.setItem<any>(key, data, (err, value) => {
-            console.log('ERROR', err);
-            console.log('DATA', data);
-
+        await this.storage?.setItem<any>(key, data, (err, value) => {
             if (!err || value === data) {
                 ok = true;
             }
@@ -50,9 +31,7 @@ export default class StorageUtils {
 
     async get(key: string): Promise<any | null> {
         let data: any | null = null;
-        await this.localforage?.getItem(key, (err, value) => {
-            console.log('ERROR', err);
-            console.log('DATA', data);
+        await this.storage?.getItem(key, (err, value) => {
             if (!err && value) {
                 data = value;
             }
@@ -62,9 +41,7 @@ export default class StorageUtils {
 
     async getAnyByKey<T>(key: string): Promise<T | null> {
         let data: any | null = null;
-        await this.localforage?.getItem<T>(key, (e, v) => {
-            console.log('ERROR', e);
-            console.log('DATA', data);
+        await this.storage?.getItem<T>(key, (e, v) => {
             if (!e && v) {
                 data = v;
             }
@@ -74,12 +51,32 @@ export default class StorageUtils {
 
     async saveAnyByKey<T>(key: string, data: T): Promise<T | null> {
         let dataSaved: T | null = null;
-        await this.localforage?.setItem<T>(key, data, (e, v) => {
+        await this.storage?.setItem<T>(key, data, (e, v) => {
             if (!e && v) {
                 dataSaved = v;
             }
         });
         return dataSaved;
+    }
+
+    async getCollectionKeys(): Promise<string[] | null> {
+        let data: Array<string> | null = null;
+        await this.storage?.keys((e, keys) => {
+            if (!e && keys) {
+                data = keys;
+            }
+        });
+        return data;
+    }
+
+    async getCollection<T>(): Promise<T[]> {
+        let data: Array<T> = [];
+        await this.storage?.iterate((value) => {
+            if (value) {
+                data.push(value as T);
+            }
+        });
+        return data;
     }
 
     // static getJSONFromStorage(key: string): any | null {
