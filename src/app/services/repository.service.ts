@@ -1,17 +1,9 @@
 import type { Tables } from '../models/supabase';
-import StorageUtils from '../utils/storage.utils';
 import Service from './service';
 
 class RepositoryService extends Service {
-    private PAGE_COUNT: number = 60;
-    private rounds: number = 0;
+    private PAGE_COUNT: number = 20;
     private start: number = 0;
-    private storage: StorageUtils = StorageUtils.instance;
-
-    async init(): Promise<RepositoryService> {
-        this.storage = StorageUtils.instance.indexedDBInstance('repositories');
-        return this;
-    }
 
     get(): Promise<any> {
         throw new Error('Method not implemented.');
@@ -34,33 +26,22 @@ class RepositoryService extends Service {
         return countR;
     }
 
-    async getAll(page: number, isRefetch: boolean): Promise<any[]> {
-        const itRequireNewData: boolean = await this.requireNewData('repositories');
-        // const missingData:boolean = (await this.storage.getCollectionKeys())?.length ?? false
+    async getPaginated(page: number): Promise<any[]> {
         let savedData: Tables<'repository'>[] = [];
-        if (itRequireNewData === true || isRefetch === true) {
-            this.start = page * this.PAGE_COUNT;
-            const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
+        this.start = (page - 1) * this.PAGE_COUNT;
+        const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
 
-            if (error !== null) {
-                console.error(error);
-                return [];
-            }
-            console.log('New data here:');
-            console.log(data);
-
-            data.forEach(async (repo: Tables<'repository'>) => {
-                await this.storage.save(repo.id, repo);
-            });
-            // this.rounds++;
+        if (error !== null) {
+            console.error(error);
+            return [];
         }
-        savedData = await this.storage.getCollection<Tables<'repository'>>();
-        return savedData.sort((a, b) => a.name.localeCompare(b.name));
+        savedData = (data as Tables<'repository'>[]).sort((a, b) => a.name.localeCompare(b.name));
+        return savedData;
     }
     getById(): Promise<any> {
         throw new Error('Method not implemented.');
     }
 }
 
-const repositoryService = await new RepositoryService().init();
+const repositoryService = new RepositoryService();
 export default repositoryService;
