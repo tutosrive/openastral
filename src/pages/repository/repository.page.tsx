@@ -13,9 +13,11 @@ export default function RepositoryPage() {
     const repositoryId: string = params.id!!;
 
     const getRepository = async () => {
-        const repo = await repositoryService.getById(repositoryId);
-        if (repo) {
-            setRepository(repo);
+        async () => {
+            await repositoryService.getById(repositoryId);
+        };
+        if (repository) {
+            setRepository((prev) => prev);
         }
     };
     const makeTags = () => {
@@ -37,7 +39,7 @@ export default function RepositoryPage() {
         makeTags();
     }, [repository]);
     useEffect(() => {
-        // getRepository();
+        getRepository();
     }, []);
 
     return <div>{repository ? <RepositoryFullView repository={repository} topics={tags} /> : <Loading />}</div>;
