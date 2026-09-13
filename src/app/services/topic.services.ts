@@ -36,7 +36,7 @@ class TopicService extends Service {
         const { data, error } = await this.client.from('topic').select().range(this.start, this.end);
 
         if (error !== null) {
-            console.error(error);
+            console.debug(error);
             return [];
         }
         savedData = (data as Tables<'topic'>[]).sort((a, b) => a.name.localeCompare(b.name));

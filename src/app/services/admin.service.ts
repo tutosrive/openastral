@@ -7,7 +7,7 @@ class AdminService extends Service {
         let savedData: Tables<'admin'> | null = null;
         const { data: admin, error } = await this.client.from(this.table).select<'admin', Tables<'admin'>>();
         if (error !== null) {
-            console.error(error);
+            console.debug(error);
             return null;
         }
         savedData = admin[0];

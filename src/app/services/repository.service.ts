@@ -32,14 +32,21 @@ class RepositoryService extends Service {
         const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
 
         if (error !== null) {
-            console.error(error);
+            console.debug(error);
             return [];
         }
         savedData = (data as Tables<'repository'>[]).sort((a, b) => a.name.localeCompare(b.name));
         return savedData;
     }
-    getById(): Promise<any> {
-        throw new Error('Method not implemented.');
+    async getById(id: string): Promise<any | null> {
+        let repo: Tables<'repository'> | null = null;
+        const { data, error } = await this.client.from('repository').select().eq('id', id);
+        if (error) {
+            console.debug(error);
+            return null;
+        }
+        repo = data[0] as Tables<'repository'>;
+        return repo;
     }
 }
 
