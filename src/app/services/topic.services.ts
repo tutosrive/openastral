@@ -1,33 +1,45 @@
 import type { Tables } from '../models/supabase';
-import StorageUtils from '../utils/storage.utils';
 import Service from './service';
 
 class TopicService extends Service {
     private table: string = 'topic';
-    private rounds: number = 0;
-    private PAGE_COUNT: number = 100;
-    private startCountFetch: number = 0;
-    private endCountFetch: number = 0;
+    private PAGE_COUNT: number = 80;
+    private start: number = 0;
+    private end: number = 0;
 
     async get(): Promise<any> {
         throw new Error('Method not implemented.');
     }
-    async getAll(isRefetch: boolean = false): Promise<any[]> {
-        const { itRequireNewData, data } = await this.requireNewData('categories', 'topic');
-        let savedData = data as Tables<'topic'>[];
-        if (itRequireNewData === true || isRefetch === true) {
-            this.startCountFetch = this.rounds * this.PAGE_COUNT;
-            this.endCountFetch = this.startCountFetch + this.PAGE_COUNT - 1;
-            this.rounds++;
-            const { data: topic, error } = await this.client.from(this.table).select<'topic', Tables<'topic'>>().range(this.startCountFetch, this.endCountFetch).order('name', { ascending: true });
-            if (error !== null) {
-                console.error(error);
-                return [];
+    async getDataCount(): Promise<number> {
+        let countR = 0;
+        const saved = localStorage.getItem('tc');
+        if (!saved || saved.length === 0) {
+            const { count, error } = await this.client.from(this.table).select('*', { count: 'exact', head: true });
+            if (error) {
+                console.log(error);
             }
-            savedData = savedData !== null ? [...savedData, ...topic] : topic;
-            const sorted = savedData.sort((a, b) => a.name.localeCompare(b.name));
-            StorageUtils.saveJSONOnLocalStorage('categories', sorted);
+            if (count) {
+                countR = count;
+                localStorage.setItem('tc', count.toString());
+            }
         }
+        countR = parseInt(localStorage.getItem('rc')!!);
+        return countR;
+    }
+
+    async getPaginated(page: number): Promise<any[]> {
+        let savedData: Tables<'topic'>[] = [];
+        this.start = (page - 1) * this.PAGE_COUNT;
+        this.end = this.start + this.PAGE_COUNT;
+        console.log(this.start);
+
+        const { data, error } = await this.client.from('topic').select().range(this.start, this.end);
+
+        if (error !== null) {
+            console.error(error);
+            return [];
+        }
+        savedData = (data as Tables<'topic'>[]).sort((a, b) => a.name.localeCompare(b.name));
         return savedData;
     }
     getById(): Promise<any> {

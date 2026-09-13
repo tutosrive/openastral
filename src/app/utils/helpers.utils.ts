@@ -15,25 +15,6 @@ export default class Helpers {
         return Intl.NumberFormat('en-US', { notation: 'compact', compactDisplay: 'short' }).format(n);
     }
 
-    static getArrayPagination(arr: Array<any>, currentPage: number, pageSize: number): { data: Array<any>; page: number } {
-        let page = currentPage;
-        const start = (currentPage - 1) * pageSize;
-        const end = start + pageSize;
-        if (start > arr.length - 1) {
-            return this.getArrayPagination(arr, 1, pageSize);
-        }
-        if (start < 0) {
-            const floor = Math.floor(arr.length / pageSize);
-            return this.getArrayPagination(arr, floor, pageSize);
-        }
-        let data = arr.slice(start, end);
-        return { data, page };
-    }
-
-    static calculateNextPage(currentPage: number): number {
-        return currentPage;
-    }
-
     static capitalizeString(str: string): string {
         let capitalized = '';
         str.split(' ').forEach((split) => {

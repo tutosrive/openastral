@@ -12,7 +12,6 @@ export default function CreatorPage() {
     const getCreator = async () => {
         updateTitle(PAGES_TITLES.admin);
         const data = await adminService.get();
-        console.log(data);
         if (!data || data === null) {
             setHasError(true);
             return;

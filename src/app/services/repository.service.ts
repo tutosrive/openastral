@@ -1,32 +1,41 @@
 import type { Tables } from '../models/supabase';
-import StorageUtils from '../utils/storage.utils';
 import Service from './service';
 
 class RepositoryService extends Service {
-    private PAGE_COUNT: number = 50;
-    private rounds: number = 0;
+    private PAGE_COUNT: number = 20;
     private start: number = 0;
 
     get(): Promise<any> {
         throw new Error('Method not implemented.');
     }
 
-    async getAll(isRefetch: boolean): Promise<any[]> {
-        const { itRequireNewData, data } = await this.requireNewData('repositories', 'repository');
-        let savedData = data as Tables<'repository'>[];
-        if (itRequireNewData === true || isRefetch === true) {
-            this.start = this.rounds * this.PAGE_COUNT;
-            const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
-            if (error !== null) {
-                console.error(error);
-                return [];
+    async getDataCount(): Promise<number> {
+        let countR = 0;
+        const saved = localStorage.getItem('rc');
+        if (!saved || saved.length === 0) {
+            const { count, error } = await this.client.from('repository').select('*', { count: 'exact', head: true });
+            if (error) {
+                console.log(error);
             }
-
-            savedData = savedData !== null ? [...savedData, ...data] : data;
-            const sorted = savedData.sort((a, b) => a.name.localeCompare(b.name));
-            StorageUtils.saveJSONOnLocalStorage('repositories', sorted);
-            this.rounds++;
+            if (count) {
+                countR = count;
+                localStorage.setItem('rc', count.toString());
+            }
         }
+        countR = parseInt(localStorage.getItem('rc')!!);
+        return countR;
+    }
+
+    async getPaginated(page: number): Promise<any[]> {
+        let savedData: Tables<'repository'>[] = [];
+        this.start = (page - 1) * this.PAGE_COUNT;
+        const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
+
+        if (error !== null) {
+            console.error(error);
+            return [];
+        }
+        savedData = (data as Tables<'repository'>[]).sort((a, b) => a.name.localeCompare(b.name));
         return savedData;
     }
     getById(): Promise<any> {
