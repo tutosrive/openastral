@@ -12,7 +12,7 @@ export default abstract class Service {
     }
 
     abstract get(): Promise<any>;
-    abstract getAll(isRefetch: boolean): Promise<any[]>;
+    abstract getAll(page: number, isRefetch: boolean): Promise<any[]>;
     abstract getById(): Promise<any>;
 
     protected async requireNewData(key: string) {

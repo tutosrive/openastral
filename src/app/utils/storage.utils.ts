@@ -78,17 +78,4 @@ export default class StorageUtils {
         });
         return data;
     }
-
-    // static getJSONFromStorage(key: string): any | null {
-    //     let data: any | null = null;
-    //     try {
-    //         let value = localStorage.getItem(key);
-    //         if (value !== null && value.length > 2) {
-    //             data = JSON.parse(value);
-    //         }
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-    //     return data;
-    // }
 }

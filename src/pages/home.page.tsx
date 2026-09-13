@@ -16,17 +16,28 @@ export default function HomePage() {
     const updateTitle = useWindowTitle((state) => state.updateTitle);
 
     const setReposs = async (refetch: boolean = false) => {
-        updateTitle(PAGES_TITLES.home);
-        const res = await repositoryService.getAll(refetch);
-        setRepos((prev) => [...prev, ...res]);
+        const res = await repositoryService.getAll(currentPage, refetch);
+        setRepos(res);
     };
-    const getPagination = () => {
-        const { data, page } = Helpers.getArrayPagination(repos, currentPage, 20);
-        setCurrentPage((prev) => {
-            const newPage = page !== prev ? page : prev;
-            return newPage;
+    const getPagination = async () => {
+        const count = await repositoryService.getDataCount();
+        const { data, page } = Helpers.getArrayPagination(repos, currentPage, 20, count);
+
+        if (!data || data.length === 0) {
+            await setReposs(true);
+            console.log('Require new data ... fetching');
+            return;
+        }
+        setCurrentRepos((prev) => {
+            if (prev !== data) {
+                setCurrentPage((prev) => {
+                    const newPage = page !== prev ? page : prev;
+                    return newPage;
+                });
+                return data;
+            }
+            return [];
         });
-        setCurrentRepos(data);
     };
     const paginationPrevious = () => {
         console.log('Previous');
@@ -39,6 +50,8 @@ export default function HomePage() {
 
     useEffect(() => {
         if (repos && repos.length > 0) {
+            console.log(`len repos: ${repos.length}`);
+
             getPagination();
         }
     }, [repos]);
@@ -50,6 +63,7 @@ export default function HomePage() {
     }, [currentPage]);
 
     useEffect(() => {
+        updateTitle(PAGES_TITLES.home);
         setReposs();
     }, []);
 

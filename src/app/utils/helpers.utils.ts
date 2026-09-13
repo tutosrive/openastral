@@ -15,16 +15,19 @@ export default class Helpers {
         return Intl.NumberFormat('en-US', { notation: 'compact', compactDisplay: 'short' }).format(n);
     }
 
-    static getArrayPagination(arr: Array<any>, currentPage: number, pageSize: number): { data: Array<any>; page: number } {
+    static getArrayPagination(arr: Array<any>, currentPage: number, pageSize: number, totalCountData: number): { data: Array<any>; page: number } {
         let page = currentPage;
         const start = (currentPage - 1) * pageSize;
         const end = start + pageSize;
-        if (start > arr.length - 1) {
-            return this.getArrayPagination(arr, 1, pageSize);
+        console.log(`TotalCount: ${totalCountData} | Start: ${start} | End: ${end} | Page: ${page}`);
+        if (start > totalCountData - 1) {
+            console.log(`Start > ${totalCountData - 1}`);
+            return this.getArrayPagination(arr, 1, pageSize, totalCountData);
         }
         if (start < 0) {
-            const floor = Math.floor(arr.length / pageSize);
-            return this.getArrayPagination(arr, floor, pageSize);
+            console.log(`Start < 0`);
+            const floor = Math.floor(totalCountData / pageSize);
+            return this.getArrayPagination(arr, floor, pageSize, totalCountData);
         }
         let data = arr.slice(start, end);
         return { data, page };
