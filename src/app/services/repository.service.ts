@@ -32,7 +32,7 @@ class RepositoryService extends Service {
         const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
 
         if (error !== null) {
-            console.error(error);
+            console.debug(error);
             return [];
         }
         savedData = (data as Tables<'repository'>[]).sort((a, b) => a.name.localeCompare(b.name));

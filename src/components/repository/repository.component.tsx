@@ -1,6 +1,7 @@
 import type { FC, ReactElement } from 'react';
 import type { Repository } from '../../app/models/models';
 import Helpers from '../../app/utils/helpers.utils';
+import { Link, useNavigate } from 'react-router';
 
 interface RepositoryProps {
     repository: Repository;
@@ -54,8 +55,9 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
 export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classess, topics }) => {
     const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
     const forkCount = Helpers.formatNumberToCompact(repository.fork_count);
+    const navigateToRepo = useNavigate();
     return (
-        <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-auto shadow-sm overflow-hidden`}>
+        <div onClick={() => navigateToRepo(`repositories/${repository.id}`)} className={`${classess ?? ''} card bg-base-300 cbg-shiny h-auto shadow-sm overflow-hidden`}>
             <div className="card-body">
                 <div className="grid grid-cols-12">
                     <h2 className="card-title truncate lg:col-span-6 col-span-12">{repository.name}</h2>
