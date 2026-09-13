@@ -1,5 +1,5 @@
 # Astral Supabase
-![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/311e4662-9c26-4675-9f02-ee52d2be3c8c.svg)]
+![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/311e4662-9c26-4675-9f02-ee52d2be3c8c.svg)
 
 > [!NOTE]
 > This project use "[SAWP](https://github.com/tutosrive/sawp)" to save all data used on supabase
