@@ -35,18 +35,17 @@ export default function HomePage() {
             {repos.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
                     {repos.map((repo) => {
-                        const uuid = crypto.randomUUID();
                         let elementTags = [
-                            <span key={uuid} className="italic text-neutral">
+                            <span key={`${repo.id}-tag-not-categories`} className="italic badge-info m-1 badge-lg badge badge-soft w-auto text-nowrap">
                                 Not categories
                             </span>,
                         ];
                         if (repo.topics && repo.topics.length > 0) {
                             elementTags = repo.topics.map((cat) => {
-                                return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
+                                return <CategoryC to={`/categories/${cat.id}`} key={`tag-${cat.id}`} name={cat.name} />;
                             });
                         }
-                        return <RepositoryParcialView key={`repo-${repo.id}-${uuid}`} repository={repo} topics={elementTags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;
+                        return <RepositoryParcialView key={`repo-${repo.id}`} repository={repo} topics={elementTags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;
                     })}
                     <div className=" col-span-12 w-full flex items-center justify-center bottom-14 ">
                         <ResponsivePaginationComponent

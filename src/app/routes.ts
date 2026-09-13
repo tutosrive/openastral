@@ -8,6 +8,7 @@ const CreatorPage = lazy(() => import('../pages/about/admin.page'));
 const routes = [
     { id: 'route-home', endpoint: '/', component: HomePage },
     { id: 'route-categories', endpoint: '/categories', component: CategoriesPage },
+    { id: 'route-categories', endpoint: '/categories/:id', component: CategoriesPage },
     { id: 'route-repository-id', endpoint: '/repositories/:id', component: RepositoryPage },
     { id: 'route-about', endpoint: '/about', component: CategoriesPage },
     { id: 'route-admin', endpoint: '/about/admin', component: CreatorPage },

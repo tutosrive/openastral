@@ -11,5 +11,5 @@ export default abstract class Service {
 
     abstract get(): Promise<any>;
     abstract getPaginated(page: number): Promise<any[]>;
-    abstract getById(): Promise<any>;
+    abstract getById(id: string): Promise<any>;
 }
