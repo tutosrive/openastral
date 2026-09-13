@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://openastral.pages.dev/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://openastral.pages.dev/categories</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openastral.pages.dev/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://openastral.pages.dev/about/admin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- NODEJS Library | NPM | PNPM | JAVASCRIPT | TYPESCRIPT | REACT: Zustand -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/MDEwOlJlcG9zaXRvcnkxODAzMjg3MTU=</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Python Library: Flask -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/MDEwOlJlcG9zaXRvcnk1OTY4OTI=</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Zed IDE -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/MDEwOlJlcG9zaXRvcnkzNDA1NDc1MjA=</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Category: AWESOME -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/MDU6VG9waWNhd2Vzb21l</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Category: NODEJS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/MDU6VG9waWNub2RlanM=</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

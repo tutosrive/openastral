@@ -92,7 +92,7 @@ export type Database = {
             };
         };
         Views: { [_ in never]: never };
-        Functions: { get_repositories: { Args: never; Returns: Json } | { Args: { endl: number; startl: number }; Returns: Json }; get_repositories_by_topic: { Args: { topics: string[] }; Returns: Json } | { Args: { endl: number; startl: number; topics: string[] }; Returns: Json } };
+        Functions: { get_repositories: { Args: { endl: number; startl: number }; Returns: Json }; get_repositories_by_topic: { Args: { endl: number; startl: number; topics: string[] }; Returns: Json }; get_repository: { Args: { ownername: string; reponame: string }; Returns: Json } };
         Enums: { [_ in never]: never };
         CompositeTypes: { [_ in never]: never };
     };

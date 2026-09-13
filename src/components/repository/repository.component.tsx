@@ -1,4 +1,5 @@
-import { useState, type FC, type ReactElement } from 'react';
+import { useEffect, useState, type FC, type ReactElement } from 'react';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 import type { Repository } from '../../app/models/models';
 import Helpers from '../../app/utils/helpers.utils';
 import { Link } from 'react-router';
@@ -10,12 +11,26 @@ interface RepositoryProps {
 }
 
 export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, topics }) => {
+    const [readme, setReadme] = useState<string>('');
     const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
+    const getReadme = async () => {
+        const req = await fetch(`${repository.readme_url}`);
+        const res = await req.text();
+        if (res.length > 0) {
+            setReadme(res);
+        }
+    };
+    useEffect(() => {
+        getReadme();
+    }, []);
     return (
         <div id={`repo-${repository.id}`} className={`${classess ?? ''} flex flex-wrap pb-28`}>
             {/* Repo Title */}
             <div className="w-full fixed left-0 bg-base-100 translate-y-[-22px] p-4 grid grid-cols-12">
                 <div className="h-full col-span-6 flex items-center justify-center">
+                    <Link to={'/'} className="flex w-full text-3xl text-accent">
+                        <i className="fa-solid fa-circle-chevron-left"></i>
+                    </Link>
                     <h1 className={'text-4xl text-primary'}>{repository.name}</h1>
                 </div>
                 <div className="col-span-6 flex items-center lg:justify-end md:justify-end justify-center flex-wrap">
@@ -41,7 +56,9 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
                 </div>
             </div>
             {/* Description */}
-            <div className={'sm:mt-30 lg:mt-20 mb:mt-20 mt-30 mt-36 mb-5'}>{repository.description}</div>
+            <div className={'sm:mt-30 lg:mt-20 mb:mt-20 mt-30 mt-36 mb-5 transition-all'}>
+                <MarkdownPreview source={readme} className="bg-transparent" />
+            </div>
             {/* Tags/Topics */}
             <div className={`overflow-scroll scrollbar-none flex flex-wrap h-55`}>
                 <div id={`repo-${repository?.id}-tags`} className={``}>
@@ -60,14 +77,14 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
         <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-auto shadow-sm overflow-hidden`} onMouseEnter={() => setEyeVisible(true)} onMouseLeave={() => setEyeVisible(false)}>
             {/* View Full Component */}
             <div className={`backdrop-blur-xs absolute w-full h-full p-0 ${eyeVisible === true ? 'card-body' : 'hidden'}`}>
-                <Link to={`repositories/${repository.id}`} className="w-full h-full flex items-center justify-center">
+                <Link to={`repositories/${repository.owner.login}/${repository.name}`} className="w-full h-full flex items-center justify-center">
                     <i className="fa-solid fa-eye text-primary text-2xl"></i>
                 </Link>
             </div>
             <div className={'card-body'}>
                 <div className="grid grid-cols-12">
                     <h2 className="card-title truncate lg:col-span-6 col-span-12">{repository.name}</h2>
-                    <div className="lg:col-span-6 col-span-12 carousel text-nowrap flex items-center lg:justify-end justify-center py-1">
+                    <div className={`lg:col-span-6 col-span-12 carousel text-nowrap flex lg:justify-end justify-center py-1 transition-all ${eyeVisible === true ? '-translate-y-8 ' : 'items-center'}`}>
                         {/* License */}
                         {/* <div className="m-2 badge badge-soft bg-neutral rounded-xl w-auto h-10">
                             <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>

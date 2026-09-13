@@ -42,7 +42,7 @@ export default function CategoriesPage() {
                         <div className="w-full h-full">
                             <div className="mb-3">
                                 {categories.map((cat) => {
-                                    return <CategoryC name={cat.name} to={`/categories/${cat.id}`} key={cat.id} />;
+                                    return <CategoryC name={cat.name} to={`/categories/${cat.name}`} key={cat.id} />;
                                 })}
                             </div>
                             <div className="w-full flex justify-center">

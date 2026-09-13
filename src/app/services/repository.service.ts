@@ -1,3 +1,4 @@
+import type { Repository } from '../models/models';
 import type { Tables } from '../models/supabase';
 import Service from './service';
 
@@ -38,16 +39,19 @@ class RepositoryService extends Service {
         savedData = (data as Tables<'repository'>[]).sort((a, b) => a.name.localeCompare(b.name));
         return savedData;
     }
-    async getById(id: string): Promise<any | null> {
-        let repo: Tables<'repository'> | null = null;
-        const { data, error } = await this.client.from('repository').select().eq('id', id);
+
+    async getByOwnerAndName(owner: string, repo: string): Promise<Repository | null> {
+        let repository: Repository | null = null;
+        const { data, error } = await this.client.rpc('get_repository', { ownername: owner, reponame: repo });
         if (error) {
             console.debug(error);
             return null;
         }
-        repo = data[0] as Tables<'repository'>;
-        return repo;
+        repository = data[0] as Repository;
+        return repository;
     }
+
+    async getById(): Promise<any | null> {}
 }
 
 const repositoryService = new RepositoryService();

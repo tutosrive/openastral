@@ -17,7 +17,7 @@ export default function Header() {
                         </svg>
                     </label>
                     <Link to={'/'} className="lg:px-12 text-nowrap text-4xl britney-ft flex justify-center items-center">
-                        <img src="./favicon.svg" alt="Open Astral Logo SVG" className="w-auto min-w-9" />
+                        <img src="./favicon.svg" alt="Open Astral Logo SVG" className="w-auto min-w-9" loading="lazy" />
                         {/* <img src="./favicon.svg" alt="Open Astral Logo SVG" className="lg:w-20 xl:inline lg:inline md:inline sm:inline hidden md:w-15 w-3/12" /> */}
                         Open Astral
                     </Link>

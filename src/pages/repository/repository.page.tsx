@@ -10,14 +10,14 @@ export default function RepositoryPage() {
     const [repository, setRepository] = useState<Repository>();
     const [tags, setTags] = useState<React.JSX.Element[]>([]);
     const params = useParams();
-    const repositoryId: string = params.id!!;
+    const repositoryOwner: string = params.owner!!;
+    const repositoryName: string = params.repo!!;
 
     const getRepository = async () => {
-        async () => {
-            await repositoryService.getById(repositoryId);
-        };
-        if (repository) {
-            setRepository((prev) => prev);
+        const repo = await repositoryService.getByOwnerAndName(repositoryOwner, repositoryName);
+
+        if (repo) {
+            setRepository(repo);
         }
     };
     const makeTags = () => {
@@ -42,5 +42,5 @@ export default function RepositoryPage() {
         getRepository();
     }, []);
 
-    return <div>{repository ? <RepositoryFullView repository={repository} topics={tags} /> : <Loading />}</div>;
+    return <div className="w-full h-full p-5">{repository ? <RepositoryFullView repository={repository} topics={tags} /> : <Loading />}</div>;
 }
