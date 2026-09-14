@@ -21,6 +21,12 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Android | Tool | Docs | Android App | Linux Commands: Why Sudo? -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tutosrive/whysudo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- NODEJS Library | NPM | PNPM | JAVASCRIPT | TYPESCRIPT | REACT: Zustand -->
   <url>
     <loc>https://openastral.pages.dev/repositories/pmndrs/zustand</loc>
