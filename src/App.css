@@ -5,3 +5,11 @@
 .chillax-ft {
     font-family: 'Chillax', sans-serif;
 }
+
+.wmde-markdown {
+    background-color: transparent !important;
+}
+
+pre {
+    background: var(--color-neutral) !important;
+}

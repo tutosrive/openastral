@@ -1,63 +1,34 @@
-import { useEffect, useState, type FC, type ReactElement } from 'react';
+import { useState, type FC, type ReactElement } from 'react';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import type { Repository } from '../../app/models/models';
-import Helpers from '../../app/utils/helpers.utils';
 import { Link } from 'react-router';
+import BadgesHeader from './badges-header.component';
 
 interface RepositoryProps {
     repository: Repository;
     topics: ReactElement | ReactElement[];
+    readme?: string;
     classess?: string;
 }
 
-export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, topics }) => {
-    const [readme, setReadme] = useState<string>('');
-    const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
-    const getReadme = async () => {
-        const req = await fetch(`${repository.readme_url}`);
-        const res = await req.text();
-        if (res.length > 0) {
-            setReadme(res);
-        }
-    };
-    useEffect(() => {
-        getReadme();
-    }, []);
+export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, topics, readme }) => {
     return (
-        <div id={`repo-${repository.id}`} className={`${classess ?? ''} flex flex-wrap pb-28`}>
+        <div id={`repo-${repository.id}`} className={`${classess ?? ''} flex flex-wrap pb-28 lg:justify-center md:justify-center justify-start w-full`}>
             {/* Repo Title */}
-            <div className="w-full fixed left-0 bg-base-100 translate-y-[-22px] p-4 grid grid-cols-12">
+            <div className="w-full fixed left-0 backdrop-blur-lg translate-y-[-18px] grid grid-cols-12 overflow-hidden z-10 max-h-26 py-3">
                 <div className="h-full col-span-6 flex items-center justify-center">
-                    <Link to={'/'} className="flex w-full text-3xl text-accent">
+                    <Link to={'/'} className="left-0 text-3xl text-accent">
                         <i className="fa-solid fa-circle-chevron-left"></i>
                     </Link>
-                    <h1 className={'text-4xl text-primary'}>{repository.name}</h1>
+                    <h1 className={'w-full text-4xl text-neutral-content britney-ft font-extrabold text-right text-nowrap overflow-x-scroll scrollbar-none'}>{repository.name}</h1>
                 </div>
                 <div className="col-span-6 flex items-center lg:justify-end md:justify-end justify-center flex-wrap">
-                    {/* Stars Count */}
-                    <div className="m-2 badge badge-soft badge-neutral rounded-xl w-auto h-10">
-                        <i className="fa-solid fa-star"></i>
-                        <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
-                            {stargazerCount}
-                        </a>
-                    </div>
-                    {/* Owner Link/Image */}
-                    <a href={repository.owner.url} target="_blank" className="badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
-                        <div className="avatar">
-                            <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                                <img alt={`Owner of repository '${repository.name}'`} src={`${repository.owner.avatar_url}`} />
-                            </div>
-                        </div>
-                    </a>
-                    {/* Backlink */}
-                    <a href={repository.url} target="_blank" className="mx-1 badge badge-soft badge-neutral rounded-4xl aspect-square h-10">
-                        <i className="fa-solid fa-arrow-up-right-from-square text-primary"></i>
-                    </a>
+                    <BadgesHeader repository={repository} />
                 </div>
             </div>
             {/* Description */}
-            <div className={'sm:mt-30 lg:mt-20 mb:mt-20 mt-30 mt-36 mb-5 transition-all'}>
-                <MarkdownPreview source={readme} className="bg-transparent" />
+            <div className={'lg:mt-10 md:mt-10 mt-15 mb-5 p-5 transition-all w-[98dvw] lg:w-full md:w-full'}>
+                <MarkdownPreview source={readme} className="z-0 w-full min-w-3" />
             </div>
             {/* Tags/Topics */}
             <div className={`overflow-scroll scrollbar-none flex flex-wrap h-55`}>
@@ -70,8 +41,6 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
 };
 
 export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classess, topics }) => {
-    const stargazerCount = Helpers.formatNumberToCompact(repository.stargazer_count);
-    const forkCount = Helpers.formatNumberToCompact(repository.fork_count);
     const [eyeVisible, setEyeVisible] = useState<boolean>(false);
     return (
         <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-auto shadow-sm overflow-hidden`} onMouseEnter={() => setEyeVisible(true)} onMouseLeave={() => setEyeVisible(false)}>
@@ -84,7 +53,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
             <div className={'card-body'}>
                 <div className="grid grid-cols-12">
                     <h2 className="card-title truncate lg:col-span-6 col-span-12">{repository.name}</h2>
-                    <div className={`lg:col-span-6 col-span-12 carousel text-nowrap flex lg:justify-end justify-center py-1 transition-all ${eyeVisible === true ? '-translate-y-8 ' : 'items-center'}`}>
+                    <div className={`lg:col-span-6 col-span-12 carousel text-nowrap flex lg:justify-end justify-center py-1 transition-all lg:translate-0 ${eyeVisible === true ? '-translate-y-8' : 'items-center'}`}>
                         {/* License */}
                         {/* <div className="m-2 badge badge-soft bg-neutral rounded-xl w-auto h-10">
                             <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
@@ -93,31 +62,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
                             </a>
                         </div> */}
                         {/* Forks Count */}
-                        <div className="mx-0.5 badge badge-soft bg-neutral rounded-xl w-auto h-10 z-10">
-                            <a target="_blank" href={`${repository.url}/forks`}>
-                                <i className="fa-solid fa-code-fork"></i>
-                                <span className="truncate">{forkCount}</span>
-                            </a>
-                        </div>
-                        {/* Stars Count */}
-                        <div className="mx-0.5 badge badge-soft bg-neutral rounded-xl w-auto h-10 z-10">
-                            <a target="_blank" href={Helpers.getUrlStargazerHistoric(repository)}>
-                                <i className="fa-solid fa-star"></i>
-                                <span className="truncate">{stargazerCount}</span>
-                            </a>
-                        </div>
-                        {/* Owner Link/Image */}
-                        <a href={repository.owner.url} target="_blank" className="mx-1 badge badge-soft badge-neutral rounded-4xl aspect-square h-10 z-10">
-                            <div className="avatar">
-                                <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                                    <img alt={`Owner of repository '${repository.name}'`} src={`${repository.owner.avatar_url}`} loading="lazy" />
-                                </div>
-                            </div>
-                        </a>
-                        {/* Backlink */}
-                        <a href={repository.url} target="_blank" className="mx-0.5 float-end badge badge-soft badge-neutral rounded-4xl aspect-square h-10 z-10">
-                            <i className="fa-solid fa-arrow-up-right-from-square text-primary"></i>
-                        </a>
+                        <BadgesHeader repository={repository} />
                     </div>
                 </div>
                 {/* Description */}

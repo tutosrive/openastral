@@ -9,9 +9,19 @@ import CategoryC from '../../components/repository/category.component';
 export default function RepositoryPage() {
     const [repository, setRepository] = useState<Repository>();
     const [tags, setTags] = useState<React.JSX.Element[]>([]);
+    const [readme, setReadme] = useState<string>('');
     const params = useParams();
     const repositoryOwner: string = params.owner!!;
     const repositoryName: string = params.repo!!;
+    const getReadme = async () => {
+        if (repository) {
+            const req = await fetch(`${repository.readme_url}`, { redirect: 'follow' });
+            const res = await req.text();
+            if (res.length > 0) {
+                setReadme(res);
+            }
+        }
+    };
 
     const getRepository = async () => {
         const repo = await repositoryService.getByOwnerAndName(repositoryOwner, repositoryName);
@@ -37,10 +47,11 @@ export default function RepositoryPage() {
     };
     useEffect(() => {
         makeTags();
+        getReadme();
     }, [repository]);
     useEffect(() => {
         getRepository();
     }, []);
 
-    return <div className="w-full h-full p-5">{repository ? <RepositoryFullView repository={repository} topics={tags} /> : <Loading />}</div>;
+    return <div className="w-full h-full mt-4 min-w-[355px]">{repository ? <RepositoryFullView repository={repository} topics={tags} readme={readme} /> : <Loading />}</div>;
 }
