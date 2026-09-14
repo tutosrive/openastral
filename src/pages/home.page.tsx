@@ -31,9 +31,9 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div id="home-page" className="w-full px-5 py-8">
+        <div id="home-page" className="w-full px-5 py-8 transition-all">
             {repos.length > 0 ? (
-                <div className="w-full h-full grid grid-cols-12 gap-1">
+                <div className="w-full h-full grid grid-cols-12 gap-1 transition-all">
                     {repos.map((repo) => {
                         let elementTags = [
                             <span key={`${repo.id}-tag-not-categories`} className="italic badge-info m-1 badge-lg badge badge-soft w-auto text-nowrap">
@@ -42,7 +42,7 @@ export default function HomePage() {
                         ];
                         if (repo.topics && repo.topics.length > 0) {
                             elementTags = repo.topics.map((cat) => {
-                                return <CategoryC to={`/categories/${cat.id}`} key={`tag-${cat.id}`} name={cat.name} />;
+                                return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
                             });
                         }
                         return <RepositoryParcialView key={`repo-${repo.id}`} repository={repo} topics={elementTags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;

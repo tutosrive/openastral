@@ -17,7 +17,7 @@ export default function Header() {
                         </svg>
                     </label>
                     <Link to={'/'} className="lg:px-12 text-nowrap text-4xl britney-ft flex justify-center items-center">
-                        <img src="./favicon.svg" alt="Open Astral Logo SVG" className="w-auto min-w-9" />
+                        <img src="/favicon.svg" alt="Open Astral Logo SVG" className="w-auto min-w-9" loading="lazy" />
                         {/* <img src="./favicon.svg" alt="Open Astral Logo SVG" className="lg:w-20 xl:inline lg:inline md:inline sm:inline hidden md:w-15 w-3/12" /> */}
                         Open Astral
                     </Link>
@@ -60,7 +60,8 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <label className="input lg:flex md:flex hidden">
+                    {/* <label className="input lg:flex md:flex hidden"> */}
+                    <label className="input hidden">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
                                 <circle cx="11" cy="11" r="8"></circle>

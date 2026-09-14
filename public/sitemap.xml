@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://openastral.pages.dev/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://openastral.pages.dev/categories</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://openastral.pages.dev/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://openastral.pages.dev/about/admin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- NODEJS Library | NPM | PNPM | JAVASCRIPT | TYPESCRIPT | REACT: Zustand -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pmndrs/zustand</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Python Library: Flask -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pallets/flask</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Zed IDE -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/zed-industries/zed</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Awesome Lists Collection -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sindresorhus/awesome</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Node.js JavaScript Runtime -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nodejs/node</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- React JavaScript Library -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/react/react</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RustDesk Open Source Remote Desktop -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rustdesk/rustdesk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RxJS: Reactive Extensions for JavaScript -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ReactiveX/rxjs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RxJava: Reactive Extensions for the JVM -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ReactiveX/RxJava</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Rust Programming Language -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rust-lang/rust</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RunAnywhere AI SDKs -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/RunanywhereAI/runanywhere-sdks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Rufus: Create bootable USB drives -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pbatard/rufus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- React Router for Web Applications -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/remix-run/react-router</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- React Native for Mobile Apps -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/react/react-native</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- All Algorithms implemented in Python -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/TheAlgorithms/Python</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PySimpleGUI Python GUI Framework -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/PySimpleGUI/PySimpleGUI</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Pyright Static Type Checker for Python -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/pyright</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PyScript Python in the Browser -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pyscript/pyscript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PixiJS 2D WebGL Rendering Engine -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pixijs/pixijs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Node.js Best Practices Guide -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/goldbergyoni/nodebestpractices</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- NiceGUI Python Web UI Framework -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/zauberzeug/nicegui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Next.js React Framework -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vercel/next.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Neutralinojs Lightweight Desktop Apps -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/neutralinojs/neutralinojs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Mermaid Diagramming and Charting Tool -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mermaid-js/mermaid</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Run your GitHub Actions locally -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nektos/act</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Category: AWESOME -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/awesome</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: NODEJS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/nodejs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

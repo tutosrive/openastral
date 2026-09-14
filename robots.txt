@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /repositories/query/search
+
+Sitemap: https://openastral.pages.dev/sitemap.xml
