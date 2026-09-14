@@ -27,6 +27,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Action | Github Action | Nodejs | Typescript | Postgres: SAWP -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tutosrive/sawp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- NODEJS Library | NPM | PNPM | JAVASCRIPT | TYPESCRIPT | REACT: Zustand -->
   <url>
     <loc>https://openastral.pages.dev/repositories/pmndrs/zustand</loc>
