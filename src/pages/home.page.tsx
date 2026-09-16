@@ -11,7 +11,10 @@ import ResponsivePaginationComponent from 'react-responsive-pagination';
 export default function HomePage() {
     const [repos, setRepos] = useState<Repository[]>([]);
     const [count, setCount] = useState<number>(0);
-    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [currentPage, setCurrentPage] = useState<number>(() => {
+        const session = sessionStorage.getItem('currentpage');
+        return session ? parseInt(session) : 1;
+    });
     const updateTitle = useWindowTitle((state) => state.updateTitle);
     const totalPages = Math.ceil(count / 20);
 
@@ -25,6 +28,9 @@ export default function HomePage() {
         setRepos(res);
         setCurrentPage(page);
     };
+    useEffect(() => {
+        sessionStorage.setItem('currentpage', `${currentPage}`);
+    }, [currentPage]);
     useEffect(() => {
         init();
         setReposs(currentPage);
