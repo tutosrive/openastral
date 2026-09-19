@@ -46,7 +46,7 @@ export const RepositoryParcialView: FC<RepositoryProps> = ({ repository, classes
         <div className={`${classess ?? ''} card bg-base-300 cbg-shiny h-auto shadow-sm overflow-hidden`} onMouseEnter={() => setEyeVisible(true)} onMouseLeave={() => setEyeVisible(false)}>
             {/* View Full Component */}
             <div className={`backdrop-blur-xs absolute w-full h-full p-0 ${eyeVisible === true ? 'card-body' : 'hidden'}`}>
-                <Link to={`repositories/${repository.owner.login}/${repository.name}`} className="w-full h-full flex items-center justify-center">
+                <Link to={`/repositories/${repository.owner.login}/${repository.name}`} className="w-full h-full flex items-center justify-center">
                     <i className="fa-solid fa-eye text-primary text-2xl"></i>
                 </Link>
             </div>

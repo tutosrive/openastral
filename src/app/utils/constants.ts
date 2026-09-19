@@ -98,7 +98,8 @@ export const CUSTOM_BADGES_STYLES: Array<string> = [
 export const PAGES_TITLES = {
     home: 'Awesome Github Repositories | Stargazers | Tutos Rive Stargazers | Github Stargazers',
     categories: 'Stargazers Categories | Repositories Topics',
-    repository: 'Favorite Repository | Github Repository',
+    byTopic: (category: string) => `Category ${category} | Stargazers By ${category} Category | Repositories on ${category}`,
+    repository: (name: string) => `${name} Repository | Viewing ${name} Repository | Favorite Repository | Github Repository`,
     about: 'About Astral Supa | Astral Supa Information',
     admin: 'Admin Astral Supa | Github Admin | About Admin Astral Supa',
     search: 'Search Repositories | Search Favorite Repository',

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import type { Topic } from '../app/models/models';
-import CategoryC from '../components/repository/category.component';
-import topicService from '../app/services/topic.services';
-import { useWindowTitle } from '../app/stores/app.store';
-import { PAGES_TITLES } from '../app/utils/constants';
-import SkeletonCategory from '../components/skeleton/categories.skeleton';
+import type { Topic } from '../../app/models/models';
+import CategoryC from '../../components/repository/category.component';
+import topicService from '../../app/services/topic.services';
+import { useWindowTitle } from '../../app/stores/app.store';
+import { PAGES_TITLES } from '../../app/utils/constants';
+import SkeletonCategory from '../../components/skeleton/categories.skeleton';
 import ResponsivePaginationComponent from 'react-responsive-pagination';
 
 export default function CategoriesPage() {

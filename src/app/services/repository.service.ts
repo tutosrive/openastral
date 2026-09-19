@@ -26,11 +26,24 @@ class RepositoryService extends Service {
         countR = parseInt(localStorage.getItem('rc')!!);
         return countR;
     }
+    async getDataCountByTags(tags: Array<string>): Promise<number> {
+        let countR = 0;
+        const { data, error } = await this.client.rpc('get_count_by_topic', { topics: tags });
+        if (error) {
+            console.log(error);
+        }
+        if (data) {
+            countR = data;
+        }
+        return countR;
+    }
 
-    async getPaginated(page: number): Promise<any[]> {
+    async getPaginated(page: number, byTopic: boolean = false, categories: Array<string> | null = null): Promise<any[]> {
         let savedData: Tables<'repository'>[] = [];
         this.start = (page - 1) * this.PAGE_COUNT;
-        const { data, error } = await this.client.rpc('get_repositories', { startl: this.start, endl: this.PAGE_COUNT });
+        const BOTH_ARGS = { startl: this.start, endl: this.PAGE_COUNT };
+        const PARAMS = byTopic === true ? { fname: 'get_repositories_by_topic', args: { topics: categories, ...BOTH_ARGS } } : { fname: 'get_repositories', args: BOTH_ARGS };
+        const { data, error } = await this.client.rpc(PARAMS.fname, PARAMS.args);
 
         if (error !== null) {
             console.debug(error);

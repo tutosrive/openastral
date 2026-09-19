@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 
 const HomePage = lazy(() => import('../pages/home.page'));
-const CategoriesPage = lazy(() => import('../pages/categories.page'));
-const RepositoriesByTagPage = lazy(() => import('../pages/categories/repos-by-tag.page'));
+const CategoriesPage = lazy(() => import('../pages/categories/categories.page'));
+const RepositoriesByTagPage = lazy(() => import('../pages/repository/repos-by-tag.page'));
 const RepositoryPage = lazy(() => import('../pages/repository/repository.page'));
 const CreatorPage = lazy(() => import('../pages/about/admin.page'));
 
