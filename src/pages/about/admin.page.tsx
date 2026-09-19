@@ -62,7 +62,7 @@ export default function CreatorPage() {
                             <span className="m-1 badge badge-soft badge-info">
                                 <i className="fa-solid fa-globe"></i>
                                 {creator.website_url ? (
-                                    <a href={creator.website_url} target="_blank">
+                                    <a href={Helpers.goToCustom(creator.website_url)} target="_blank">
                                         Website
                                     </a>
                                 ) : (
@@ -73,24 +73,17 @@ export default function CreatorPage() {
                                 <i className="fa-solid fa-clock"></i>
                                 {creator.created_at}
                             </span>
-                            <a href={creator.url} className="m-1 badge badge-soft badge-success">
+                            <a href={Helpers.goToCustom(creator.url)} className="m-1 badge badge-soft badge-success">
                                 <i className="fa-brands fa-github"></i>
                                 {creator.login}
                             </a>
-                            <a className="m-1 badge badge-soft badge-warning" href={`https://github.com/${creator.login}?tab=stars`} target="_blank">
+                            <a className="m-1 badge badge-soft badge-warning" href={Helpers.goToCustom(`https://github.com/${creator.login}?tab=stars`)} target="_blank">
                                 <i className="fa-solid fa-star"></i>
                                 {creator.stargazercount}
                             </a>
                         </div>
-                        {/* <p>{creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>}</p> */}
                         <div className={'lg:mt-10 md:mt-10 mt-15 mb-5 p-5 transition-all w-[98dvw] lg:w-full md:w-full md-preview'}>
-                            {!description ? (
-                                <p>
-                                    creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>
-                                </p>
-                            ) : (
-                                <MarkdownPreview source={description} className="z-0 w-full min-w-3 " />
-                            )}
+                            {!description ? <p>{creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>}</p> : <MarkdownPreview source={description} className="z-0 w-full min-w-3" urlTransform={Helpers.goToCustom} />}
                         </div>
                     </div>
                 </div>

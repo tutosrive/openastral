@@ -15,7 +15,159 @@ Open Astral is inspired by "[Astral](https://github.com/astralapp/astral)" becau
 
 # Why?
 
-Because I don't just simplify—I genuinely enjoy coding, and I will always prefer a nicely crafted web app and a proper piece of work over a basic ["Stargazer"]() README.
+Because I don't just simplify—I genuinely enjoy coding, and I will always prefer a nicely crafted web app and a proper piece of work over a basic ["Stargazer"](https://github.com/tutosrive/stargazer) README.
+
+---
+
+# Requirements
+
+- Environment Variables (inside your deploy dashboard ...)
+    1. `VITE_SUPABASE_URL={YOur-Secret}`: Your Supabase **HTTP URL**
+    2. `VITE_SUPABASE_APIKEY={YOur-Secret}`: Your Supabase **_PUBLISHABLE_** apikey, sure that IS PUBLISHABLE!
+    3. `VITE_GH_TOKEN={YOur-Secret}`: Github Token, **_JUST with Public Repo READ_**
+
+---
+
+You need exactly this functions created in Supabase!
+
+1. Function to get repositories with pagination
+
+```sql
+         create or replace function public.get_repositories(startl int, endl int)
+       returns json
+       language plpgsql
+       stable
+       as $$
+         declare
+           response json;
+         begin
+           select json_agg(row_to_json(repos)) into response
+           from (
+             select
+               r.*,
+               jsonb_build_object(
+                 'id', o.id,
+                 'avatar_url', o.avatar_url,
+                 'login', o.login,
+                 'url', o.url
+               ) as owner,
+               coalesce(
+                 jsonb_agg(to_jsonb(t) order by t.id)
+                   filter (where t.id is not null), '[]'::jsonb
+               ) as topics
+             from public.repository as r
+             inner join owner o
+               on o.id = r.owner_id
+             left join public.topicxrepository as tr
+           on tr.idrepo = r.id
+           left join public.topic as t
+           on t.id = tr.idtopic
+           group by r.id, o.id
+           order by r.name
+           offset get_repositories.startl limit get_repositories.endl
+           )repos;
+           return coalesce(response, '[]'::json);
+       end;
+       $$;
+```
+
+2. Get repository by topics/categories/tags PAGINATED
+
+```sql
+create or replace function get_repositories_by_topic(topics text[], startl int, endl int)
+returns json
+language plpgsql
+stable
+as $$ declare response json;
+  begin
+    select json_agg(row_to_json(repos)) into response
+    from (select r.*,
+        jsonb_build_object(
+          'id', o.id,
+          'avatar_url', o.avatar_url,
+          'login', o.login,
+          'url', o.url
+        ) as owner,
+        coalesce(
+          jsonb_agg(to_jsonb(t) order by t.id)
+            filter (where t.id is not null),
+          '[]'::jsonb
+        ) as topics from repository r
+        inner join owner o
+          on o.id = r.owner_id
+        inner join topicxrepository tr
+          on r.id = tr.idrepo
+        inner join topic t
+          on t.id = tr.idtopic
+        where t.name = ANY(get_repositories_by_topic.topics)
+        group by r.id, o.id
+        order by r.name asc
+        offset get_repositories_by_topic.startl limit get_repositories_by_topic.endl
+    )repos;
+    return coalesce(response, '[]'::json);
+  end;
+$$;
+```
+
+3. Get Just One Repository
+
+```sql
+create or replace function public.get_repository (ownername text, reponame text) returns json language plpgsql stable as $$
+  declare
+    response json;
+  begin
+    select json_agg(row_to_json(repo)) into response
+    from (
+      select
+        r.*,
+        jsonb_build_object(
+          'id', o.id,
+          'avatar_url', o.avatar_url,
+          'login', o.login,
+          'url', o.url
+        ) as owner,
+        coalesce(
+          jsonb_agg(to_jsonb(t) order by t.id)
+            filter (where t.id is not null),
+          '[]'::jsonb
+        ) as topics
+      from public.repository as r
+      inner join owner o
+        on o.id = r.owner_id
+      left join public.topicxrepository as tr
+        on tr.idrepo = r.id
+      left join public.topic as t
+        on t.id = tr.idtopic
+      where r.name = get_repository.reponame and o.login = get_repository.ownername
+      group by r.id, o.id
+      order by r.name
+    )repo;
+
+    return coalesce(response, '{}'::json);
+  end;
+$$;
+```
+
+4. Get the total count of repos with tag/topic/category FILTER
+
+```sql
+create or replace function get_count_by_topic(topics text[])
+returns integer
+language plpgsql
+stable
+as $$
+begin
+  return (
+    select count(t.name)::integer
+    from repository r
+    inner join owner o on o.id = r.owner_id
+    inner join topicxrepository tr on r.id = tr.idrepo
+    inner join topic t on t.id = tr.idtopic
+    where t.name = any (get_count_by_topic.topics)
+  );
+end;
+$$;
+```
 
 ---
 

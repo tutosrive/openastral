@@ -22,7 +22,7 @@ export default function RepositoriesByTagPage() {
     };
 
     const init = async () => {
-        updateTitle(PAGES_TITLES.home);
+        updateTitle(PAGES_TITLES.byTopic(category!!));
         const resCount = await repositoryService.getDataCountByTags([category!!]);
         setCount(resCount);
     };
