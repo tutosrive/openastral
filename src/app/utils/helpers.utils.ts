@@ -53,4 +53,15 @@ export default class Helpers {
             return this.getReadme(repo, owner, `https://api.github.com/repos/${owner}/${repo}/readme`, intents + 1, true);
         }
     }
+
+    static goToCustom(url: string) {
+        const REF_URL: string = 'openastral.pages.dev';
+        let newUrl: string = url;
+        if (url.includes('star-history.com') || url.includes('github.com')) {
+            newUrl = `${url}?ref=${REF_URL}`;
+        } else if (!url.includes(REF_URL)) {
+            newUrl = `${url}?utm_source=${REF_URL}`;
+        }
+        return newUrl;
+    }
 }

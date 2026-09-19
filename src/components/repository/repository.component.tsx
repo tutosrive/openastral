@@ -3,6 +3,7 @@ import MarkdownPreview from '@uiw/react-markdown-preview';
 import type { Repository } from '../../app/models/models';
 import { Link } from 'react-router';
 import BadgesHeader from './badges-header.component';
+import Helpers from '../../app/utils/helpers.utils';
 
 interface RepositoryProps {
     repository: Repository;
@@ -28,7 +29,7 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
             </div>
             {/* Description */}
             <div className={'lg:mt-10 md:mt-10 mt-15 mb-5 p-5 transition-all w-[98dvw] lg:w-full md:w-full'}>
-                <MarkdownPreview source={readme} className="z-0 w-full min-w-3" />
+                <MarkdownPreview source={readme} className="z-0 w-full min-w-3" urlTransform={Helpers.goToCustom} />
             </div>
             {/* Tags/Topics */}
             <div className={`overflow-scroll scrollbar-none flex flex-wrap h-55`}>

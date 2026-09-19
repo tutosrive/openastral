@@ -6,11 +6,14 @@ import Loading from '../../components/loading.component';
 import type { Repository } from '../../app/models/models';
 import CategoryC from '../../components/repository/category.component';
 import Helpers from '../../app/utils/helpers.utils';
+import { useWindowTitle } from '../../app/stores/app.store';
+import { PAGES_TITLES } from '../../app/utils/constants';
 
 export default function RepositoryPage() {
     const [repository, setRepository] = useState<Repository>();
     const [tags, setTags] = useState<React.JSX.Element[]>([]);
     const [readme, setReadme] = useState<string>('');
+    const updateTitle = useWindowTitle((state) => state.updateTitle);
     const params = useParams();
     const repositoryOwner: string = params.owner!!;
     const repositoryName: string = params.repo!!;
@@ -24,6 +27,7 @@ export default function RepositoryPage() {
     };
 
     const getRepository = async () => {
+        updateTitle(PAGES_TITLES.repository(`${repositoryOwner}/${repositoryName}`));
         const repo = await repositoryService.getByOwnerAndName(repositoryOwner, repositoryName);
 
         if (repo) {
