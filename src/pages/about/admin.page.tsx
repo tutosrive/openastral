@@ -4,10 +4,13 @@ import adminService from '../../app/services/admin.service';
 import Loading from '../../components/loading.component';
 import { useWindowTitle } from '../../app/stores/app.store';
 import { PAGES_TITLES } from '../../app/utils/constants';
+import Helpers from '../../app/utils/helpers.utils';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 
 export default function CreatorPage() {
     const [creator, setCreator] = useState<Tables<'admin'>>();
     const [hasError, setHasError] = useState<boolean>(false);
+    const [description, setDescription] = useState<string>();
     const updateTitle = useWindowTitle((state) => state.updateTitle);
     const getCreator = async () => {
         updateTitle(PAGES_TITLES.admin);
@@ -18,7 +21,18 @@ export default function CreatorPage() {
         }
         setCreator(data);
     };
-
+    const tryGetAdminReadme = async () => {
+        if (creator) {
+            const DEFAULT_URL = `https://raw.githubusercontent.com/${creator.login}/${creator.login}/main/README.md`;
+            const res = await Helpers.getReadme(creator.login, creator.login, DEFAULT_URL);
+            if (res && res.length > 0) {
+                setDescription(res);
+            }
+        }
+    };
+    useEffect(() => {
+        tryGetAdminReadme();
+    }, [creator]);
     useEffect(() => {
         getCreator();
     }, []);
@@ -47,11 +61,13 @@ export default function CreatorPage() {
                             </span>
                             <span className="m-1 badge badge-soft badge-info">
                                 <i className="fa-solid fa-globe"></i>
-                                {creator.website_url ?? <span className="italic">No website</span>}
-                            </span>
-                            <span className="m-1 badge badge-soft badge-info">
-                                <i className="fa-solid fa-id-badge"></i>
-                                {creator.login}
+                                {creator.website_url ? (
+                                    <a href={creator.website_url} target="_blank">
+                                        Website
+                                    </a>
+                                ) : (
+                                    <span className="italic">No website</span>
+                                )}
                             </span>
                             <span className="m-1 badge badge-soft badge-info">
                                 <i className="fa-solid fa-clock"></i>
@@ -61,12 +77,21 @@ export default function CreatorPage() {
                                 <i className="fa-brands fa-github"></i>
                                 {creator.login}
                             </a>
-                            <span className="m-1 badge badge-soft badge-warning">
+                            <a className="m-1 badge badge-soft badge-warning" href={`https://github.com/${creator.login}?tab=stars`} target="_blank">
                                 <i className="fa-solid fa-star"></i>
                                 {creator.stargazercount}
-                            </span>
+                            </a>
                         </div>
-                        <p>{creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>}</p>
+                        {/* <p>{creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>}</p> */}
+                        <div className={'lg:mt-10 md:mt-10 mt-15 mb-5 p-5 transition-all w-[98dvw] lg:w-full md:w-full md-preview'}>
+                            {!description ? (
+                                <p>
+                                    creator.bio ?? <span className="italic text-neutral text-xs">No Description</span>
+                                </p>
+                            ) : (
+                                <MarkdownPreview source={description} className="z-0 w-full min-w-3 " />
+                            )}
+                        </div>
                     </div>
                 </div>
             ) : (
