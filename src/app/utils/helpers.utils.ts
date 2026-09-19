@@ -38,7 +38,7 @@ export default class Helpers {
             } else {
                 req = await fetch(urlReadme);
             }
-            if (intents === 3) {
+            if (req.status === 200 || intents === 3) {
                 return req.text();
             }
             if (req.status === 404) {
