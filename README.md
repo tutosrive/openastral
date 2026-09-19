@@ -173,6 +173,5 @@ $$;
 
 # Future features
 
-- Load repositories by topic/tag/category (they're basically the same thing...)
 - Search repositories
-- When returning from a single repository view, don't reset to the home page—go right back to where you were with the previous pagination intact.
+- Cache data from SUPABASE
