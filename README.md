@@ -2,8 +2,8 @@
 
 ![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/311e4662-9c26-4675-9f02-ee52d2be3c8c.svg)
 
-> [!NOTE]
-> This project use "[SAWP](https://github.com/tutosrive/sawp)" to save all data used on Postgres database (But this template, use Supabase-Js, if you want use other BaaS or your own backend, off course, you can fork this and just change all queries from Supabase to your BaaS
+> [!IMPORTANT]
+> This project use "[SAWP](https://github.com/tutosrive/sawp)" to save all data used on Postgres database (But this template, use Supabase-Js, if you want use other BaaS or your own backend, off course, you can fork this and just change all queries from Supabase to your BaaS)
 
 This project is to show all my github starred repositories (Stargazers) in a nice website, it uses Supabase to get all data in real-time and to make nice queries that relational databases allow.
 

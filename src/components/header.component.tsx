@@ -1,12 +1,13 @@
 import { Link } from 'react-router';
 import ThemeChanger from './theme-changer.component';
 import { useTheme } from '../app/stores/app.store';
+import Helpers from '../app/utils/helpers.utils';
 
 export default function Header() {
     const values = { home: 'Home', about: { first: 'About', second: 'Page', third: 'Creator', fourthy: 'Search' }, category: 'Categories' };
     const theme = useTheme((state) => state.name);
     return (
-        <div className="flex items-center justify-center max-lg:collapse bg-base-200 lg:mb-4 shadow-sm w-full row-span-1 rounded-none z-50 py-9">
+        <div className="flex items-center justify-center max-lg:collapse bg-base-200 lg:mb-4 shadow-sm w-dvw row-span-1 rounded-none z-50 py-9">
             <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
             <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
             <div className="collapse-title navbar m-0 flex w-full ">
@@ -16,9 +17,8 @@ export default function Header() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </label>
-                    <Link to={'/'} className="lg:px-12 text-nowrap text-4xl britney-ft flex justify-center items-center">
-                        <img src="/favicon.svg" alt="Open Astral Logo SVG" className="w-auto min-w-9" loading="lazy" />
-                        {/* <img src="./favicon.svg" alt="Open Astral Logo SVG" className="lg:w-20 xl:inline lg:inline md:inline sm:inline hidden md:w-15 w-3/12" /> */}
+                    <Link to={'/'} className="lg:px-12 text-nowrap lg:text-4xl md:text-4xl sm:text-3xl text-xl britney-ft flex justify-center items-center">
+                        <img src="/favicon.svg" alt="Open Astral Logo SVG" className="lg:w-12 md:w-10 sm:w-8 w-7" loading="lazy" />
                         Open Astral
                     </Link>
                 </div>
@@ -60,7 +60,6 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* <label className="input lg:flex md:flex hidden"> */}
                     <label className="input hidden">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
@@ -71,6 +70,9 @@ export default function Header() {
                         <input type="search" required placeholder="Search" className="input w-64 lg:w-auto" />
                     </label>
                     <ThemeChanger themeName={theme} />
+                    <a href={Helpers.goToCustom('http://github.com/tutosrive/openastral')}>
+                        <i className="fa-brands fa-github"></i>
+                    </a>
                 </div>
             </div>
 

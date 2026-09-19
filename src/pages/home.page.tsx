@@ -36,7 +36,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div id="home-page" className="w-full px-5 py-8 transition-all">
+        <div id="home-page" className="w-dvw lg:px-5 md:px-5 sm:px-4 px-3 py-8">
             {repos.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
                     {repos.map((repo) => {
