@@ -39,6 +39,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- GITHUB-VSCODE | VSCODE-CODE | ELECTRON | MICROSOFT | IDE: VsCode -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/vscode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Python Library: Flask -->
   <url>
     <loc>https://openastral.pages.dev/repositories/pallets/flask</loc>

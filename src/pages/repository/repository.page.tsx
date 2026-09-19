@@ -5,6 +5,7 @@ import repositoryService from '../../app/services/repository.service';
 import Loading from '../../components/loading.component';
 import type { Repository } from '../../app/models/models';
 import CategoryC from '../../components/repository/category.component';
+import Helpers from '../../app/utils/helpers.utils';
 
 export default function RepositoryPage() {
     const [repository, setRepository] = useState<Repository>();
@@ -15,9 +16,8 @@ export default function RepositoryPage() {
     const repositoryName: string = params.repo!!;
     const getReadme = async () => {
         if (repository) {
-            const req = await fetch(`${repository.readme_url}`, { redirect: 'follow' });
-            const res = await req.text();
-            if (res.length > 0) {
+            const res = await Helpers.getReadme(repository.name, repository.owner.login, `${repository.readme_url}`);
+            if (res && res.length > 0) {
                 setReadme(res);
             }
         }

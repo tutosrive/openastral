@@ -28,4 +28,29 @@ export default class Helpers {
         const theme = localStorage.getItem('theme');
         return theme !== 'true' && theme && theme.length > 4 ? theme : 'default';
     }
+
+    static async getReadme(repo: string, owner: string, urlReadme: string, intents: number = 1, isGithub: boolean = false): Promise<string | undefined> {
+        const TOKEN = import.meta.env.VITE_GH_TOKEN;
+        let req;
+        try {
+            if (isGithub === true) {
+                req = await fetch(urlReadme, { headers: { Accept: 'application/vnd.github.v3.raw', Authorization: `token ${TOKEN}`, 'X-GitHub-Api-Version': '2026-03-10' }, method: 'GET' });
+            } else {
+                req = await fetch(urlReadme);
+            }
+            if (intents === 3) {
+                return req.text();
+            }
+            if (req.status === 404) {
+                throw new Error('Readme Not Found');
+            }
+
+            if (isGithub === true) {
+                const TEMP_RES = await req.json();
+                return this.getReadme(repo, owner, TEMP_RES.download_url, intents + 1);
+            }
+        } catch (e) {
+            return this.getReadme(repo, owner, `https://api.github.com/repos/${owner}/${repo}/readme`, intents + 1, true);
+        }
+    }
 }
