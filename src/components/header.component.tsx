@@ -73,7 +73,7 @@ export default function Header() {
                         <input type="search" required placeholder="Search" className="input w-64 lg:w-auto" />
                     </label>
                     <ThemeChanger themeName={theme} />
-                    <a href={Helpers.goToCustom('http://github.com/tutosrive/openastral')}>
+                    <a href={Helpers.goToCustom('https://github.com/tutosrive/openastral')}>
                         <i className="fa-brands fa-github"></i>
                     </a>
                 </div>
