@@ -45,87 +45,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Python Library: Flask -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/pallets/flask</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Zed IDE -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/zed-industries/zed</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Awesome Lists Collection -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/sindresorhus/awesome</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Node.js JavaScript Runtime -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/nodejs/node</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- React JavaScript Library -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/react/react</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- RustDesk Open Source Remote Desktop -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/rustdesk/rustdesk</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- RxJS: Reactive Extensions for JavaScript -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/ReactiveX/rxjs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- RxJava: Reactive Extensions for the JVM -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/ReactiveX/RxJava</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Rust Programming Language -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/rust-lang/rust</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- RunAnywhere AI SDKs -->
   <url>
     <loc>https://openastral.pages.dev/repositories/RunanywhereAI/runanywhere-sdks</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Rufus: Create bootable USB drives -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/pbatard/rufus</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- React Router for Web Applications -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/remix-run/react-router</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- React Native for Mobile Apps -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/react/react-native</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- All Algorithms implemented in Python -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/TheAlgorithms/Python</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -147,27 +69,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- PixiJS 2D WebGL Rendering Engine -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/pixijs/pixijs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Node.js Best Practices Guide -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/goldbergyoni/nodebestpractices</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NiceGUI Python Web UI Framework -->
   <url>
     <loc>https://openastral.pages.dev/repositories/zauberzeug/nicegui</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Next.js React Framework -->
-  <url>
-    <loc>https://openastral.pages.dev/repositories/vercel/next.js</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -177,19 +81,2334 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Mermaid Diagramming and Charting Tool -->
+  <!-- EDUCATION | GUIDES | PROGRAMMING: Build Your Own X -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/codecrafters-io/build-your-own-x</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED LISTS | RESOURCES | AWESOME: Awesome -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sindresorhus/awesome</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- APIS | DEVELOPMENT | RESOURCES: Public APIs -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/public-apis/public-apis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- BOOKS | EDUCATION | RESOURCES: Free Programming Books -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/EbookFoundation/free-programming-books</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | RESOURCES | AWESOME: Awesome Python -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vinta/awesome-python</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- SELF-HOSTING | INFRASTRUCTURE | AWESOME: Awesome Selfhosted -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/awesome-selfhosted/awesome-selfhosted</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | TYPESCRIPT | FRONTEND | META: React -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/react/react</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | KERNEL | OPERATING SYSTEM | OPEN SOURCE: Linux -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/torvalds/linux</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | ALGORITHMS | EDUCATION: Python Algorithms -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/TheAlgorithms/Python</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | JAVASCRIPT | FRONTEND: Vue.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vuejs/vue</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- OPEN SOURCE | DEVELOPMENT | PLATFORM: OpenCode -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/anomalyco/opencode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AUTOMATION | WORKFLOW | NODEJS: n8n -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/n8n-io/n8n</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | PYTHON | MACHINE LEARNING | GOOGLE: TensorFlow -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tensorflow/tensorflow</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | ALGORITHMS | EDUCATION: JavaScript Algorithms -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/trekhleb/javascript-algorithms</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | VIDEO DOWNLOADER | UTILITY: yt-dlp -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/yt-dlp/yt-dlp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | RESOURCES | AWESOME: Awesome Go -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/avelino/awesome-go</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | MARKDOWN | CONVERTER | MICROSOFT: MarkItDown -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/markitdown</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | SCRAPING | AI | DATA: Firecrawl -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/firecrawl/firecrawl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DART | MOBILE | CROSS-PLATFORM | GOOGLE: Flutter -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/flutter/flutter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AI | PROMPTS | CHATGPT | RESOURCES: Prompts Chat -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/f/prompts.chat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | ANDROID | SCREEN MIRRORING | UTILITY: scrcpy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Genymobile/scrcpy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | FRAMEWORK | VERCEL: Next.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vercel/next.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | COMPILER | LANGUAGE | GOOGLE: Go -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/golang/go</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | C++ | WINDOWS | UTILITY | MICROSOFT: PowerToys -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/PowerToys</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AI | LLM | RESOURCES | AWESOME: Awesome LLM Apps -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Shubhamsaboo/awesome-llm-apps</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DEVOPS | CLOUD | RESOURCES | FREE: Free for Dev -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ripienaar/free-for-dev</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | DRAWING | WHITEBOARD: Excalidraw -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/excalidraw/excalidraw</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | TYPESCRIPT | MOBILE | META: React Native -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/react/react-native</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | TAILWIND | UI COMPONENTS: shadcn-ui -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/shadcn-ui/ui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DESKTOP | REMOTE DESKTOP | OPEN SOURCE: RustDesk -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rustdesk/rustdesk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | TYPESCRIPT | DESKTOP | FRAMEWORK: Electron -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/electron/electron</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | JAVASCRIPT | RUNTIME | SERVER: Node.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nodejs/node</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- EDUCATION | AI | MICROSOFT | RESOURCES: Generative AI for Beginners -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/generative-ai-for-beginners</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | COMPILER | LANGUAGE | SYSTEM: Rust -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rust-lang/rust</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | GAME ENGINE | OPEN SOURCE | 3D: Godot -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/godotengine/godot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | 3D | WEBGL | GRAPHICS: Three.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mrdoob/three.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AUTOMATION | BROWSER: Browser Use -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/browser-use/browser-use</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DART | SELF-HOSTING | PHOTOS: Immich -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/immich-app/immich</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | TYPESCRIPT | DESKTOP | FRAMEWORK: Tauri -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tauri-apps/tauri</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | JAVASCRIPT | LANGUAGE | MICROSOFT: TypeScript -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/TypeScript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | HTTP | CLIENT | NODEJS: Axios -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/axios/axios</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DATABASE | BACKEND | FIREBASE ALTERNATIVE: Supabase -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/supabase/supabase</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | TYPESCRIPT | RUNTIME | SERVER: Deno -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/denoland/deno</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | NODEJS | BEST PRACTICES | RESOURCES: Node.js Best Practices -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/goldbergyoni/nodebestpractices</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | LLM | EDUCATION: LLMs from Scratch -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rasbt/LLMs-from-scratch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | WINDOWS | TERMINAL | MICROSOFT: Windows Terminal -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/terminal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | REACT | TOOLING | FRONTEND: Create React App -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/react/create-react-app</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | API | BACKEND | FRAMEWORK: FastAPI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fastapi/fastapi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | FRAMEWORK | FRONTEND | GOOGLE: Angular -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/angular/angular</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | UI COMPONENTS | DESIGN: Ant Design -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ant-design/ant-design</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- IDEAS | PORTFOLIO | EDUCATION | RESOURCES: App Ideas -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/florinpop17/app-ideas</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CSS | UTILITY | FRAMEWORK | FRONTEND: Tailwind CSS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tailwindlabs/tailwindcss</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- EDUCATION | WEB DEV | MICROSOFT | RESOURCES: Web Dev For Beginners -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/Web-Dev-For-Beginners</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ZIG | TYPESCRIPT | RUNTIME | TOOLING: Bun -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/oven-sh/bun</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- SHELL | BASH | NODEJS | VERSION MANAGER: NVM -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nvm-sh/nvm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | DESIGN PATTERNS | ARCHITECTURE | EDUCATION: Java Design Patterns -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/iluwatar/java-design-patterns</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | MATH | ANIMATION | VIDEO: Manim -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/3b1b/manim</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | PDF | UTILITY | SELF-HOSTING: Stirling-PDF -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Stirling-Tools/Stirling-PDF</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | FRAMEWORK | BACKEND | WEB: Django -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/django/django</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DART | FLUTTER | FILE SHARING | UTILITY: LocalSend -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/localsend/localsend</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | PYTHON | COMPUTER VISION | AI: OpenCV -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/opencv/opencv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | RAG | LLM: RAGFlow -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/infiniflow/ragflow</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- EDUCATION | MACHINE LEARNING | MICROSOFT | RESOURCES: ML For Beginners -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/ML-For-Beginners</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | DIAGRAMS | MARKDOWN | TOOLING: Mermaid -->
   <url>
     <loc>https://openastral.pages.dev/repositories/mermaid-js/mermaid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Run your GitHub Actions locally -->
+  <!-- RUST | IDE | EDITOR | PERFORMANCE: Zed -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/zed-industries/zed</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | STATIC SITE GENERATOR | WEB | FRAMEWORK: Hugo -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/gohugoio/hugo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | PYTHON | PACKAGE MANAGER | TOOLING: uv -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/astral-sh/uv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | OCR | AI | VISION: PaddleOCR -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/PaddlePaddle/PaddleOCR</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DESKTOP | VIDEO EDITOR | UTILITY: OpenCut -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/OpenCut-app/OpenCut</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- OPEN SOURCE | BEGINNERS | AWESOME | RESOURCES: Awesome For Beginners -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/MunGell/awesome-for-beginners</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | FRAMEWORK | BACKEND | WEB: Gin -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/gin-gonic/gin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | TYPESCRIPT | FRONTEND | FRAMEWORK: Svelte -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sveltejs/svelte</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | JAVASCRIPT | BUILD TOOL | FRONTEND: Vite -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vitejs/vite</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CSS | ANIMATION | FRONTEND | LIBRARY: Animate.css -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/animate-css/animate.css</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AI | EDUCATION | PROMPTS | RESOURCES: Understand Anything -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Egonex-AI/Understand-Anything</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | TERMINAL | GIT | UI: Lazygit -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jesseduffield/lazygit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- FONTS | LIGATURES | TYPOGRAPHY | PROGRAMMING: FiraCode -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tonsky/FiraCode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | FRAMEWORK | BACKEND | ENTERPRISE: Spring Boot -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/spring-projects/spring-boot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- VUE | TYPESCRIPT | API | CLIENT: Hoppscotch -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/hoppscotch/hoppscotch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | SECURITY | HACKING | UTILITY: Hackingtool -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Z4nzu/hackingtool</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | VSCODE | IDE | CLOUD: Code Server -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/coder/code-server</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | BOOTABLE | USB | UTILITY: Ventoy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ventoy/Ventoy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | PYTHON | LANGUAGE | INTERPRETER: CPython -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/python/cpython</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ALGORITHMS | LEETCODE | EDUCATION: LeetCode Animation -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/MisterBooo/LeetCodeAnimation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | NODEJS | BACKEND | FRAMEWORK: NestJS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nestjs/nest</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | GUI | FRONTEND | GRAPHICS: Dear ImGui -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ocornut/imgui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | C++ | STREAMING | VIDEO: OBS Studio -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/obsproject/obs-studio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | WEBSERVER | HTTP | SERVER: Caddy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/caddyserver/caddy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | NODEJS | MOCK | API: JSON Server -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/typicode/json-server</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | REVERSE ENGINEERING | SECURITY | NSA: Ghidra -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/NationalSecurityAgency/ghidra</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | FRAMEWORK | BACKEND | WEB: Flask -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pallets/flask</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- REACT | RESOURCES | AWESOME | FRONTEND: Awesome React -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/enaqx/awesome-react</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | TERMINAL | SSH | UTILITY: Tabby -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Eugeny/tabby</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AI | MACHINE LEARNING | AWESOME | RESOURCES: Awesome Machine Learning -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/josephmisiti/awesome-machine-learning</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- SCALA | ALGORITHM | SOCIAL MEDIA | TWITTER: The Algorithm -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/twitter/the-algorithm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ARCHITECTURE | SCALABILITY | AWESOME | SYSTEM DESIGN: Awesome Scalability -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/binhnguyennus/awesome-scalability</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | ANIMATION | FRONTEND | LIBRARY: Anime.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/juliangarnier/anime</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | WORKSPACE | NOTION ALTERNATIVE | OPEN SOURCE: AFFiNE -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/toeverything/AFFiNE</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ASSEMBLY | HISTORY | SPACE | NASA: Apollo-11 -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/chrislgarry/Apollo-11</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | PRESENTATION | HTML | FRONTEND: reveal.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/hakimel/reveal.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | GITHUB ACTIONS | LOCAL | TESTING: act -->
   <url>
     <loc>https://openastral.pages.dev/repositories/nektos/act</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <!-- EDUCATION | COURSES | AWESOME | CS: Awesome Courses -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/prakhar1989/awesome-courses</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | CODE | GRAPH | VISUALIZATION: CodeGraph -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/colbymchenry/codegraph</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | NODEJS | BACKEND | FRAMEWORK: Express -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/expressjs/express</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | VSCODE | ASSISTANT: Cline -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/cline/cline</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DESIGN | RESOURCES | UI/UX | FRONTEND: Design Resources -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/bradtraversy/design-resources-for-developers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | NODEJS | AWESOME | RESOURCES: Awesome Node.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sindresorhus/awesome-nodejs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ALGORITHMS | EDUCATION | CS: Java Algorithms -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/TheAlgorithms/Java</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | DOCUMENTATION | META: Docusaurus -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/facebook/docusaurus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AI | PROMPTS | SECURITY | LLM: System Prompts Leaks -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/asgeirtj/system_prompts_leaks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | INTERVIEWS | ALGORITHMS | CS: Interviews -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/kdn251/interviews</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- MARKDOWN | CLI | DOCUMENTATION | UTILITY: tldr -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tldr-pages/tldr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | WEBSOCKETS | REALTIME | NODEJS: Socket.IO -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/socketio/socket.io</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | VERSION CONTROL | SYSTEM | TOOLING: Git -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/git/git</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | NOTES | SELF-HOSTING | OPEN SOURCE: Memos -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/usememos/memos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUBY | RESUME | GITHUB | GENERATOR: Resume -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/resume/resume.github.com</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | FRAMEWORK | STATIC SITE | FRONTEND: Astro -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/withastro/astro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | AGENT | TOOLING: Strix -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/usestrix/strix</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | STATE MANAGEMENT | REACT | FRONTEND: Redux -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/reduxjs/redux</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DESKTOP | WEB TO APP | UTILITY: Pake -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tw93/Pake</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | VUE | MARKDOWN | EDITOR: MarkText -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/marktext/marktext</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DART | FLUTTER | RESOURCES | AWESOME: Awesome Flutter -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Solido/awesome-flutter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- SYSTEM | AUTOMATION | ARCHIVE | UTILITY: Archify -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tt-a1i/archify</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | DATABASE | BACKEND | BAAS: PocketBase -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pocketbase/pocketbase</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | TERMINAL | EMULATOR: Termux -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/termux/termux-app</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | EXTENSION | MARKDOWN | UTILITY: Markdown Here -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/adam-p/markdown-here</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | FRAMEWORK | BACKEND | ENTERPRISE: Spring Framework -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/spring-projects/spring-framework</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AUDIO | MACHINE LEARNING: Real-Time Voice Cloning -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/CorentinJ/Real-Time-Voice-Cloning</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | RESOURCES | AWESOME | LIST: Awesome Rust -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rust-unofficial/awesome-rust</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | VIDEO | ANIMATION: Remotion -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/remotion-dev/remotion</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUBY | FRAMEWORK | BACKEND | WEB: Ruby on Rails -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rails/rails</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ANDROID | UI COMPONENTS | RESOURCES | AWESOME: Awesome Android UI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/wasabeef/awesome-android-ui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | TERMINAL | CLI | UI: Rich -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Textualize/rich</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | COMPUTER VISION | UTILITY: Face Recognition -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ageitgey/face_recognition</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AUTOMATION | WORKFLOWS | N8N | UTILITY: n8n-workflows -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Zie619/n8n-workflows</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | ROUTING | FRONTEND: React Router -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/remix-run/react-router</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | FRAMEWORK | FRONTEND: Gatsby -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/gatsbyjs/gatsby</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | LLM | WORKFLOWS: Flowise -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/FlowiseAI/Flowise</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | SHELL | SCRIPTING | MICROSOFT: PowerShell -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/PowerShell/PowerShell</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | REVERSE ENGINEERING | HEX EDITOR | UTILITY: ImHex -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/WerWolv/ImHex</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | VUE | FRAMEWORK | FRONTEND: Vue.js Core -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vuejs/core</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | HTTP | CLIENT | LIBRARY: Requests -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/psf/requests</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AUDIO | MICROSOFT: VibeVoice -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/VibeVoice</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | PDF | RENDERER | MOZILLA: PDF.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mozilla/pdf.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CSS | STYLING | FRONTEND | UTILITY: Normalize.css -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/necolas/normalize.css</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- KOTLIN | COMPILER | LANGUAGE | JETBRAINS: Kotlin -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/JetBrains/kotlin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DESKTOP | VOICE | AUDIO: Voicebox -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jamiepine/voicebox</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | MOBILE | CROSS-PLATFORM | FRONTEND: Ionic Framework -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ionic-team/ionic-framework</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | FORMATTER | CODE | TOOL: Prettier -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/prettier/prettier</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | LIBRARIES | GOOGLE | UTILITIES: Guava -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/google/guava</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | DATABASE | SQL | GUI: DBeaver -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/dbeaver/dbeaver</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUBY | STATIC SITE | BLOG | GENERATOR: Jekyll -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jekyll/jekyll</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | JSON | LIBRARY | SINGLE-HEADER: JSON for Modern C++ -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nlohmann/json</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | DECOMPILER | APK | ANDROID: Jadx -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/skylot/jadx</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | WHITEBOARD | CANVAS | REACT: tldraw -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tldraw/tldraw</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | PYTHON | LINTER | TOOL: Ruff -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/astral-sh/ruff</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | HTML | AJAX | FRONTEND: htmx -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/bigskysoftware/htmx</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | AI | LLM | LOCAL: LocalAI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mudler/LocalAI</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LIST | JAVA | AWESOME: Awesome Java -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/akullpp/awesome-java</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LIST | DESIGN PATTERNS | AWESOME: Awesome Design Patterns -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/DovAmir/awesome-design-patterns</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | ALGORITHMS | VISUALIZATION | EDUCATION: Algorithm Visualizer -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/algorithm-visualizer/algorithm-visualizer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | PRESENTATION | MARKDOWN | VUE: Slidev -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/slidevjs/slidev</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | TYPES | EDUCATION | CHALLENGES: Type Challenges -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/type-challenges/type-challenges</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LIST | REACT | AWESOME: Awesome React Components -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/brillout/awesome-react-components</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | REACTIVE | ASYNC | OBSERVABLE: RxJava -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ReactiveX/RxJava</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | GAME ENGINE | ECS | OPEN SOURCE: Bevy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/bevyengine/bevy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | WEBGL | 2D | ENGINE: PixiJS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pixijs/pixijs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | ORM | DATABASE | NODEJS: Prisma -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/prisma/orm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | EDITOR | WYSIWYG | RICH TEXT: Quill -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/slab/quill</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | CHEATSHEET | EDUCATION: TypeScript React Cheatsheet -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/typescript-cheatsheets/react</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | HTTP | CLIENT | ANDROID: OkHttp -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/lysine-dev/okhttp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | API | CLIENT | POSTMAN-ALTERNATIVE: Bruno -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/usebruno/bruno</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | EDITOR | CODE | BROWSER: Monaco Editor -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/monaco-editor</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | EDITOR | TERMINAL | VIM-LIKE: Helix -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/helix-editor/helix</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- KOTLIN | ANDROID | ARCHITECTURE | EXAMPLES: Architecture Samples -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/android/architecture-samples</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | FASTAPI | TEMPLATE | FULL-STACK: Full Stack FastAPI Template -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fastapi/full-stack-fastapi-template</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | TESTING | FRAMEWORK | NODEJS: Jest -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jestjs/jest</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | WINDOWS | FILE MANAGER | UWP: Files -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/files-community/Files</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | LLM | DESKTOP: Jan -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/janhq/jan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DATA ENGINEERING | HANDBOOK | RESOURCES | EDUCATION: Data Engineer Handbook -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/DataExpert-io/data-engineer-handbook</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | DESIGN PATTERNS | ARCHITECTURE | EDUCATION: Python Patterns -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/faif/python-patterns</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | NETWORK | PROTOCOL | TRANSFER: cURL -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/curl/curl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- SYSTEM DESIGN | RESOURCES | AWESOME | ARCHITECTURE: Awesome System Design Resources -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ashishps1/awesome-system-design-resources</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | DATABASE | SQL | ANALYTICS: DuckDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/duckdb/duckdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DESIGN | TOOLS | UI/UX | AWESOME: Awesome Design Tools -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/goabstract/Awesome-Design-Tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | DESKTOP | CHROMIUM | FRAMEWORK: NW.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/nwjs/nw.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | NETWORK | MONITOR | UTILITY: Sniffnet -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/GyulyVGC/sniffnet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | AI | VECTOR SEARCH | FACEBOOK: FAISS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/facebookresearch/faiss</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | AI | LLM | QUANTIZATION: BitNet -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/BitNet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | API | CLIENT | HTTP: Insomnia -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Kong/insomnia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | OPEN SOURCE | PLATFORM: OpenHuman -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tinyhumansai/openhuman</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | WINDOWS | SCREENSHOT | UTILITY: ShareX -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ShareX/ShareX</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DATABASE | DIAGRAMS | TOOL: DrawDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/drawdb-io/drawdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | PIXEL ART | EDITOR | GRAPHICS: Aseprite -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/aseprite/aseprite</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | GUI | FRAMEWORK | WEB: Dioxus -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/DioxusLabs/dioxus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | REACT | FRONTEND | LIGHTWEIGHT: Preact -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/preactjs/preact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | NOTES | KNOWLEDGE BASE: Open Notebook -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/lfnovo/open-notebook</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | WAYLAND | WINDOW MANAGER | LINUX: Hyprland -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/hyprwm/Hyprland</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | CHARTS | UI: MPAndroidChart -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/PhilJay/MPAndroidChart</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | BOOTABLE | USB | UTILITY: Rufus -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pbatard/rufus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | OSINT | SECURITY | UTILITY: Maigret -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/soxoj/maigret</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DEVOPS | DOCKER | PANEL: Dokploy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Dokploy/dokploy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | TERMINAL | UI | FRAMEWORK: Textual -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Textualize/textual</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | MARKDOWN | PARSER | UTILITY: Marked -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/markedjs/marked</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | NODEJS | BACKEND | FRAMEWORK: Fastify -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fastify/fastify</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | AUTHENTICATION | SECURITY | IAM: Keycloak -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/keycloak/keycloak</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | ORM | DATABASE | NODEJS: TypeORM -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/typeorm/typeorm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | PACKAGE MANAGER | NODEJS | TOOLING: pnpm -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pnpm/pnpm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | DESKTOP | FRAMEWORK | WEB: Wails -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/wailsapp/wails</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | NVR | VIDEO | AI: Frigate -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/blakeblackshear/frigate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | ANIMATION | LOTTIE: Lottie Android -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/airbnb/lottie-android</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | RAG | INDEXING: PageIndex -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/VectifyAI/PageIndex</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | TERMINAL | MULTIPLEXER | UTILITY: Zellij -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/zellij-org/zellij</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | IMAGE | LOADING: Glide -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/bumptech/glide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LIST | JAVASCRIPT | AWESOME: Awesome JavaScript -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sorrycc/awesome-javascript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | SECURITY | OSINT | TOOL: Web-Check -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/lissy93/web-check</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | GAME DEV | GRAPHICS | LIBRARY: Raylib -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/raysan5/raylib</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DATABASE | VECTOR | AI: Qdrant -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/qdrant/qdrant</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | FORMS | LIBRARY: Formik -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jaredpalmer/formik</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | ALGORITHMS | EDUCATION | DATA STRUCTURES: TheAlgorithms JavaScript -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/TheAlgorithms/JavaScript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | SHELL | TERMINAL | UTILITY: Fish Shell -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fish-shell/fish-shell</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | WEB | MONITORING | UTILITY: Changedetection.io -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/dgtlmoon/changedetection.io</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | PROGRAMMING LANGUAGE | GOOGLE | EXPERIMENTAL: Carbon Language -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/carbon-language/carbon-lang</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | OPERATING SYSTEM | GRAPHICS | DESKTOP: SerenityOS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/SerenityOS/serenity</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | WINDOWS | LINUX | SUBSYSTEM: WSL -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/WSL</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LIST | AWESOME | COLLECTIONS: Awesome Awesomeness -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/bayandin/awesome-awesomeness</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | ANIMATION | REACT | LIBRARY: Motion -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/motiondivision/motion</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | CAD | 3D MODELING | ENGINEERING: FreeCAD -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/FreeCAD/FreeCAD</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | CLEANUP | UTILITY | FILES: Czkawka -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/qarmin/czkawka</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | VSCODE | EDITOR | OPEN SOURCE: VSCodium -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/VSCodium/vscodium</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DATABASE | MULTI-MODEL | SQL: SurrealDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/surrealdb/surrealdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | TELEGRAM | MESSAGING | DESKTOP: Telegram Desktop -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/telegramdesktop/tdesktop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | EMULATOR | PS4 | GAMING: shadPS4 -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/shadps4-emu/shadPS4</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | WEB | FRONTEND | WASM: Yew -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/yewstack/yew</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | GAMING | LINUX | WINE: Proton -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ValveSoftware/Proton</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | UI | TOOLTIP | REACT: Floating UI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/floating-ui/floating-ui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | NUMERICAL | COMPUTING | SCIENCE: NumPy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/numpy/numpy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | HOOKS | DATA FETCHING: SWR -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/vercel/swr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | 3D | THREEJS: React Three Fiber -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pmndrs/react-three-fiber</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AI | GEOSPATIAL | MAPS: God's Eye View -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/bilawalsidhu/gods-eye-view</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | WEB | FAST | FRAMEWORK: Hono -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/honojs/hono</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | EDITOR | BLOCKS | WEB: Editor.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/codex-team/editor.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | CANVAS | DOM | RENDERER: html2canvas -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/niklasvh/html2canvas</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | ANDROID | SCREENCAST | UTILITY: QtScrcpy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/barry-ran/QtScrcpy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | RICH TEXT | EDITOR: Slate -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ianstormtaylor/slate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | UI | COMPONENTS: Mantine -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mantinedev/mantine</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACTIVE | ASYNC | PROGRAMMING: RxJS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ReactiveX/rxjs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | OPENAI | SDK: OpenAI Python -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/openai/openai-python</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AUTOMATION | AGENT: Handy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/cjpais/Handy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | DOCUMENTATION | SITE | GENERATOR: Docsify -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/docsifyjs/docsify</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | UI | FRAMEWORK | CROSS-PLATFORM: Avalonia -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/AvaloniaUI/Avalonia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | GUI | FRAMEWORK | RENDERER: Iced -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/iced-rs/iced</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | CANVAS | GRAPHICS | LIBRARY: Fabric.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fabricjs/fabric.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- SECURITY | LINUX | SERVER | HARDENING: How To Secure A Linux Server -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/imthenachoman/How-To-Secure-A-Linux-Server</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | UPLOAD | FILE | WIDGET: Uppy -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/transloadit/uppy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | SCREENSHOT | UTILITY | DESKTOP: Flameshot -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/flameshot-org/flameshot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | CRYPTO | SSL | SECURITY: OpenSSL -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/openssl/openssl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | GUI | IMMEDIATE | FRAMEWORK: egui -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/emilk/egui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | STATE MACHINE | STATECHART | JAVASCRIPT: XState -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/statelyai/xstate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | MEMORY | LEAK DETECTION: LeakCanary -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/square/leakcanary</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- AI | AGENTS | AWESOME | CURATED: Awesome AI Agents -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/e2b-dev/awesome-ai-agents</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AUTH | AUTHENTICATION | WEB: Better Auth -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/better-auth/better-auth</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | EDITOR | WINDOWS | TEXT: Notepad++ -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/notepad-plus-plus/notepad-plus-plus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | SECURITY | SECRETS | SCANNER: Gitleaks -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/gitleaks/gitleaks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | AGENT | PERFORMANCE | UTILITY: Page Agent -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/alibaba/page-agent</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ELIXIR | ANALYTICS | PRIVACY | WEB: Plausible Analytics -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/plausible/analytics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LIST | VSCODE | AWESOME: Awesome VS Code -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/viatsko/awesome-vscode</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | WEB | FULL-STACK | FRAMEWORK: Reflex -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/reflex-dev/reflex</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | MOUSE | SHARING | UTILITY: Deskflow -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/deskflow/deskflow</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | EDITOR | AI | CODE: Void -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/voideditor/void</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PHP | CLOUD | STORAGE | FILE MANAGER: Cloudreve -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/cloudreve/cloudreve</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | DATABASE | NOSQL | DOCUMENT: MongoDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mongodb/mongo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | GENERATIVE | RESOURCES: Open Generative AI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Anil-matcha/Open-Generative-AI</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | AUDIO | RECORDING | WEB: Recordly -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/webadderallorg/Recordly</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | GITHUB ACTIONS | AWESOME | CI/CD: Awesome Actions -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sdras/awesome-actions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | STATE MANAGEMENT | REACT | JAVASCRIPT: MobX -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mobxjs/mobx</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | SELECT | UI: React Select -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/JedWatson/react-select</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | FONT | PROGRAMMING | MICROSOFT: Cascadia Code -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/cascadia-code</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | SECURITY | SECRETS | SCANNER: TruffleHog -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/trufflesecurity/trufflehog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | COMPRESSION | ALGORITHM | FACEBOOK: Zstd -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/facebook/zstd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | BROWSER | PRIVACY | CHROMIUM: Ungooled Chromium -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ungoogled-software/ungoogled-chromium</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | LINTER | CODE | QUALITY: ESLint -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/eslint/eslint</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | REACT | EDUCATION | TUTORIAL: 30 Days of React -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Asabeneh/30-Days-Of-React</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LLM | AI | AWESOME: Awesome LLM -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Hannibal046/Awesome-LLM</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | MARKDOWN | TERMINAL | VIEWER: Glow -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/charmbracelet/glow</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | EDITOR | CODE | WEB: CodeMirror 5 -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/codemirror/codemirror5</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | GRAPHICS | VECTOR | EDITOR: Graphite -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/GraphiteEditor/Graphite</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AGENT | SEARCH: AgenticSeek -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Fosowl/agenticSeek</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | EDITOR | CODE | BROWSER: Ace Editor -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ajaxorg/ace</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | WEB | HTTP | FRAMEWORK: Axum -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tokio-rs/axum</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | SPEECH | AI | AUDIO: DeepSpeech -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mozilla/DeepSpeech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | OPENAPI | GENERATOR | TOOLING: OpenAPI Generator -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/OpenAPITools/openapi-generator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | EDITOR | AI: Onlook -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/onlook-dev/onlook</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | GAME DEV | ENGINE | VISUAL: GDevelop -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/4ian/GDevelop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | SPEECH | SYNTHESIS: Chatterbox -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/resemble-ai/chatterbox</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | HTML | EDITOR | COMPONENT: GrapesJS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/GrapesJS/grapesjs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | WINDOWS | PACKAGE MANAGER | GUI: UniGetUI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Devolutions/UniGetUI</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | IMAGE | COMPRESSION | UTILITY: Squoosh -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/GoogleChromeLabs/squoosh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | TUTORIAL | EDUCATION | MODERN C++: Modern C++ Tutorial -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/changkun/modern-cpp-tutorial</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | STORAGE | OFFLINE | DATABASE: localForage -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/localForage/localForage</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | MOBILE | CROSS-PLATFORM | NATIVE: NativeScript -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/NativeScript/NativeScript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | LINUX | SOFTWARE | AWESOME: Awesome Linux Software -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/luong-komorebi/Awesome-Linux-Software</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | APK | TOOLING: Apktool -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/iBotPeaches/Apktool</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | ALGORITHMS | EDUCATION | DATA STRUCTURES: Algorithms (Python) -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/keon/algorithms</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | ALGORITHMS | AWESOME | EDUCATION: Awesome Algorithms -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tayllan/awesome-algorithms</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | DIAGRAMS | TOOL | MARKDOWN: D2 -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/d2lang/d2</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- FORMAT | SERIALIZATION | DATA | UTILITY: TOON Format -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/toon-format/toon</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AGENT | MICROSOFT: JARVIS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/JARVIS</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | TERMINAL | AUTOCOMPLETE | TOOL: Fig Autocomplete -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/withfig/autocomplete</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | RESPONSIVE | TESTING | DESKTOP: Responsively App -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/responsively-org/responsively-app</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | GAMES | LIST | PROGRAMMING: Programming Games -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/leereilly/games</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | WEB | HTTP | FRAMEWORK: Actix Web -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/actix/actix-web</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | EVENTBUS | PUBLISH-SUBSCRIBE: EventBus -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/greenrobot/EventBus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | EDGE | GALLERY: Google AI Edge Gallery -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/google-ai-edge/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | TERMINAL | SYSTEM | INFO: Fastfetch -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fastfetch-cli/fastfetch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | SQLITE | DATABASE | GUI: DB Browser for SQLite -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/sqlitebrowser/sqlitebrowser</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | ANDROID | RECYCLERVIEW | ADAPTER: BaseRecyclerViewAdapterHelper -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/CymChad/BaseRecyclerViewAdapterHelper</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | ICONS | UI | LIBRARY: Lucide -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/lucide-icons/lucide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DATABASE | SQL | TURSO: Turso -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tursodatabase/turso</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | JSON | GOOGLE | SERIALIZATION: Gson -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/google/gson</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | OSINT | SECURITY | SOCIAL: Social Analyzer -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/qeeqbox/social-analyzer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | EDITOR | RICH TEXT | FRAMEWORK: Lexical -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/facebook/lexical</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | GUI | FRAMEWORK | DESKTOP: Slint -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/slint-ui/slint</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | PROGRAMMING LANGUAGE | RUBY | INTERPRETER: Ruby -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ruby/ruby</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | BROWSER | PRIVACY | CHROMIUM: Brave Browser -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/brave/brave-browser</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | DATABASE | TIME-SERIES | SQL: TimescaleDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/timescale/timescaledb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- KOTLIN | ANDROID | COMPOSE | EXAMPLES: Compose Samples -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/android/compose-samples</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DATABASE | OFFLINE | SYNCHRONIZATION: RxDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pubkey/rxdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | JDK | OPENJDK | PROGRAMMING LANGUAGE: OpenJDK -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/openjdk/jdk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | .NET | MAUI | CROSS-PLATFORM: .NET MAUI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/dotnet/maui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- GO | TERMINAL | FILE MANAGER | UTILITY: Superfile -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/yorukot/superfile</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DATABASE | POSTGRESQL | CLOUD: Neon -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/neondatabase/neon</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | POSTGRESQL | VECTOR | DATABASE: pgvector -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pgvector/pgvector</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DATABASE | DIAGRAMS | TOOL: ChartDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/chartdb/chartdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DART | FLUTTER | UI | TEMPLATES: Best Flutter UI Templates -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mitesh77/Best-Flutter-UI-Templates</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DOCKER | DESKTOP | UTILITY: Winboat -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/winboat-org/winboat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DATABASE | JSON | LIGHTWEIGHT: LowDB -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/typicode/lowdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | WHATSAPP | API | AUTOMATION: WhatsApp Web.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/wwebjs/whatsapp-web.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | GENERATOR | JHIPSTER | FULL-STACK: JHipster -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jhipster/generator-jhipster</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | REACT | GRID | LAYOUT: React Grid Layout -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/react-grid-layout/react-grid-layout</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | PYTHON | INTERPRETER | RUSTPYTHON: RustPython -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/RustPython/RustPython</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | UTILITY | WEATHER | TOOL: Witr -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pranshuparmar/witr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | TERMINAL | WAVE | DESKTOP: Waveterm -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/wavetermdev/waveterm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | ALERT | UI | POPUP: SweetAlert -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/t4t5/sweetalert</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | MARKDOWN | PARSER | UTILITY: Markdown-it -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/markdown-it/markdown-it</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | AI | ONNX | MICROSOFT: ONNX Runtime -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/onnxruntime</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | IDE | EDITOR | CLOUD: Eclipse Theia -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/eclipse-theia/theia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | CLI | PROMPT | NODEJS: Inquirer.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/SBoudrias/Inquirer.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- CURATED | .NET | AWESOME | COLLECTIONS: Awesome .NET -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/quozd/awesome-dotnet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | AI | AUDIO | WHISPER: Buzz -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/chidiwilliams/buzz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | DESKTOP | SCREEN | UTILITY: Deskreen -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pavlobu/deskreen</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | BACKEND | SERVER | PARSE: Parse Server -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/parse-community/parse-server</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | WEB | FRONTEND | FRAMEWORK: Leptos -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/leptos-rs/leptos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | STATE MANAGEMENT | REACT | ATOM: Jotai -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pmndrs/jotai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | TERMINAL | WEB | COMPONENT: Xterm.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/xtermjs/xterm.js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | CANVAS | SKETCH | GRAPHICS: Rough.js -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rough-stuff/rough</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | CALENDAR | UI | JAVASCRIPT: FullCalendar -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/fullcalendar/fullcalendar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVA | INTELLIJ | IDE | JETBRAINS: IntelliJ Community -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/JetBrains/intellij-community</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | GRAPHQL | API | REFERENCE: GraphQL JS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/graphql/graphql-js</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | UI | MICROSOFT | DESIGN SYSTEM: Fluent UI -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/fluentui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- JAVASCRIPT | EDITOR | RICH TEXT | BASECAMP: Trix -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/basecamp/trix</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | PROFILE | GITHUB | SUMMARY: Profile Summary for GitHub -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/tipsy/profile-summary-for-github</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | EMULATOR | PLAYSTATION 3 | GAMING: RPCS3 -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/RPCS3/rpcs3</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | REVERSE ENGINEERING | DISASSEMBLER | GUI: Cutter -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rizinorg/cutter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | PYTHON | LINTING | ASTRAL: Ty -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/astral-sh/ty</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C | MULTIMEDIA | PLAYER | VIDEO: VLC Media Player -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/videolan/vlc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C# | WALLPAPER | DESKTOP | WINDOWS: Lively Wallpaper -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/rocksdanister/lively</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- KOTLIN | ANDROID | DIALOGS | UI: Material Dialogs -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/afollestad/material-dialogs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | DATABASE | CLI | UTILITY: Dbx -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/t8y2/dbx</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- KOTLIN | MULTIPLATFORM | UI | JETBRAINS: Compose Multiplatform -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/JetBrains/compose-multiplatform</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | SCREEN RECORDER | MACOS | CAPTURE: Kap -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/wulkano/Kap</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | API | CLIENT | HTTP: Yaak -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/mountain-loop/yaak</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | ANIMATION | PROGRAMMATIC | CANVAS: Motion Canvas -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/motion-canvas/motion-canvas</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | PDF | INSPECTOR | UTILITY: PDF Inspector -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/firecrawl/pdf-inspector</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | COMPILER | EXPLORER | TOOL: Compiler Explorer -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/compiler-explorer/compiler-explorer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | ANDROID | WINE | EMULATOR: Winlator -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/brunodev85/winlator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | VIDEO | TRANSLATION | AI: PyVideoTrans -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/jianchang512/pyvideotrans</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | CSS | ATOMIC | FRAMEWORK: UnoCSS -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/unocss/unocss</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- DART | ANDROID | IMAGE | VIEWER: PhotoView -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/Baseflow/PhotoView</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | PLOTTING | VISUALIZATION | DATA: Plotly.py -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/plotly/plotly.py</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | MACHINE LEARNING | BOOSTING | MICROSOFT: LightGBM -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/lightgbm-org/LightGBM</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | MOBILE | FRAMEWORK | UI: Framework7 -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/framework7io/framework7</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- TYPESCRIPT | SCREEN RECORDER | BROWSER | EXTENSION: Screenity -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/alyssaxuu/screenity</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- PYTHON | BROWSER | WEBASSEMBLY | PYTHON: PyScript -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/pyscript/pyscript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | LED | LIGHTING | ESP8266: WLED -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/wled/WLED</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUBY | SIGNATURE | DOCUMENT | WORKFLOW: Docuseal -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/docusealco/docuseal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- RUST | FLASH | EMULATOR | WEB: Ruffle -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/ruffle-rs/ruffle</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- C++ | SIMULATOR | DRONE | MICROSOFT: AirSim -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/microsoft/AirSim</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Category: AWESOME -->
   <url>
     <loc>https://openastral.pages.dev/categories/awesome</loc>
@@ -199,6 +2418,366 @@
   <!-- Category: NODEJS -->
   <url>
     <loc>https://openastral.pages.dev/categories/nodejs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: ANDROID -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/android</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: JAVASCRIPT -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/javascript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: REACT -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/react</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: KOTLIN -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/kotlin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: HACKTOBERFEST -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/hacktoberfest</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: PYTHON -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/python</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: TYPESCRIPT -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/typescript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: JAVA -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/java</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: ANDROID LIBRARY -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/android-library</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: RUST -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/rust</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: WINDOWS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/windows</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: LINUX -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/linux</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: AWESOME LIST -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/awesome-list</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GUI -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/gui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: UI -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/ui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: OPEN SOURCE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/open-source</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: AWESOME -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/awesome</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: ANIMATION -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/animation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: MARKDOWN -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/markdown</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: EDITOR -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/editor</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: MACOS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/macos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: JETPACK COMPOSE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/jetpack-compose</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: CROSS PLATFORM -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/cross-platform</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: NODEJS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/nodejs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: MATERIAL DESIGN -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/material-design</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GAME ENGINE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/game-engine</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GAME DEVELOPMENT -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/game-development</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: AI -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GAMEDEV -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/gamedev</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: IOS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/ios</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: ANDROID UI -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/android-ui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: IDE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/ide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: KOTLIN ANDROID -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/kotlin-android</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: DESKTOP -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/desktop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: DATABASE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/database</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: JEKYLL -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/jekyll</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: CSHARP -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/csharp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: CSS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/css</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: WEB -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/web</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: CPP -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/cpp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: LIBRARY -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/library</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: JEKYLL THEME -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/jekyll-theme</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: HTML -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: COMPOSE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/compose</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: C PLUS PLUS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/c-plus-plus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: API -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/api</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GOLANG -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/golang</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: CLI -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/cli</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: SQL -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/sql</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: THEME -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/theme</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: FRAMEWORK -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/framework</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: SQLITE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/sqlite</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GRAPHICS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/graphics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GO -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/go</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: NEXTJS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/nextjs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: LLM -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/llm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: GITHUB -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/github</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: VUE -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/vue</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: DOTNET -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/dotnet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Category: DEVELOPER TOOLS -->
+  <url>
+    <loc>https://openastral.pages.dev/categories/developer-tools</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
