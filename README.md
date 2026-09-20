@@ -1,6 +1,4 @@
-# Open Astral
-
-![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/311e4662-9c26-4675-9f02-ee52d2be3c8c.svg)
+> Build In: ![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/311e4662-9c26-4675-9f02-ee52d2be3c8c.svg)
 
 > [!IMPORTANT]
 > This project use "[SAWP](https://github.com/tutosrive/sawp)" to save all data used on Postgres database (But this template, use Supabase-Js, if you want use other BaaS or your own backend, off course, you can fork this and just change all queries from Supabase to your BaaS)
@@ -13,13 +11,30 @@ Open Astral is inspired by "[Astral](https://github.com/astralapp/astral)" becau
 
 ---
 
-# Why?
+<h2 class="text-primary text-4xl">Why?</h2>
 
 Because I don't just simplify—I genuinely enjoy coding, and I will always prefer a nicely crafted web app and a proper piece of work over a basic ["Stargazer"](https://github.com/tutosrive/stargazer) README.
 
 ---
 
-# Requirements
+<h2 class="text-primary text-4xl">Requirements</h2>
+
+<details>
+  <summary class="text-primary text-2xl">View all requirements inside supabase (Images)</summary>
+
+1. OpenAstral Supabase Functions Required
+ <div class="flex w-dvw justify-center">
+   <img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-functions-required-openastral.png" alt="OpenAstral Supabase Functions Required" />
+ </div>
+2. OpenAstral Supabase Tables Required
+ <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-tables-required-openastral.png" alt="OpenAstral Supabase Tables Required" /></div>
+3. OpenAstral Supabase Integrations Required
+ <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-integrations-required-openastral.png" alt="OpenAstral Supabase Integrations Required" /></div>
+4. OpenAstral Supabase Policies Required
+ <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-policies-required-openastral.png" alt="OpenAstral Supabase Policies Required" /></div>
+5. OpenAstral Supabase Extensions Required
+   <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-extensions-required-openastral.png" alt="OpenAstral Supabase Extensions Required" /></div>
+ </details>
 
 - Environment Variables (inside your deploy dashboard ...)
     1. `VITE_SUPABASE_URL={YOur-Secret}`: Your Supabase **HTTP URL**
