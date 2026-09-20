@@ -20,7 +20,7 @@ export default function AboutPage() {
     return (
         <div className={'lg:mt-10 md:mt-10 mt-15 mb-5 p-5 transition-all w-[98dvw] lg:w-full md:w-full md-preview'}>
             <h1 className="text-center text-9xl text-primary britney-ft">
-                <a href={Helpers.goToCustom('http://github.com/tutosrive/openastral')} target="_blank">
+                <a href={Helpers.goToCustom('https://github.com/tutosrive/openastral')} target="_blank">
                     Open Astral
                 </a>
             </h1>

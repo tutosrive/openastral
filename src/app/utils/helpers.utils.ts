@@ -59,7 +59,7 @@ export default class Helpers {
         let newUrl: string = url;
         if (url.includes('star-history.com') || url.includes('github.com')) {
             newUrl = `${url}?ref=${REF_URL}`;
-        } else if (!url.includes(REF_URL)) {
+        } else if (url.includes(REF_URL) === false && url.startsWith('#') === false) {
             newUrl = `${url}?utm_source=${REF_URL}`;
         }
         return newUrl;
