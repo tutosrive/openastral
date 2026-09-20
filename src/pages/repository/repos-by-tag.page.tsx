@@ -36,7 +36,7 @@ export default function RepositoriesByTagPage() {
         setReposs(currentPage);
     }, []);
     return (
-        <div id="home-page" className="w-full px-5 py-8 transition-all">
+        <div id="home-page" className="w-dvw px-5 py-8">
             {repos.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
                     {repos.map((repo) => {
