@@ -1,7 +1,7 @@
 import { useState, type FC, type ReactElement } from 'react';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import type { Repository } from '../../app/models/models';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import BadgesHeader from './badges-header.component';
 import Helpers from '../../app/utils/helpers.utils';
 
@@ -13,14 +13,15 @@ interface RepositoryProps {
 }
 
 export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, topics, readme }) => {
+    const navigate = useNavigate();
     return (
         <div id={`repo-${repository.id}`} className={`${classess ?? ''} flex flex-wrap pb-28 lg:justify-center md:justify-center justify-start w-full`}>
             {/* Repo Title */}
             <div className="w-full fixed left-0 backdrop-blur-lg translate-y-[-18px] grid grid-cols-12 overflow-hidden z-10 max-h-26 py-3">
                 <div className="h-full col-span-6 flex items-center justify-center">
-                    <Link to={'/'} className="left-0 text-3xl text-accent">
+                    <div onClick={() => navigate(-1)} className="left-0 text-3xl text-accent cursor-pointer">
                         <i className="fa-solid fa-circle-chevron-left"></i>
-                    </Link>
+                    </div>
                     <h1 className={'w-full text-4xl text-neutral-content britney-ft font-extrabold text-right text-nowrap overflow-x-scroll scrollbar-none'}>{repository.name}</h1>
                 </div>
                 <div className="col-span-6 flex items-center lg:justify-end md:justify-end justify-center flex-wrap">

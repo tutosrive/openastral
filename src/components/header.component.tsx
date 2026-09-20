@@ -4,6 +4,10 @@ import { useTheme } from '../app/stores/app.store';
 import Helpers from '../app/utils/helpers.utils';
 
 export default function Header() {
+    const closeDropDown = () => {
+        const element = document.activeElement;
+        if (element && element instanceof HTMLElement) element.blur();
+    };
     const values = { home: 'Home', about: { first: 'About', second: 'Page', third: 'Creator', fourthy: 'Search' }, category: 'Categories' };
     const theme = useTheme((state) => state.name);
     return (
@@ -37,25 +41,24 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <details>
-                                <summary>
-                                    <i className="fa-solid fa-circle-info"></i>
+                            <div className="dropdown dropdown-center">
+                                <div tabIndex={0} id="button-toggle-dropdown-about" role="button" className="rounded-field">
                                     {values.about.first}
-                                </summary>
-                                <ul className="p-2 bg-base-100 w-40 z-1">
+                                </div>
+                                <ul tabIndex={-1} className="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-52 p-2 shadow-sm">
                                     <li>
-                                        <Link to={'/about'}>
+                                        <Link to={'/about'} onClick={closeDropDown}>
                                             <i className="fa-solid fa-star inline"></i> {values.about.second}
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to={'/about/admin'}>
+                                        <Link to={'/about/admin'} onClick={closeDropDown}>
                                             <i className="fa-solid fa-circle-user"></i>
                                             {values.about.third}
                                         </Link>
                                     </li>
                                 </ul>
-                            </details>
+                            </div>
                         </li>
                     </ul>
                 </div>
