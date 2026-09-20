@@ -29,7 +29,7 @@ Because I don't just simplify—I genuinely enjoy coding, and I will always pref
 2. OpenAstral Supabase Tables Required
  <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-tables-required-openastral.png" alt="OpenAstral Supabase Tables Required" /></div>
 3. OpenAstral Supabase Integrations Required
- <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-integrations-required-openastral.png" alt="OpenAstral Supabase Integrations Required" /></div>
+ <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-integrations-required-openastral-v2.png" alt="OpenAstral Supabase Integrations Required" /></div>
 4. OpenAstral Supabase Policies Required
  <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-policies-required-openastral.png" alt="OpenAstral Supabase Policies Required" /></div>
 5. OpenAstral Supabase Extensions Required
