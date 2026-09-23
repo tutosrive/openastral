@@ -7,11 +7,11 @@ import repositoryService from '../../app/services/repository.service';
 import CumulativeRepo from '../../components/repository/cumulative.component';
 import PaginationController from '../../components/pagination.component';
 import SkeletonRepository from '../../components/skeleton/repository.skeleton';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
 export default function RepositoriesByTagPage() {
     const params = useParams();
     const category = params.name;
-    const [repos, setRepos] = useState<Repository[]>([]);
     const [count, setCount] = useState<number>(0);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const updateTitle = useWindowTitle((state) => state.updateTitle);
@@ -20,29 +20,23 @@ export default function RepositoriesByTagPage() {
 
         return Math.ceil(count / 20);
     };
-
+    const { data } = useQuery<Repository[]>({ queryKey: ['repos', category, currentPage], queryFn: () => repositoryService.getPaginated(currentPage, true, [category!!]), notifyOnChangeProps: ['data'], placeholderData: keepPreviousData, staleTime: Infinity });
     const init = async () => {
         updateTitle(PAGES_TITLES.byTopic(category!!));
         const resCount = await repositoryService.getDataCountByTags([category!!]);
         setCount(resCount);
     };
-    const setReposs = async (page: number) => {
-        const res = await repositoryService.getPaginated(page, true, [category!!]);
-        setRepos(res);
-        setCurrentPage(page);
-    };
     useEffect(() => {
         init();
-        setReposs(currentPage);
     }, []);
     return (
         <div id="home-page" className="w-dvw px-5 py-8">
-            {repos.length > 0 ? (
+            {data && data.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
-                    {repos.map((repo) => {
+                    {data.map((repo) => {
                         return <CumulativeRepo repository={repo} key={`repo-${repo.id}`} />;
                     })}
-                    <PaginationController callback={setReposs} page={currentPage} totalPages={totalPages()} />
+                    <PaginationController callback={setCurrentPage} page={currentPage} totalPages={totalPages()} />
                 </div>
             ) : (
                 <SkeletonRepository />
