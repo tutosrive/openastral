@@ -10,7 +10,7 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 export default function CreatorPage() {
     const [description, setDescription] = useState<string>();
     const updateTitle = useWindowTitle((state) => state.updateTitle);
-    const { data } = useQuery({ queryKey: ['admin'], queryFn: adminService.get, notifyOnChangeProps: ['data'], placeholderData: keepPreviousData, staleTime: Infinity });
+    const { data } = useQuery({ queryKey: ['admin'], queryFn: () => adminService.get(), notifyOnChangeProps: ['data'], placeholderData: keepPreviousData, staleTime: Infinity });
     const startCreator = async () => {
         updateTitle(PAGES_TITLES.admin);
     };
