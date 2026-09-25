@@ -14,7 +14,6 @@ const PaginationController: FC<PaginationControllerProps> = ({ callback, page, t
                 current={page}
                 onPageChange={(n) => callback(n)}
                 total={totalPages}
-                linkHref={'omit'}
                 containerClassName="flex justify-center gap-1 w-full"
                 pageItemClassName="inline-flex items-center rounded-md border text-sm backdrop-blur-md"
                 activeItemClassName="border-blue-800 bg-blue-800 text-white shadow-sm"

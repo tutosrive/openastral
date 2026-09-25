@@ -6,4 +6,4 @@ export type ThemeStore = typeof ThemeStoreInitial & { update: (newTheme: string)
 export const WindowTitleStoreInitial = { title: 'Open Astral' };
 export type WindowTitleStore = typeof WindowTitleStoreInitial & { updateTitle: (title: string) => void };
 export type SearchType = 'category' | 'repository' | 'mix';
-export type SearchStore = { results: Repository[] | Topic[]; type: SearchType; updateType: (newType: SearchType) => void };
+export type SearchStore = { result: Repository[] | Topic[]; type: SearchType; updateType: (newType: SearchType) => void; updateResult: (newResult: Repository[] | Topic[]) => void };
