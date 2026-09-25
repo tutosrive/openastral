@@ -53,7 +53,7 @@ export default function SearchPage() {
         setCurrentPage(1);
     }, [textToFind]);
     return (
-        <div id="search-page" className="w-full h-full min-h-full px-5 py-8">
+        <div id="search-page" className="w-full min-h-full px-5 py-8">
             {hasError.has === false ? (
                 data && data.length > 0 ? (
                     <div className="w-full h-full grid grid-cols-12 gap-1">
@@ -66,7 +66,7 @@ export default function SearchPage() {
                     <SkeletonRepository />
                 )
             ) : (
-                <div className="w-full h-full flex items-center justify-center">{hasError.error}</div>
+                <div className="w-full min-h-full flex items-center justify-center">{hasError.error}</div>
             )}
         </div>
     );
