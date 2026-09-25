@@ -9,13 +9,10 @@ import { useEffect, useState } from 'react';
 import PaginationController from '../../components/pagination.component';
 
 export default function SearchPage() {
-    const [countPages, setCountPages] = useState<number>(0);
-    const [currentPage, setCurrentPage] = useState<number>(() => {
-        const session = sessionStorage.getItem('currentpage-search');
-        return session ? parseInt(session) : 1;
-    });
     const [searchParams] = useSearchParams();
     const textToFind = searchParams.get('text') ?? '';
+    const [countPages, setCountPages] = useState<number>(0);
+    const [currentPage, setCurrentPage] = useState<number>(1);
     const type = useSearch((state) => state.type);
     const handleSearch = async () => {
         let result: Repository[] | null = null;
@@ -31,7 +28,7 @@ export default function SearchPage() {
     const updateTotalPagesCalc = () => {
         if (data) {
             const firstRepo = data[0] as Repository;
-            if (firstRepo.totalcount) {
+            if (firstRepo && firstRepo.totalcount) {
                 const totalPages = Math.ceil(firstRepo.totalcount / 20);
                 setCountPages(totalPages);
             }
@@ -41,8 +38,8 @@ export default function SearchPage() {
         updateTotalPagesCalc();
     }, [data]);
     useEffect(() => {
-        sessionStorage.setItem('currentpage-search', currentPage.toString());
-    }, [currentPage]);
+        setCurrentPage(1);
+    }, [textToFind]);
     return (
         <div id="search-page" className="w-dvw px-5 py-8">
             {data && data.length > 0 ? (

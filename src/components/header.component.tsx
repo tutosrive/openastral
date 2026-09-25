@@ -10,11 +10,19 @@ export default function Header() {
         const element = document.activeElement;
         if (element && element instanceof HTMLElement) element.blur();
     };
+    const navigateToSearch = () => {
+        (document.querySelector('#search-icon-header') as HTMLElement)?.click();
+    };
     const handleInputSearch = (e: any) => {
         const input = e.target;
         if (input) {
             let value = (input.value as string) ?? '';
             setInputValue(value);
+        }
+    };
+    const handleEnterOnSearch = (e: any) => {
+        if (e.key === 'Enter') {
+            navigateToSearch();
         }
     };
     const values = { home: 'Home', about: { first: 'About', second: 'Page', third: 'Creator', fourthy: 'Search' }, category: 'Categories' };
@@ -73,8 +81,8 @@ export default function Header() {
                 </div>
                 <div className="navbar-end">
                     <label className="input in-focus-within:outline-none lg:grid sm:grid md:grid grid-cols-12 gap-0 p-0 m-0 hidden">
-                        <input type="search" onInput={handleInputSearch} required placeholder="VS Code Ide" className="input col-span-10" />
-                        <Link to={{ pathname: '/search', search: `?text=${inputValue}` }} className="btn btn-neutral btn-ghost col-span-2 h-full w-full">
+                        <input type="search" onInput={handleInputSearch} onKeyDown={handleEnterOnSearch} required placeholder="VS Code Ide" className="input col-span-10" />
+                        <Link id="search-icon-header" to={{ pathname: '/search', search: `?text=${inputValue}` }} className="btn btn-neutral btn-ghost col-span-2 h-full w-full">
                             <i className="fa-solid fa-magnifying-glass"></i>
                         </Link>
                     </label>
