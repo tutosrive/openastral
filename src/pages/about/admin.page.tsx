@@ -6,12 +6,15 @@ import { PAGES_TITLES } from '../../app/utils/constants';
 import Helpers from '../../app/utils/helpers.utils';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { useSearch } from '../../app/stores/search.store';
 
 export default function CreatorPage() {
     const [description, setDescription] = useState<string>();
     const updateTitle = useWindowTitle((state) => state.updateTitle);
+    const updateTypeSearch = useSearch((state) => state.updateType);
     const { data } = useQuery({ queryKey: ['admin'], queryFn: () => adminService.get(), notifyOnChangeProps: ['data'], placeholderData: keepPreviousData, staleTime: Infinity });
     const startCreator = async () => {
+        updateTypeSearch('mix');
         updateTitle(PAGES_TITLES.admin);
     };
     const tryGetAdminReadme = async () => {

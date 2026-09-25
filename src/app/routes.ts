@@ -6,6 +6,7 @@ const RepositoriesByTagPage = lazy(() => import('../pages/repository/repos-by-ta
 const RepositoryPage = lazy(() => import('../pages/repository/repository.page'));
 const CreatorPage = lazy(() => import('../pages/about/admin.page'));
 const AboutPage = lazy(() => import('../pages/about/about.page'));
+const SearchPage = lazy(() => import('../pages/search/search.page'));
 
 const routes = [
     { id: 'route-home', endpoint: '/', component: HomePage },
@@ -14,7 +15,7 @@ const routes = [
     { id: 'route-repository-id', endpoint: '/repositories/:owner/:repo', component: RepositoryPage },
     { id: 'route-about', endpoint: '/about', component: AboutPage },
     { id: 'route-admin', endpoint: '/about/admin', component: CreatorPage },
-    { id: 'route-repository-search', endpoint: '/repositories/query/search', component: HomePage },
+    { id: 'route-repository-search', endpoint: '/search', component: SearchPage },
 ];
 
 export default routes;
