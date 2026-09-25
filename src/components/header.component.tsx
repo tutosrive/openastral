@@ -16,7 +16,7 @@ export default function Header() {
     const handleInputSearch = (e: any) => {
         const input = e.target;
         if (input) {
-            let value = (input.value as string) ?? '';
+            let value = (input.value as string).trimStart().trimEnd().replaceAll(' ', '|') ?? '';
             setInputValue(value);
         }
     };
@@ -81,7 +81,7 @@ export default function Header() {
                 </div>
                 <div className="navbar-end">
                     <label className="input in-focus-within:outline-none lg:grid sm:grid md:grid grid-cols-12 gap-0 p-0 m-0 hidden">
-                        <input type="search" onInput={handleInputSearch} onKeyDown={handleEnterOnSearch} required placeholder="VS Code Ide" className="input col-span-10" />
+                        <input type="search" onInput={handleInputSearch} onKeyDown={handleEnterOnSearch} required placeholder="VSCode Ide" className="input col-span-10" />
                         <Link id="search-icon-header" to={{ pathname: '/search', search: `?text=${inputValue}` }} className="btn btn-neutral btn-ghost col-span-2 h-full w-full">
                             <i className="fa-solid fa-magnifying-glass"></i>
                         </Link>
