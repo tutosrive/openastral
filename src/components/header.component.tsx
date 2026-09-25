@@ -2,11 +2,28 @@ import { Link } from 'react-router';
 import ThemeChanger from './theme-changer.component';
 import { useTheme } from '../app/stores/app.store';
 import Helpers from '../app/utils/helpers.utils';
+import { useState } from 'react';
 
 export default function Header() {
+    const [inputValue, setInputValue] = useState<string>('');
     const closeDropDown = () => {
         const element = document.activeElement;
         if (element && element instanceof HTMLElement) element.blur();
+    };
+    const navigateToSearch = () => {
+        (document.querySelector('#search-icon-header') as HTMLElement)?.click();
+    };
+    const handleInputSearch = (e: any) => {
+        const input = e.target;
+        if (input) {
+            let value = (input.value as string).trimStart().trimEnd().replaceAll(' ', '|') ?? '';
+            setInputValue(value);
+        }
+    };
+    const handleEnterOnSearch = (e: any) => {
+        if (e.key === 'Enter') {
+            navigateToSearch();
+        }
     };
     const values = { home: 'Home', about: { first: 'About', second: 'Page', third: 'Creator', fourthy: 'Search' }, category: 'Categories' };
     const theme = useTheme((state) => state.name);
@@ -63,14 +80,11 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <label className="input hidden">
-                        <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.3-4.3"></path>
-                            </g>
-                        </svg>
-                        <input type="search" required placeholder="Search" className="input w-64 lg:w-auto" />
+                    <label className="input in-focus-within:outline-none lg:grid sm:grid md:grid grid-cols-12 gap-0 p-0 m-0 hidden">
+                        <input type="search" onInput={handleInputSearch} onKeyDown={handleEnterOnSearch} required placeholder="VSCode Ide" className="input col-span-10" />
+                        <Link id="search-icon-header" to={{ pathname: '/search', search: `?text=${inputValue}` }} className="btn btn-neutral btn-ghost col-span-2 h-full w-full">
+                            <i className="fa-solid fa-magnifying-glass"></i>
+                        </Link>
                     </label>
                     <ThemeChanger themeName={theme} />
                     <a href={Helpers.goToCustom('https://github.com/tutosrive/openastral')}>

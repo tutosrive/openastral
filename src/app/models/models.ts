@@ -45,12 +45,14 @@ export interface Repository {
     owner: Owner;
     owner_starred: Admin;
     topics: Topic[] | null;
+    totalcount: number | null | undefined;
 }
 
 export interface Topic {
     id: string;
     name: string;
     stargazerCount: number;
+    totalcount: number | null | undefined;
 }
 
 export interface TopicXRepository {

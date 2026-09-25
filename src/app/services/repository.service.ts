@@ -64,6 +64,16 @@ class RepositoryService extends Service {
         return repository;
     }
 
+    async getSearchMix(text: string, page: number): Promise<any[] | null> {
+        let result: Tables<'repository'>[] | null = null;
+        this.start = (page - 1) * this.PAGE_COUNT;
+        const { data, error } = await this.client.rpc('find_repositories_mix', { regextofind: text, startl: this.start, total: this.PAGE_COUNT });
+        if (!error) {
+            result = data as Array<Tables<'repository'>>;
+        }
+        return result;
+    }
+
     async getById(): Promise<any | null> {}
 }
 

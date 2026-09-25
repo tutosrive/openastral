@@ -184,6 +184,120 @@ end;
 $$;
 ```
 
+5. Search repositories in MIX mode (matchs owner, repository and topic names ...)
+
+```sql
+create or replace function public.find_repositories_mix(regexToFind text, startl integer, total integer) returns json language plpgsql stable as $$
+  declare
+    response json;
+  begin
+    select json_agg(row_to_json(repo)) into response
+    from (
+      select
+        count(r.id) OVER() as totalcount,
+        r.*,
+        jsonb_build_object(
+          'id', o.id,
+          'avatar_url', o.avatar_url,
+          'login', o.login,
+          'url', o.url
+        ) as owner,
+        coalesce(
+          jsonb_agg(to_jsonb(t) order by t.id)
+            filter (where t.id is not null),
+          '[]'::jsonb
+        ) as topics
+      from public.repository as r
+      inner join owner o
+        on o.id = r.owner_id
+      left join public.topicxrepository as tr
+        on tr.idrepo = r.id
+      left join public.topic as t
+        on t.id = tr.idtopic
+      where r.name ~* find_repositories_mix.regexToFind
+      or r.description ~* find_repositories_mix.regexToFind
+      or t.name ~* find_repositories_mix.regexToFind
+      or o.login ~* find_repositories_mix.regexToFind
+      group by r.id, o.id
+      order by r.name
+      offset find_repositories_mix.startl limit find_repositories_mix.total
+    )repo;
+
+    return coalesce(response, '{}'::json);
+  end;
+$$;
+```
+
+6. Find JUST repositories
+
+```sql
+create or replace function public.find_repositories(regexToFind text, startl integer, total integer) returns json language plpgsql stable as $$
+  declare
+    response json;
+  begin
+    select json_agg(row_to_json(repo)) into response
+    from (
+      select
+        count(r.id) OVER() as totalcount,
+        r.*,
+        jsonb_build_object(
+          'id', o.id,
+          'avatar_url', o.avatar_url,
+          'login', o.login,
+          'url', o.url
+        ) as owner,
+        coalesce(
+          jsonb_agg(to_jsonb(t) order by t.id)
+            filter (where t.id is not null),
+          '[]'::jsonb
+        ) as topics
+      from public.repository as r
+      inner join owner o
+        on o.id = r.owner_id
+      left join public.topicxrepository as tr
+        on tr.idrepo = r.id
+      left join public.topic as t
+        on t.id = tr.idtopic
+      where r.name ~* find_repositories.regexToFind
+      or r.description ~* find_repositories.regexToFind
+      group by r.id, o.id
+      order by r.name
+      offset find_repositories.startl limit find_repositories.total
+    )repo;
+
+    return coalesce(response, '{}'::json);
+  end;
+$$;
+```
+
+7. Find JUST topics
+
+```sql
+create or replace function public.find_topics(regexToFind text, startl integer, total integer) returns json language plpgsql stable as $$
+  declare
+    response json;
+  begin
+    select json_agg(row_to_json(repo)) into response
+    from (
+      select
+        count(t.id) OVER() as totalcount,
+        t.*
+      from public.repository as r
+      left join public.topicxrepository as tr
+        on tr.idrepo = r.id
+      left join public.topic as t
+        on t.id = tr.idtopic
+      where t.name ~* find_topics.regexToFind
+      group by t.id, t.name
+      order by t.name
+      offset find_topics.startl limit find_topics.total
+    )repo;
+
+    return coalesce(response, '[]'::json);
+  end;
+$$;
+```
+
 ---
 
 # Future features

@@ -93,6 +93,9 @@ export type Database = {
         };
         Views: { [_ in never]: never };
         Functions: {
+            find_repositories: { Args: { regextofind: string; startl: number; total: number }; Returns: Json };
+            find_repositories_mix: { Args: { regextofind: string; startl: number; total: number }; Returns: Json };
+            find_topics: { Args: { regextofind: string; startl: number; total: number }; Returns: Json };
             get_count_by_topic: { Args: { topics: string[] }; Returns: number };
             get_repositories: { Args: { endl: number; startl: number }; Returns: Json };
             get_repositories_by_topic: { Args: { endl: number; startl: number; topics: string[] }; Returns: Json };
