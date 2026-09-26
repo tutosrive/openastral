@@ -25,7 +25,7 @@ const CumulativeRepo: FC<CumulativeRepoProps> = ({ repository }) => {
     useEffect(() => {
         makeTags();
     }, []);
-    return <RepositoryParcialView repository={repository} topics={tags} classess="lg:col-span-6 md:col-span-6 col-span-12" />;
+    return <RepositoryParcialView repository={repository} topics={tags} classess="min-2xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12" />;
 };
 
 export default CumulativeRepo;
