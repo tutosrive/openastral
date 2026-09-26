@@ -302,5 +302,4 @@ $$;
 
 # Future features
 
-- Search repositories
-- Cache data from SUPABASE
+- Highlight search results
