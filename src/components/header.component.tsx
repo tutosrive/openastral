@@ -12,10 +12,6 @@ export default function Header() {
         const element = document.activeElement;
         if (element && element instanceof HTMLElement) element.blur();
     };
-    const closeMenu = () => {
-        const element = document.activeElement;
-        if (element && element instanceof HTMLElement) element.blur();
-    };
     const navigateToSearch = () => {
         (document.querySelector('#search-icon-header') as HTMLElement)?.click();
     };
