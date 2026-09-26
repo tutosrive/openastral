@@ -23,7 +23,7 @@ class TopicService extends Service {
                 localStorage.setItem('tc', count.toString());
             }
         }
-        countR = parseInt(localStorage.getItem('rc')!!);
+        countR = parseInt(localStorage.getItem('tc')!!);
         return countR;
     }
 
@@ -42,6 +42,17 @@ class TopicService extends Service {
         savedData = (data as Tables<'topic'>[]).sort((a, b) => a.name.localeCompare(b.name));
         return savedData;
     }
+
+    async getSearch(text: string, page: number): Promise<any[] | null> {
+        let result: Tables<'topic'>[] | null = null;
+        this.start = (page - 1) * this.PAGE_COUNT;
+        const { data, error } = await this.client.rpc('find_topics', { regextofind: text, startl: this.start, total: this.PAGE_COUNT });
+        if (!error) {
+            result = data as Array<Tables<'topic'>>;
+        }
+        return result;
+    }
+
     getById(): Promise<any> {
         throw new Error('Method not implemented.');
     }

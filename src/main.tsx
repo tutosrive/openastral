@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+// import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
@@ -11,11 +11,11 @@ const clientQuery = new QueryClient({ defaultOptions: { queries: { staleTime: In
 const persistConfig = createAsyncStoragePersister({ storage: window.localStorage });
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <BrowserRouter basename="/" useTransitions={true}>
-            <PersistQueryClientProvider client={clientQuery} persistOptions={{ persister: persistConfig }}>
-                <App />
-            </PersistQueryClientProvider>
-        </BrowserRouter>
-    </StrictMode>,
+    // <StrictMode>
+    <BrowserRouter basename="/" useTransitions={true}>
+        <PersistQueryClientProvider client={clientQuery} persistOptions={{ persister: persistConfig }}>
+            <App />
+        </PersistQueryClientProvider>
+    </BrowserRouter>,
+    // </StrictMode>,
 );

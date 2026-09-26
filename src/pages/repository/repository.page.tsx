@@ -9,13 +9,12 @@ import Helpers from '../../app/utils/helpers.utils';
 import { useWindowTitle } from '../../app/stores/app.store';
 import { PAGES_TITLES } from '../../app/utils/constants';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
-// import { useSearch } from '../../app/stores/search.store';
+import { useSearch } from '../../app/stores/search.store';
 
 export default function RepositoryPage() {
-    // const [tags, setTags] = useState<React.JSX.Element[]>([]);
     const [readme, setReadme] = useState<string>('');
     const updateTitle = useWindowTitle((state) => state.updateTitle);
-    // const updateTypeSearch = useSearch((state) => state.updateType);
+    const updateTypeSearch = useSearch((state) => state.updateType);
     const params = useParams();
     const repositoryOwner: string = params.owner!!;
     const repositoryName: string = params.repo!!;
@@ -29,7 +28,7 @@ export default function RepositoryPage() {
         }
     };
     const init = () => {
-        // updateTypeSearch('repository');
+        updateTypeSearch('repository');
         updateTitle(PAGES_TITLES.repository(`${repositoryOwner}/${repositoryName}`));
     };
     const makeTags = () => {

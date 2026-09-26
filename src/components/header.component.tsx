@@ -3,9 +3,11 @@ import ThemeChanger from './theme-changer.component';
 import { useTheme } from '../app/stores/app.store';
 import Helpers from '../app/utils/helpers.utils';
 import { useState } from 'react';
+import { useSearch } from '../app/stores/search.store';
 
 export default function Header() {
     const [inputValue, setInputValue] = useState<string>('');
+    const typeSearch = useSearch((state) => state.type);
     const closeDropDown = () => {
         const element = document.activeElement;
         if (element && element instanceof HTMLElement) element.blur();
@@ -81,7 +83,7 @@ export default function Header() {
                 </div>
                 <div className="navbar-end">
                     <label className="input in-focus-within:outline-none lg:grid sm:grid md:grid grid-cols-12 gap-0 p-0 m-0 hidden">
-                        <input type="search" onInput={handleInputSearch} onKeyDown={handleEnterOnSearch} required placeholder="VSCode Ide" className="input col-span-10" />
+                        <input type="search" onInput={handleInputSearch} onKeyDown={handleEnterOnSearch} required placeholder={`Search Mode ${typeSearch}`} className="input col-span-10" />
                         <Link id="search-icon-header" to={{ pathname: '/search', search: `?text=${inputValue}` }} className="btn btn-neutral btn-ghost col-span-2 h-full w-full">
                             <i className="fa-solid fa-magnifying-glass"></i>
                         </Link>

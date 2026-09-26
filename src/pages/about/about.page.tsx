@@ -1,7 +1,7 @@
 import Helpers from '../../app/utils/helpers.utils';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
-// import { useSearch } from '../../app/stores/search.store';
+import { useSearch } from '../../app/stores/search.store';
 import { useEffect } from 'react';
 
 export default function AboutPage() {
@@ -11,10 +11,10 @@ export default function AboutPage() {
         const DEFAULT_URL = `https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`;
         return await Helpers.getReadme(owner, repo, DEFAULT_URL);
     };
-    // const updateTypeSearch = useSearch((state) => state.updateType);
+    const updateTypeSearch = useSearch((state) => state.updateType);
     const { data } = useQuery<string | undefined>({ queryKey: ['about-page'], queryFn: tryGetPageReadme, notifyOnChangeProps: ['data'], placeholderData: keepPreviousData, staleTime: Infinity });
     const init = () => {
-        // updateTypeSearch('mix');
+        updateTypeSearch('mix');
     };
     useEffect(() => {
         init();
