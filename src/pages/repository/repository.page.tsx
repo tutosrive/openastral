@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import { RepositoryFullView } from '../../components/repository/repository.component';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactElement } from 'react';
 import repositoryService from '../../app/services/repository.service';
 import Loading from '../../components/loading.component';
 import type { Repository } from '../../app/models/models';
@@ -12,7 +12,7 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 // import { useSearch } from '../../app/stores/search.store';
 
 export default function RepositoryPage() {
-    const [tags, setTags] = useState<React.JSX.Element[]>([]);
+    // const [tags, setTags] = useState<React.JSX.Element[]>([]);
     const [readme, setReadme] = useState<string>('');
     const updateTitle = useWindowTitle((state) => state.updateTitle);
     // const updateTypeSearch = useSearch((state) => state.updateType);
@@ -33,27 +33,27 @@ export default function RepositoryPage() {
         updateTitle(PAGES_TITLES.repository(`${repositoryOwner}/${repositoryName}`));
     };
     const makeTags = () => {
+        let elementTags: ReactElement | ReactElement[] = [];
         if (data) {
-            let elementTags = [
+            elementTags = (
                 <span key={`${data.id}-tag-not-categories`} className="italic text-neutral">
                     Not categories
-                </span>,
-            ];
+                </span>
+            );
             if (data.topics && data.topics.length > 0) {
                 elementTags = data.topics.map((cat) => {
                     return <CategoryC to={`/categories/${cat.name}`} key={`tag-${cat.id}`} name={cat.name} />;
                 });
             }
-            setTags(elementTags);
         }
+        return elementTags;
     };
     useEffect(() => {
-        makeTags();
         getReadme();
     }, [data]);
     useEffect(() => {
         init();
     }, []);
-
+    const tags = makeTags();
     return <div className="w-full h-full mt-4 min-w-[355px]">{data ? <RepositoryFullView repository={data} topics={tags} readme={readme} /> : <Loading />}</div>;
 }

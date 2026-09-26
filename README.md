@@ -24,7 +24,7 @@ Because I don't just simplify—I genuinely enjoy coding, and I will always pref
 
 1. OpenAstral Supabase Functions Required
  <div class="flex w-dvw justify-center">
-   <img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-functions-required-openastral.png" alt="OpenAstral Supabase Functions Required" />
+   <img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-functions-required-openastral-v2.png" alt="OpenAstral Supabase Functions Required" />
  </div>
 2. OpenAstral Supabase Tables Required
  <div class="flex w-dvw justify-center"><img class="lg:max-w-200" src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/others/db-tables-required-openastral.png" alt="OpenAstral Supabase Tables Required" /></div>

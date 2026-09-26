@@ -6,7 +6,18 @@ import { PAGES_TITLES } from '../../app/utils/constants';
 import Helpers from '../../app/utils/helpers.utils';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import type { Tables } from '../../app/models/supabase';
 // import { useSearch } from '../../app/stores/search.store';
+
+const tryGetAdminReadme = async (data: Tables<'admin'> | null | undefined, setDescription: React.Dispatch<React.SetStateAction<string | undefined>>) => {
+    if (data) {
+        const DEFAULT_URL = `https://raw.githubusercontent.com/${data.login}/${data.login}/main/README.md`;
+        const res = await Helpers.getReadme(data.login, data.login, DEFAULT_URL);
+        if (res && res.length > 0) {
+            setDescription(res);
+        }
+    }
+};
 
 export default function CreatorPage() {
     const [description, setDescription] = useState<string>();
@@ -17,17 +28,8 @@ export default function CreatorPage() {
         // updateTypeSearch('mix');
         updateTitle(PAGES_TITLES.admin);
     };
-    const tryGetAdminReadme = async () => {
-        if (data) {
-            const DEFAULT_URL = `https://raw.githubusercontent.com/${data.login}/${data.login}/main/README.md`;
-            const res = await Helpers.getReadme(data.login, data.login, DEFAULT_URL);
-            if (res && res.length > 0) {
-                setDescription(res);
-            }
-        }
-    };
     useEffect(() => {
-        tryGetAdminReadme();
+        tryGetAdminReadme(data, setDescription);
     }, [data]);
     useEffect(() => {
         startCreator();
