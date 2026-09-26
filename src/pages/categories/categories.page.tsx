@@ -6,7 +6,7 @@ import { useWindowTitle } from '../../app/stores/app.store';
 import { PAGES_TITLES } from '../../app/utils/constants';
 import SkeletonCategory from '../../components/skeleton/categories.skeleton';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
-// import { useSearch } from '../../app/stores/search.store';
+import { useSearch } from '../../app/stores/search.store';
 import PaginationController from '../../components/pagination.component';
 
 export default function CategoriesPage() {
@@ -14,11 +14,11 @@ export default function CategoriesPage() {
     const [count, setCount] = useState<number>(0);
     const updateTitle = useWindowTitle((state) => state.updateTitle);
     const totalPages = Math.ceil(count / 80);
-    // const updateTypeSearch = useSearch((state) => state.updateType);
+    const updateTypeSearch = useSearch((state) => state.updateType);
     const { data } = useQuery<Topic[]>({ queryKey: ['categories', currentPage], queryFn: () => topicService.getPaginated(currentPage), notifyOnChangeProps: ['data'], placeholderData: keepPreviousData, staleTime: Infinity });
 
     const init = async () => {
-        // updateTypeSearch('category');
+        updateTypeSearch('category');
         updateTitle(PAGES_TITLES.categories);
         const resCount = await topicService.getDataCount();
         setCount(resCount);
@@ -29,7 +29,7 @@ export default function CategoriesPage() {
 
     return (
         <div className="w-full h-full flex flex-wrap items-center justify-center">
-            <div className="w-full flex flex-wrap items-center justify-center">
+            <div className="w-full flex flex-wrap items-center justify-center lg:px-5 md:px-5 sm:px-4 px-3 pt-8 pb-12">
                 {data && data.length > 0 ? (
                     <div className="w-full h-full">
                         <div className="mb-3">

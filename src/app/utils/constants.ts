@@ -95,6 +95,9 @@ export const CUSTOM_BADGES_STYLES: Array<string> = [
     'bg-rose-900 text-rose-300',
 ];
 
+export const PAGE_COUNT_REPOSITORY: number = 20;
+export const PAGE_COUNT_CATEGORY: number = 80;
+
 export const PAGES_TITLES = {
     home: 'Awesome Github Repositories | Stargazers | Tutos Rive Stargazers | Github Stargazers',
     categories: 'Stargazers Categories | Repositories Topics',
