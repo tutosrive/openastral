@@ -54,5 +54,5 @@ export default function RepositoryPage() {
         init();
     }, []);
     const tags = makeTags();
-    return <div className="w-full h-full mt-4 min-w-[355px]">{data ? <RepositoryFullView repository={data} topics={tags} readme={readme} /> : <Loading />}</div>;
+    return <div className="w-full h-full mt-4 min-w-[355px] lg:pt-8 lg:pb-8 md:pt-8 md:pb-8 sm:pt-8 sm:pb-8 px-5 pt-16 pb-8">{data ? <RepositoryFullView repository={data} topics={tags} readme={readme} /> : <Loading />}</div>;
 }

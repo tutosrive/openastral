@@ -17,7 +17,7 @@ export const RepositoryFullView: FC<RepositoryProps> = ({ repository, classess, 
     return (
         <div id={`repo-${repository.id}`} className={`${classess ?? ''} flex flex-wrap pb-28 lg:justify-center md:justify-center justify-start w-full`}>
             {/* Repo Title */}
-            <div className="w-full fixed left-0 backdrop-blur-lg translate-y-[-18px] grid grid-cols-12 overflow-hidden z-10 max-h-26 py-3">
+            <div className="w-full fixed left-0 backdrop-blur-lg md:translate-y-[-18px] sm:lg:translate-y-[-18px] translate-y-[-35px] grid grid-cols-12 overflow-hidden z-10 max-h-26 py-3">
                 <div className="h-full col-span-6 flex items-center justify-center">
                     <div onClick={() => navigate(-1)} className="left-0 text-3xl text-accent cursor-pointer">
                         <i className="fa-solid fa-circle-chevron-left"></i>

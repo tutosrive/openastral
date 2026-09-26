@@ -29,7 +29,7 @@ export default function CategoriesPage() {
 
     return (
         <div className="w-full h-full flex flex-wrap items-center justify-center">
-            <div className="w-full flex flex-wrap items-center justify-center">
+            <div className="w-full flex flex-wrap items-center justify-center lg:px-5 md:px-5 sm:px-4 px-3 pt-8 pb-12">
                 {data && data.length > 0 ? (
                     <div className="w-full h-full">
                         <div className="mb-3">
