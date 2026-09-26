@@ -33,7 +33,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div id="home-page" className="w-dvw lg:px-5 md:px-5 sm:px-4 lg:pt-8 lg:pb-8 md:pt-8 md:pb-8 sm:pt-8 sm:pb-8 px-3 pt-16 pb-8">
+        <div id="home-page" className="w-dvw lg:px-5 md:px-5 sm:px-4 lg:pt-1 lg:pb-8 md:pt-1 md:pb-8 sm:pt-1 sm:pb-8 px-3 pt-16 pb-8">
             {data && data.length > 0 ? (
                 <div className="w-full h-full grid grid-cols-12 gap-1">
                     {data.map((repo) => {

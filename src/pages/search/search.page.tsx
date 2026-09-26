@@ -43,7 +43,7 @@ export default function SearchPage() {
     const totalCount = data?.[0]?.totalcount ? Math.ceil(data?.[0]?.totalcount / pageCount) : 0;
 
     return (
-        <div id="search-page" className={`w-full lg:pt-8 lg:pb-8 md:pt-8 md:pb-8 sm:pt-8 sm:pb-8 px-5 pt-16 pb-8 ${isRepository === true ? 'min-h-full' : 'h-full flex flex-wrap items-center justify-center'}`}>
+        <div id="search-page" className={`w-full lg:pt-1 lg:pb-8 md:pt-1 md:pb-8 sm:pt-1 sm:pb-8 px-5 pt-16 pb-8 ${isRepository === true ? 'min-h-full' : 'h-full flex flex-wrap items-center justify-center'}`}>
             {isEmptyResult ? (
                 <span>
                     No matching records found for <span className="text-error">{textToFind}</span>. Please try a different query.
