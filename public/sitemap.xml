@@ -21,6 +21,68 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- ArtCraft | AI | Studio | Image & Video Studio: ArtCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/artcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Design | Prototyping | Interface Design Tool: FigCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/figcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Motion Graphics | Compositing | Video Effects Tool: EffectCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/effectcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Spreadsheet | Data | Excel-style Spreadsheet: GridCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/gridcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Photography | Non-destructive Editor | Photo Editor: LightCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/lightcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Documents | Reader & Editor | PDF Tool: PdfCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/pdfcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Image Editing | Photo Editor | Raster Graphics Editor: PhotoCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/photocraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Word Processing | Document Editor | Microsoft Word Alternative: WordCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/wordcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- ArtCraft | Vector Art | SVG Editor | Vector Graphics Tool: VectorCraft -->
+  <url>
+    <loc>https://openastral.pages.dev/repositories/storytold/vectorcraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Android | Tool | Docs | Android App | Linux Commands: Why Sudo? -->
   <url>
     <loc>https://openastral.pages.dev/repositories/tutosrive/whysudo</loc>
