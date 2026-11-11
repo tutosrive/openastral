@@ -17,7 +17,7 @@ jobs:
 
             # Process all Starred Repositoties from an User
             - name: SWP-action
-              uses: tutosrive/sawp@0.2.3.1
+              uses: tutosrive/sawp@v0.2.3.1.1
               with:
                   github-user: ${{ github.actor }} # Or any GitHub Username
                   github-token: ${{ secrets.GH_TOKEN }}
